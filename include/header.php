@@ -9,7 +9,7 @@ and open the template in the editor.
         <a href="index.php"><img src="images/RGUEthics.png" alt="Company logo" /></a>
     </div>
     <form style="float: right; position:absolute; right: 5%; top: 10%">
-        Google Search:
+        Search:
         <input type="search" name="googlesearch">
         <input type="Submit">
     </form>
@@ -20,7 +20,7 @@ and open the template in the editor.
             <li> <a href="EAO.php">Experiment Approval Officers (EAO)</a></li>
             <li> <a href="about.php">About Us</a></li>
             <li> <a href="contact.php">Contact</a></li>
-            <li> <a href="owc.php">Login</a></li>
+            <li> <a href="login.php">Login</a></li>
         </ul>
     </nav>
 </header>

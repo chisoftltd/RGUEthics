@@ -11,9 +11,20 @@
     <script src="js/jplist.core.min.js"></script>
 </head>
 <body>
+<div>
+    <?php include 'include/header.php'; ?>
+</div>
+<div>
+    <?php
+    $image_url='https://www.google.com/intl/en_com/images/srpr/logo3w.png';
+    ?>
 
-<h1>Welcome to Web Application Description - RGUEthics!</h1>
-<?php include 'include/header.php';?>
+    <img src="<?php echo $image_url;?>">
+    
+</div>
+<div>
+    <?php include 'include/footer.php'; ?>
 
+</div>
 </body>
 </html>
