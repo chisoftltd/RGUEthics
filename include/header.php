@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <header>
     <div id="logo">
-        <a href="index.html"><img src="PetroleumGeoscienceLog.png" alt="Course Work logo" /></a>
+        <a href="index.php"><img src="images/RGUEthics.png" alt="Company logo" /></a>
     </div>
     <form style="float: right; position:absolute; right: 5%; top: 10%">
         Google Search:
@@ -15,12 +15,12 @@ and open the template in the editor.
     </form>
     <nav>
         <ul class="header-links">
-            <li> <a href="index.html">Home</a></li>
-            <li> <a href="shale.html">Student</a></li>
-            <li> <a href="porosity.html">Experiment Approval Officers (EAO)</a></li>
-            <li> <a href="waterSaturation.html">About Us</a></li>
-            <li> <a href="contact.html">Contact</a></li>
-            <li> <a href="owc.html">Login</a></li>
+            <li> <a href="index.php">Home</a></li>
+            <li> <a href="student.php">Student</a></li>
+            <li> <a href="EAO.php">Experiment Approval Officers (EAO)</a></li>
+            <li> <a href="about.php">About Us</a></li>
+            <li> <a href="contact.php">Contact</a></li>
+            <li> <a href="owc.php">Login</a></li>
         </ul>
     </nav>
 </header>
