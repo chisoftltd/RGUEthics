@@ -61,6 +61,7 @@ if (isset($_POST['btn-login'])) {
         <title>Coding Cage - Login & Registration System</title>
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"  />
         <link rel="stylesheet" href="style.css" type="text/css" />
+        <link rel="stylesheet" href="css/main-style.css">
     </head>
     <body>
         <div>

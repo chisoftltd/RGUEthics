@@ -19,6 +19,7 @@ $userRow = mysql_fetch_array($res);
         <title>Welcome - <?php echo $userRow['userEmail']; ?></title>
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"  />
         <link rel="stylesheet" href="style.css" type="text/css" />
+        <link rel="stylesheet" href="css/main-style.css">
     </head>
     <body>
         <div>
