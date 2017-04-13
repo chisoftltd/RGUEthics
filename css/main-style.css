@@ -97,3 +97,8 @@ h2{
     text-align: center;
     color: #017572;
 }
+#pageContent {
+    float: left;
+    width: 580px;
+    padding: 0 10px 10px 20px;
+}
