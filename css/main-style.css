@@ -97,13 +97,7 @@ h2{
     text-align: center;
     color: #017572;
 }
-#pageContent {
-     position: relative;
-    background:blue;
-    width:500px;
-    height:300px;
-    padding:10px;
-}
+
 #left {
     width:100px;
     height:auto;
