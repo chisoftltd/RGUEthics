@@ -126,8 +126,8 @@ $error = false;
                         
                            <div class="form-group">
                             <div class="input-group">
-                                <span class="input-group-addon"><textarea class="glyphicon glyphicon-lock" name="body" id="body" rows="20" cols="35"></textarea></span>
-                                <input type="password" name="pass" class="form-control" placeholder="Provide a brief outline of the aims and objectives of the proposed research project." maxlength="15" />
+                                <span class="input-group-addon"><textarea class="glyphicon glyphicon-lock" name="body" id="body" rows="20" cols="35" placeholder="Provide a brief outline of the aims and objectives of the proposed research project." maxlength="15"></textarea></span>
+                                <input type="password" name="pass" class="form-control"  />
                             </div>
                             <span class="text-danger"><?php echo $passError; ?></span>
                         </div> 
