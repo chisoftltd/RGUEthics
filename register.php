@@ -75,7 +75,7 @@ if (isset($_POST['btn-signup'])) {
             unset($pass);
         } else {
             $errTyp = "danger";
-            $errMSG = "Something went wrong, try again later..." + $res;
+            $errMSG = "Something went wrong, try again later...";
         }
     }
 }
