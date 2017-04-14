@@ -114,7 +114,7 @@ if (isset($_POST['btn-signup'])) {
                             ?>
                             <div class="form-group">
                                 <div class="alert alert-<?php echo ($errTyp == "success") ? "success" : $errTyp; ?>">
-                                    <span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG; ?>
+                                    <span class="glyphicon glyphicon-info-sign"></span> <?php echo $res; ?>
                                 </div>
                             </div>
                             <?php
