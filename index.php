@@ -14,12 +14,15 @@
         <div>
             <?php include 'include/header.php'; ?>
         </div>
-        <div id="pageContent">
+        <div class="pageContent">
             <nav class="nav">
                 <ul>
-                    <li><a href="#">London</a></li>
-                    <li><a href="#">Paris</a></li>
-                    <li><a href="#">Tokyo</a></li>
+                    <li> <a href="index.php">Home</a></li>
+                    <li> <a href="student.php">Student</a></li>
+                    <li> <a href="EAO.php">Experiment Approval Officers (EAO)</a></li>
+                    <li> <a href="about.php">About Us</a></li>
+                    <li> <a href="contact.php">Contact</a></li>
+                    <li> <a href="login.php">Login</a></li>
                 </ul>
             </nav>
             <article class="article">
