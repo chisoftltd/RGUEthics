@@ -128,7 +128,7 @@ $error = false;
                             <div class="input-group">
                                 <textarea class="glyphicon glyphicon-lock" name="body" id="body" rows="20" cols="53" placeholder="Provide a brief outline of the aims and objectives of the proposed research project." maxlength="53"></textarea>                                <input type="password" name="pass" class="form-control"  />
                             </div>
-                            <span class="text-danger"><?php echo $passError; ?></span>
+      
                         </div> 
 
                     </div>
