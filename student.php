@@ -74,7 +74,7 @@ $error = false;
                             </div>
                             <span class="text-danger"><?php echo $passError; ?></span>
                         </div>
-                        
+
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
@@ -82,31 +82,31 @@ $error = false;
                             </div>
                             <span class="text-danger"><?php echo $passError; ?></span>
                         </div>   
-                        
-                           <div class="form-group">
+
+                        <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
                                 <input type="password" name="pass" class="form-control" placeholder="Research, Postgraduate or Undergraduate status" maxlength="15" />
                             </div>
                             <span class="text-danger"><?php echo $passError; ?></span>
                         </div>  
-                        
-                         <div class="form-group">
+
+                        <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
                                 <input type="password" name="pass" class="form-control" placeholder="Name of student supervisor" maxlength="15" />
                             </div>
                             <span class="text-danger"><?php echo $passError; ?></span>
                         </div>  
-                        
-                         <div class="form-group">
+
+                        <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
                                 <input type="password" name="pass" class="form-control" placeholder="Project Title" maxlength="15" />
                             </div>
                             <span class="text-danger"><?php echo $passError; ?></span>
                         </div> 
-                        
+
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
@@ -114,8 +114,8 @@ $error = false;
                             </div>
                             <span class="text-danger"><?php echo $passError; ?></span>
                         </div> 
-                        
-                        
+
+
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
@@ -123,42 +123,42 @@ $error = false;
                             </div>
                             <span class="text-danger"><?php echo $passError; ?></span>
                         </div> 
-                        
-                           <div class="form-group">
+
+                        <div class="form-group">
                             <div class="input-group">
-                                <span class="input-group-addon"><textarea class="glyphicon glyphicon-lock" name="body" id="body" rows="20" cols="35" placeholder="Provide a brief outline of the aims and objectives of the proposed research project." maxlength="15"></textarea></span>
+                                <span class="input-group-addon"><textarea class="glyphicon glyphicon-lock" name="body" id="body" rows="20" cols="45" placeholder="Provide a brief outline of the aims and objectives of the proposed research project." maxlength="15"></textarea></span>
                                 <input type="password" name="pass" class="form-control"  />
                             </div>
                             <span class="text-danger"><?php echo $passError; ?></span>
                         </div> 
-                        
-                        </div>
-                        <div class="form-group">
-                            <hr />
-                        </div>
-
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-block btn-primary" name="btn-signup">Sign Up</button>
-                        </div>
-
-                        <div class="form-group">
-                            <hr />
-                        </div>
-
-                        <div class="form-group">
-                            <a href="index.php">Sign in Here...</a>
-                        </div>
 
                     </div>
+                    <div class="form-group">
+                        <hr />
+                    </div>
 
-                </form>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-block btn-primary" name="btn-signup">Sign Up</button>
+                    </div>
+
+                    <div class="form-group">
+                        <hr />
+                    </div>
+
+                    <div class="form-group">
+                        <a href="index.php">Sign in Here...</a>
+                    </div>
+
             </div>
 
-        </div>
-        <div>
-            <?php include 'include/footer.php'; ?>
+        </form>
+    </div>
 
-        </div>
-    </body>
+</div>
+<div>
+    <?php include 'include/footer.php'; ?>
+
+</div>
+</body>
 </html>
 <?php ob_end_flush(); ?>
