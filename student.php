@@ -32,7 +32,7 @@ $error = false;
                     <div class="col-md-12">
 
                         <div class="form-group">
-                            <h2 class="">Sign Up.</h2>
+                            <h2 class="">Register Your Project.</h2>
                         </div>
 
                         <div class="form-group">
@@ -120,6 +120,14 @@ $error = false;
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
                                 <input type="password" name="pass" class="form-control" placeholder="Proposed project end date" maxlength="15" />
+                            </div>
+                            <span class="text-danger"><?php echo $passError; ?></span>
+                        </div> 
+                        
+                           <div class="form-group">
+                            <div class="input-group">
+                                <textarea class="input-group-addon"></textarea>
+                                <input type="password" name="pass" class="form-control" placeholder="Provide a brief outline of the aims and objectives of the proposed research project." maxlength="15" />
                             </div>
                             <span class="text-danger"><?php echo $passError; ?></span>
                         </div> 
