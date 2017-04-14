@@ -97,16 +97,3 @@ h2{
     text-align: center;
     color: #017572;
 }
-
-#left {
-    width:100px;
-    height:auto;
-    float:left;
-    background:white;
-}
-#right {
-    width:100px;
-    height:auto;
-    float:right;
-    background:white;
-}
