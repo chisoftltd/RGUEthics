@@ -18,11 +18,17 @@
             <nav class="nav">
                 <ul>
                     <li> <a href="index.php">Home</a></li>
+                    <br>
                     <li> <a href="student.php">Student</a></li>
+                    <br>
                     <li> <a href="EAO.php">Experiment Approval Officers (EAO)</a></li>
+                    <br>
                     <li> <a href="about.php">About Us</a></li>
+                    <br>
                     <li> <a href="contact.php">Contact</a></li>
+                    <br>
                     <li> <a href="login.php">Login</a></li>
+                    <br>
                 </ul>
             </nav>
             <article class="article">             
@@ -30,13 +36,13 @@
                 <h1>Full Assessment Guidance Notes</h1>
                 <h2>A Full Research Ethics  and Integrity Assessment is required when the research project involves;</h2>
                 <ul>
-                    <li>‘vulnerable’ human subjects (e.g. children, people who may not be fluent in English, people who may have cognitive disabilities, and – especially where the research is to be undertaken in a developing country - people in limited economic circumstances)</li>
+                    <li>‘vulnerable’ human subjects (e.g. children, people who may not be fluent in English, people who may have cognitive disabilities, and – <br> especially where the research is to be undertaken in a developing country - people in limited economic circumstances)</li>
                     <br>
-                    <li>invasive procedures or addressing sensitive issues (e.g. video-taping without informed consent, questions about sexuality or about criminal behaviour)</li>               
+                    <li>invasive procedures or addressing sensitive issues (e.g. video-taping without informed consent, questions about sexuality or about criminal<br> behaviour)</li>               
                     <br>
                     <li>and/or</li>
                     <br>
-                    <li>biophysical research which requires extraordinary permission from landowners, involves significant disturbance to vulnerable species or habitats, sampling rare/endangered or harmful taxa/species, and/or transporting samples/specimens between countries or significant ‘boundaries’.</li>
+                    <li>biophysical research which requires extraordinary permission from landowners, involves significant disturbance to vulnerable species or habitats,<br> sampling rare/endangered or harmful taxa/species, and/or transporting samples/specimens between countries or significant ‘boundaries’.</li>
                     <br>
                 </ul>
 
