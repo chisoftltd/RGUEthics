@@ -138,7 +138,7 @@ $error = false;
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" class="btn btn-block btn-primary" name="btn-signup">Sign Up</button>
+                        <button type="submit" class="btn btn-block btn-primary" name="btn-signup">Register</button>
                     </div>
 
                     <div class="form-group">
