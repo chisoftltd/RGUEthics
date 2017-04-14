@@ -24,7 +24,7 @@ $error = false;
         <div>
             <?php include 'include/header.php'; ?>
         </div>
-         <div class="container">
+        <div class="container">
 
             <div id="login-form">
                 <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
@@ -54,7 +54,7 @@ $error = false;
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                                <input type="text" name="name" class="form-control" placeholder="Enter Name" maxlength="50" value="<?php echo $name ?>" />
+                                <input type="text" name="name" class="form-control" placeholder="Name of Student" maxlength="50" value="<?php echo $name ?>" />
                             </div>
                             <span class="text-danger"><?php echo $nameError; ?></span>
                         </div>
@@ -70,11 +70,61 @@ $error = false;
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                                <input type="password" name="pass" class="form-control" placeholder="Enter Password" maxlength="15" />
+                                <input type="password" name="pass" class="form-control" placeholder="Student Number" maxlength="15" />
                             </div>
                             <span class="text-danger"><?php echo $passError; ?></span>
                         </div>
-
+                        
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                <input type="password" name="pass" class="form-control" placeholder="Degree Programme (eg, BABS; MAHRM, LLB/LLM)" maxlength="15" />
+                            </div>
+                            <span class="text-danger"><?php echo $passError; ?></span>
+                        </div>   
+                        
+                           <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                <input type="password" name="pass" class="form-control" placeholder="Research, Postgraduate or Undergraduate status" maxlength="15" />
+                            </div>
+                            <span class="text-danger"><?php echo $passError; ?></span>
+                        </div>  
+                        
+                         <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                <input type="password" name="pass" class="form-control" placeholder="Name of student supervisor" maxlength="15" />
+                            </div>
+                            <span class="text-danger"><?php echo $passError; ?></span>
+                        </div>  
+                        
+                         <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                <input type="password" name="pass" class="form-control" placeholder="Project Title" maxlength="15" />
+                            </div>
+                            <span class="text-danger"><?php echo $passError; ?></span>
+                        </div> 
+                        
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                <input type="password" name="pass" class="form-control" placeholder="Proposed project start date" maxlength="15" />
+                            </div>
+                            <span class="text-danger"><?php echo $passError; ?></span>
+                        </div> 
+                        
+                        
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                <input type="password" name="pass" class="form-control" placeholder="Proposed project end date" maxlength="15" />
+                            </div>
+                            <span class="text-danger"><?php echo $passError; ?></span>
+                        </div> 
+                        
+                        </div>
                         <div class="form-group">
                             <hr />
                         </div>
