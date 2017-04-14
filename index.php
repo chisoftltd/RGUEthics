@@ -17,6 +17,8 @@
         <div id="pageContent">
             <div id="left"></div>
             <div class="divider">
+                <h1>Research Ethics and Integrity</h1>
+                <h1>Full Assessment Guidance Notes</h1>
                 <p>The Research Ethics Guidebook is designed as a resource for&nbsp;social science researchers - those early in their careers, as well as more experienced colleagues.&nbsp; It aims to help you find your way through the variety of regulatory processes and procedures that can apply to social science research - signposting you to more detailed information along the way, and acting as a prompt for reflection and questioning at all stages of the research process.&nbsp;You might use it for:</p>
                 <ul>
                     <li><em>Your own research...&nbsp; </em>To help you write a&nbsp;research proposal, apply for ethics approval, or deal with ethics dilemmas that arise during a project.</li>
