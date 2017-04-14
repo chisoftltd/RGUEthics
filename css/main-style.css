@@ -94,8 +94,8 @@ li a:hover {
 }
 
 h2{
-    text-align: center;
-    color: #017572;
+    text-align: left;
+    color: #000000;
 }
 .pageContent {
     display: -webkit-flex;
