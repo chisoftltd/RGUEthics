@@ -25,13 +25,7 @@
                     <li> <a href="login.php">Login</a></li>
                 </ul>
             </nav>
-            <article class="article">
-                <h1>London</h1>
-                <p>London is the capital city of England. It is the most populous city in the United Kingdom,
-                    with a metropolitan area of over 13 million inhabitants.</p>
-                <p>Standing on the River Thames, London has been a major settlement for two millennia,
-                    its history going back to its founding by the Romans, who named it Londinium.</p>
-                <p><strong>Resize this page to see that what happens!</strong></p>
+            <article class="article">             
                 <h1>Research Ethics and Integrity</h1>
                 <h1>Full Assessment Guidance Notes</h1>
                 <h2>A Full Research Ethics  and Integrity Assessment is required when the research project involves;</h2>
