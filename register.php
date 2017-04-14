@@ -75,7 +75,7 @@ if (isset($_POST['btn-signup'])) {
             unset($pass);
         } else {
             $errTyp = "danger";
-            $errMSG = "Something went wrong, try again later...";
+            $errMSG = "Something went wrong, try again later..." + $res;
         }
     }
 }
@@ -91,7 +91,7 @@ if (isset($_POST['btn-signup'])) {
     </head>
     <body>
         <div>
-<?php include 'include/header.php'; ?>
+            <?php include 'include/header.php'; ?>
         </div>
 
         <div class="container">
@@ -109,17 +109,17 @@ if (isset($_POST['btn-signup'])) {
                             <hr />
                         </div>
 
-<?php
-if (isset($errMSG)) {
-    ?>
+                        <?php
+                        if (isset($errMSG)) {
+                            ?>
                             <div class="form-group">
                                 <div class="alert alert-<?php echo ($errTyp == "success") ? "success" : $errTyp; ?>">
                                     <span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG; ?>
                                 </div>
                             </div>
-    <?php
-}
-?>
+                            <?php
+                        }
+                        ?>
 
                         <div class="form-group">
                             <div class="input-group">
@@ -168,7 +168,7 @@ if (isset($errMSG)) {
 
         </div>
         <div>
-<?php include 'include/footer.php'; ?>
+            <?php include 'include/footer.php'; ?>
 
         </div>
 
