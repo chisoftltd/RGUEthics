@@ -25,7 +25,7 @@ $error = false;
             <?php include 'include/header.php'; ?>
         </div>
         <div>
-            <form action="sendemail.php" method="post" style="padding-left: 50px">
+            <form action="sendemail.php" method="post" style="margin: 0 auto; width:250px;">
                 <label>Subject of email:</label><br>
                 <input type="text" name="subject" id="subject"/><br>
                 <label>Body of email:</label><br>
