@@ -127,9 +127,37 @@ $error = false;
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"> </span>
+                                <ol>
+                                    <li>
+                                        1. Does the research project involve any of the following risk factors:
+                                        <ul>
+                                            <li>
+                                                Research involving health sector organisations:
+                                            </li>
+                                            <li>
+                                                Research involving children or other vulnerable groups
+                                            </li>
+                                            <li>
+                                                Research involving sensitive topics
+                                            </li>
+                                            <li>
+                                                Research involving aerospace/defence organisations
+                                            </li>
+                                            <li>
+                                                Research involving nuclear production organisations
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ol>
                                 <textarea class="glyphicon glyphicon-lock" name="body" id="body" rows="20" cols="60" placeholder="Provide a brief outline of the aims and objectives of the proposed research project." maxlength="60"></textarea>
                             </div>
-      
+                        </div> 
+                        
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"> </span>
+                                <textarea class="glyphicon glyphicon-lock" name="body" id="body" rows="20" cols="60" placeholder="Provide a brief outline of the aims and objectives of the proposed research project." maxlength="60"></textarea>
+                            </div>
                         </div> 
 
                     </div>
