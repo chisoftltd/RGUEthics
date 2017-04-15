@@ -129,7 +129,7 @@ $error = false;
                                 <span class="input-group-addon"> </span>
                                 <ol>
                                     <li>
-                                        1. Does the research project involve any of the following risk factors:
+                                        <strong>1. Does the research project involve any of the following risk factors:</strong>
                                         <ul>
                                             <li>
                                                 Research involving health sector organisations:
@@ -149,7 +149,6 @@ $error = false;
                                         </ul>
                                     </li>
                                 </ol>
-                                <textarea class="glyphicon glyphicon-lock" name="body" id="body" rows="20" cols="60" placeholder="Provide a brief outline of the aims and objectives of the proposed research project." maxlength="60"></textarea>
                             </div>
                         </div> 
                         
