@@ -169,6 +169,7 @@ if (isset($_POST['btn-signup'])) {
         </div>
         <div>
             <?php include 'include/footer.php'; ?>
+
         </div>
     </body>
 </html>
