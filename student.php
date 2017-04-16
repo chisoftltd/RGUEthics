@@ -25,10 +25,10 @@ if (!empty($_POST['yes'])) {
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"  />
         <link rel="stylesheet" href="style.css" type="text/css" />
         <link rel="stylesheet" href="css/main-style.css">
-        <script language="JavaScript" type="text/javascript" src="/js/jquery-1.2.6.min.js"></script>
-        <script language="JavaScript" type="text/javascript" src="/js/jquery-ui-personalized-1.5.2.packed.js"></script>
-        <script language="JavaScript" type="text/javascript" src="/js/sprinkle.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script id="twitter-wjs" src="http://platform.twitter.com/widgets.js"></script>
+        <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
     </head>
     <body>
         <div>
