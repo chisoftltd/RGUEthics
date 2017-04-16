@@ -178,28 +178,26 @@ if (!empty($_POST['yes'])) {
                                 </ul>
                             </div>
                         </div> 
-                        <h3>
-                            Details of the Project
-                        </h3>
+                        <p>
+                            <strong>Details of the Project:</strong>
+                        </p>
                         <div class="form-group">
                             <div class="input-group">
                                 <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="body" id="body" rows="20" cols="60" placeholder="Provide a brief outline of the aims and objectives of the proposed research project." maxlength="60"></textarea>
                             </div>
                         </div> 
-
-                        <h3>
-                            Details of Participants
-                        </h3>
-
+                        <p>
+                            <strong>Details of Participants:</strong>
+                        </p>
                         <div class="form-group">
                             <div class="input-group">
                                 <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="body" id="body" rows="20" cols="60" placeholder="Please provide details of the potential participants for this project, including how they will be selected and recruited." maxlength="60"></textarea>
                             </div>
                         </div>
 
-                        <h3>
-                            Details of the Data being Processed
-                        </h3>
+                        <p>
+                            <strong>Details of the Data being Processed:</strong>
+                        </p>
 
                         <div class="form-group">
                             <div class="input-group">
@@ -207,20 +205,18 @@ if (!empty($_POST['yes'])) {
                             </div>
                         </div>
 
-                        <h3>
-                            Sharing (Disclosure)
-                        </h3>
-
+                        <p>
+                            <strong>Sharing (Disclosure):</strong>
+                        </p>
                         <div class="form-group">
                             <div class="input-group">
                                 <textarea class="glyphicon glyphicon-lock"style="text-align: left; min-width: 100%" name="body" id="body" rows="20" cols="60" placeholder="Please describe how the outcomes of the research will be disseminated (for example provide an explanation as to where, and how, will the results be published, or other mechanisms you will be using to share the potential participants personal data)." maxlength="60"></textarea>
                             </div>
                         </div>
 
-                        <h3>
-                            Consent
-                        </h3>
-
+                        <p>
+                            <strong>Consent:</strong>
+                        </p>
                         <div class="form-group">
                             <div class="input-group">
                                 <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="body" id="body" rows="20" cols="60" placeholder="Consent requirements for research projects can vary widely. Whether you are intending to use a consent form, information sheet, or verbally, it is recommended to assure compliance with the Data Protection Act and with ethical requirements. Please include the information sheet and consent forms you will be using for this project, and or protocol. If you are not including an information sheet and consent form, please explain how the consent will be recorded?
@@ -228,40 +224,43 @@ if (!empty($_POST['yes'])) {
                             </div>
                         </div>
 
-                        <h3>
-                            Data Storage
-                        </h3>
-
-
+                        <p>
+                            <strong>Data Storage:</strong>
+                        </p>
                         <div class="form-group">
                             <div class="input-group">
                                 <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="body" id="body" rows="20" cols="60" placeholder="Please describe the arrangements you will make for the security of the data, including how and where it will be stored. i.e. UCL network, *encrypted USB stick, *encrypted laptop etc. Describe how you will store your data, who will have access to it, and what happens to the data at the end of the project." maxlength="60"></textarea>
                             </div>
                         </div>
 
-                        <h3>
-                            Anonymity
-                        </h3>
+                        <p>
+                            <strong>Anonymity:</strong>
+                        </p>
                         <div class="form-group">
                             <div class="input-group">
                                 <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="body" id="body" rows="20" cols="60" placeholder="Describe how you will maintain the confidentiality of the research data collected. Also, describe how you will ensure that research participants are anonymised in your data analysis." maxlength="60"></textarea>
                             </div>
                         </div>
-                        <h3>
-                            International Transfer
-                        </h3>
+                        <p>
+                            <strong>International Transfer:</strong>
+                        </p>
+                        <p>
+                            Will identifiable data be transferred outside the UK as part of this study?
+                            <input type="radio" name="yes" value="1"><b>YES</b>
+                            <input type="radio" name="yes" value="0"><b>NO</b>
+                        </p>
                         <h4>
                             Will identifiable data be transferred outside the UK as part of this study?
                             <input type="radio" name="yes" value="1"><b>YES</b>
                             <input type="radio" name="yes" value="0"><b>NO</b>
                         </h4>
-                        <h6 style="font-style: italic"> The eighth principle of the Data Protection Act 1998 prohibits the transfer of personal data to countries or territories outside the European Economic Area (which consists of the 27 EU member states, Iceland, Liechtenstein and Norway).
+                        <p style="font-style: italic"> The eighth principle of the Data Protection Act 1998 prohibits the transfer of personal data to countries or territories outside the European Economic Area (which consists of the 27 EU member states, Iceland, Liechtenstein and Norway).
 
                             At the time of writing the following countries have also been deemed adequate for the purposes of the 8th principle Andorra, Argentina, Canada, Faroe Islands, Guernsey, Isle of Man, Israel, Jersey, New Zealand, Switzerland and Uruguay.
                             <br>
                             The Data Protection Officer has produced guidance on the transfer of data overseas and particular to the United States. This is available from the Data Protection webpages.
                             <br>
-                        </h6>
+                        </p>
                         <div class="form-group">
                             <div class="input-group">
                                 <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="body" id="body" rows="10" cols="60" placeholder="If you intend to transfer data to a country not mentioned above, please supply details of adequate safeguards below:
@@ -269,12 +268,12 @@ if (!empty($_POST['yes'])) {
                             </div>
                         </div>
                         <div>
-                            <h3>
-                                Notification
-                            </h3>
-                            <h4 style="font-style: italic">(Please note that notification is a prerequisite for registration)</h4>
-                            <h4>Have you informed your department's Data Protection Coordinator about your project?<input type="radio" name="yes" value="1"><b>YES</b>
-                                <input type="radio" name="yes" value="0"><b>NO</b> </h4>
+                            <p>
+                                <strong>Notification:</strong>
+                            </p> 
+                            <p style="font-style: italic">(Please note that notification is a prerequisite for registration)</p>
+                            <p>Have you informed your department's Data Protection Coordinator about your project?<input type="radio" name="yes" value="1"><b>YES</b>
+                                <input type="radio" name="yes" value="0"><b>NO</b> </p>
                         </div>
 
                         <div class="form-group">
