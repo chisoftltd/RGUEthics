@@ -25,7 +25,9 @@ if (!empty($_POST['yes'])) {
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"  />
         <link rel="stylesheet" href="style.css" type="text/css" />
         <link rel="stylesheet" href="css/main-style.css">
-   </head>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/vendor/formvalidation/css/formValidation.min.css">
+    </head>
     <body>
         <div>
             <?php include 'include/header.php'; ?>
