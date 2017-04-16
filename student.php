@@ -363,7 +363,7 @@ if (!empty($_POST['yes'])) {
 
 <script>
     $(document).ready(function () {
-        $('#registrationForm').formValidation({
+        $('.container').formValidation({
             framework: 'bootstrap',
             agree: {
                 // The plugin will ignore the hidden field
@@ -384,7 +384,7 @@ if (!empty($_POST['yes'])) {
         $('#agreeButton, #disagreeButton').on('click', function () {
             var whichButton = $(this).attr('id');
 
-            $('#registrationForm')
+            $('.container')
                     .find('[name="agree"]')
                     .val(whichButton === 'agreeButton' ? 'yes' : 'no')
                     .end()
