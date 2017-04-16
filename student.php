@@ -186,7 +186,7 @@ if (!empty($_POST['yes'])) {
                         </h3>
                         <div class="form-group">
                             <div class="input-group">
-                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="body" id="body" rows="20" cols="60" placeholder="Provide a brief outline of the aims and objectives of the proposed research project." maxlength="60"></textarea>
+                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" placeholder="Provide a brief outline of the aims and objectives of the proposed research project." maxlength="60"></textarea>
                             </div>
                         </div> 
 
