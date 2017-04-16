@@ -25,9 +25,6 @@ if (!empty($_POST['yes'])) {
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"  />
         <link rel="stylesheet" href="style.css" type="text/css" />
         <link rel="stylesheet" href="css/main-style.css">
-        <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" media="screen"
-              href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
     </head>
     <body>
         <div>
@@ -257,7 +254,8 @@ if (!empty($_POST['yes'])) {
                             At the time of writing the following countries have also been deemed adequate for the purposes of the 8th principle Andorra, Argentina, Canada, Faroe Islands, Guernsey, Isle of Man, Israel, Jersey, New Zealand, Switzerland and Uruguay.
                             <br>
                             The Data Protection Officer has produced guidance on the transfer of data overseas and particular to the United States. This is available from the Data Protection webpages.
-                            <br></h4>
+                            <br>
+                        </h4>
                         <div class="form-group">
                             <div class="input-group">
                                 <textarea class="glyphicon glyphicon-lock" style="text-align: justify" name="body" id="body" rows="10" cols="60" placeholder="If you intend to transfer data to a country not mentioned above, please supply details of adequate safeguards below:
@@ -272,124 +270,36 @@ if (!empty($_POST['yes'])) {
                             <h4>Have you informed your department's Data Protection Coordinator about your project?<input type="radio" name="yes" value="1"><b>YES</b>
                                 <input type="radio" name="yes" value="0"><b>NO</b> </h4>
                         </div>
-                      
-                        <div class="form-group">
-                            <div class="col-xs-6 col-xs-offset-3">
-                                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#termsModal">Agree with the terms and conditions</button>
-                                <input type="hidden" name="agree" value="no" />
-                            </div>
-                        </div>
-                        <!-- Terms and conditions modal -->
+                        <div>
 
-                    </div>
-            </div>
-            <div class="form-group">
-                <hr />
-            </div>
-
-            <div class="form-group">
-                <button type="submit" class="btn btn-block btn-primary" name="btn-signup">Register</button>
-            </div>
-
-            <div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="Terms and conditions" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h3 class="modal-title">Terms and conditions</h3>
-                        </div>
-
-                        <div class="modal-body">
-                            <p><h2>Relevant ethics terms and conditions</h2>
-                            We expect that researchers will follow the guidance provided in the framework for research ethics which sets out what we consider best practice for social science research. At a minimum, we require that researchers and research organisations follow the RCUK grant terms and conditions as set out in the research funding guide. A research organisation takes responsibility for the management of the research project and the accountability of funds provided. Terms and conditions apply to the research organisation which by extension includes principal investigators, research teams, finance officers as well as administrators and any relevant individual acting on behalf of the research organisation in regards to an ESRC grant.</p>
-
-                            <p> The RCUK terms and conditions are mandatory and must be followed by all individuals and organisations involved in ESRC-funded research. The relevant conditions are:</p>
-                            <ul>
-                                <li>
-                                    Overall responsibility for ensuring that all ESRC-funded research is subject to appropriate ethics review and monitoring lies with the research organisation (RO). By submitting a proposal to ESRC, the RO accepts the proposal’s ethics information and confirms that it is prepared to administer any resulting grant on the basis specified in the proposal (and any additional conditions), and is committed to an appropriate and iterative ethics review process.   
-                                </li>
-                                <li>
-                                    Research organisations should have clear, transparent and effective procedures for ethics review and governance, and appropriate mechanisms for monitoring the operation of RECs and the decisions they take in relation to ESRC-funded research. 
-                                </li>
-                                <li>
-                                    The research organisation should also have in place a clear sanctions policy against an individual in instances where an allegation of misconduct is upheld, and must inform the ESRC of sanctions put in place in cases involving individuals who are receiving ESRC funding (see RCUK Policy and guidelines on governance of good research conduct (external website)).
-                                </li>
-                                <li>
-                                    Ethics review should be carried out before any work requiring ethics review is undertaken.
-                                </li>
-                                <li>
-                                    Interdisciplinary projects which include medical or health research should follow the Medical Research Council's guidance on the conduct of medical research (external website).
-                                </li>
-                                <li>
-                                    Research organisations should have appropriate processes and systems in place to ensure that all ESRC-funded research (including studentships) is conducted in line with the requirements of regulatory and professional bodies, the guidance provided by this Framework for Research Ethics, the ESRC Research Funding Guide, the ESRC Postgraduate Funding Guide, and the RCUK policy and guidelines on the governance of good research conduct (external website). 
-                                </li>
-                            </ul>
-                            <p>
-                                We reserve the right to undertake audits of organisational arrangements to ensure that they are operating to the expectations outlined in this framework. Records of REC procedures, minutes of meetings, lists of reviewed proposals and research organisation's monitoring reports should also be made available to ESRC on request.
-                            </p>
-                        </div>
-
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" id="agreeButton" data-dismiss="modal">Agree</button>
-                            <button type="button" class="btn btn-default" id="disagreeButton" data-dismiss="modal">Disagree</button>
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <hr />
-                </div>
+                    <div class="form-group">
+                        <hr />
+                    </div>
 
-                <div class="form-group">
-                    <a href="index.php">Sign in Here...</a>
-                </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-block btn-primary" name="btn-signup">Register</button>
+                    </div>
+
+                    <div class="form-group">
+                        <hr />
+                    </div>
+
+                    <div class="form-group">
+                        <a href="index.php">Sign in Here...</a>
+                    </div>
 
             </div>
 
         </form>
     </div>
 
-    <script>
-        $(document).ready(function () {
-            $('.container').formValidation({
-                framework: 'bootstrap',
-                icon: {
-                    valid: 'glyphicon glyphicon-ok',
-                    invalid: 'glyphicon glyphicon-remove',
-                    validating: 'glyphicon glyphicon-refresh'
-                },
-                fields: {
-                    agree: {
-                        // The plugin will ignore the hidden field
-                        // By setting excluded: false, the field will be validated as usual
-                        excluded: false,
-                        validators: {
-                            callback: {
-                                message: 'You must agree with the terms and conditions',
-                                callback: function (value, validator, $field) {
-                                    return value === 'yes';
-                                }
-                            }
-                        }
+</div>
+<div>
+    <?php include 'include/footer.php'; ?>
 
-                    }
-                }
-            });
-// Update the value of "agree" input when clicking the Agree/Disagree button
-            $('#agreeButton, #disagreeButton').on('click', function () {
-                var whichButton = $(this).attr('id');
-
-                $('.container')
-                        .find('[name="agree"]')
-                        .val(whichButton === 'agreeButton' ? 'yes' : 'no')
-                        .end()
-                        // Revalidate the field manually
-                        .formValidation('revalidateField', 'agree');
-            });
-        });
-    </script>
-    <div>
-        <?php include 'include/footer.php'; ?>
-
-    </div>
+</div>
 </body>
 </html>
 <?php ob_end_flush(); ?>
