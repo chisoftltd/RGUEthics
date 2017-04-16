@@ -350,11 +350,6 @@ if (!empty($_POST['yes'])) {
                     <div class="form-group">
                         <hr />
                     </div>
-
-                    <div class="form-group">
-                        <a href="index.php">Sign in Here...</a>
-                    </div>
-
             </div>
 
         </form>
