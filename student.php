@@ -362,6 +362,10 @@ if (!empty($_POST['yes'])) {
     <?php include 'include/footer.php'; ?>
 
 </div>
+<script src="//code.jquery.com/jquery-2.1.3.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/vendor/formvalidation/js/formValidation.min.js"></script>
+<script src="/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
 
 <script>
     $(document).ready(function () {
