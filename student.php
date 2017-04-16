@@ -29,10 +29,10 @@ $error = false;
             <div id="login-form">
                 <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
 
-                    <div class="col-md-12">
+                    <div class="col-md-13">
 
                         <div class="form-group">
-                            <h2 class="">Register Your Project.</h2>
+                            <h3 class="">Register Your Project.</h3>
                         </div>
 
                         <div class="form-group">
@@ -165,18 +165,18 @@ $error = false;
                                 </ul>
                             </div>
                         </div> 
-                        <h2>
+                        <h3>
                             <strong>Details of the Project</strong>
-                        </h2>
+                        </h3>
                         <div class="form-group">
                             <div class="input-group">
                                 <textarea class="glyphicon glyphicon-lock" name="body" id="body" rows="20" cols="60" placeholder="Provide a brief outline of the aims and objectives of the proposed research project." maxlength="60"></textarea>
                             </div>
                         </div> 
 
-                        <h2>
+                        <h3>
                             <strong>Details of Participants</strong>
-                        </h2>
+                        </h3>
 
                         <div class="form-group">
                             <div class="input-group">
@@ -184,9 +184,9 @@ $error = false;
                             </div>
                         </div>
 
-                        <h2>
+                        <h3>
                             <strong>Details of the Data being Processed</strong>
-                        </h2>
+                        </h3>
 
                         <div class="form-group">
                             <div class="input-group">
@@ -194,9 +194,9 @@ $error = false;
                             </div>
                         </div>
 
-                        <h2>
+                        <h3>
                             <strong>Sharing (Disclosure)</strong>
-                        </h2>
+                        </h3>
 
                         <div class="form-group">
                             <div class="input-group">
@@ -204,9 +204,9 @@ $error = false;
                             </div>
                         </div>
 
-                        <h2>
+                        <h3>
                             <strong>Consent</strong>
-                        </h2>
+                        </h3>
 
                         <div class="form-group">
                             <div class="input-group">
@@ -217,9 +217,9 @@ $error = false;
                             </div>
                         </div>
 
-                        <h2>
+                        <h3>
                             <strong>Data Storage</strong>
-                        </h2>
+                        </h3>
 
 
                         <div class="form-group">
@@ -228,9 +228,9 @@ $error = false;
                             </div>
                         </div>
 
-                        <h2>
+                        <h3>
                             <strong>International Transfer</strong>
-                        </h2>
+                        </h3>
                         <div class="form-group">
                             <div class="input-group">
                                 <textarea class="glyphicon glyphicon-lock" name="body" id="body" rows="10" cols="60" placeholder="
@@ -254,11 +254,11 @@ $error = false;
                             </div>
                         </div>
                         <div>
-                            <h2>
+                            <h3>
                                 <strong>Notification</strong>
-                            </h2>
-                            <h3 style="font-style: italic">(Please note that notification is a prerequisite for registration)</h3>
-                            <h3>Have you informed your department's Data Protection Coordinator about your project? </h3>
+                            </h3>
+                            <h4 style="font-style: italic">(Please note that notification is a prerequisite for registration)</h4>
+                            <h4>Have you informed your department's Data Protection Coordinator about your project? </h4>
                             <input type="radio" name="yes" value="1"><b>YES</b>
                             <input type="radio" name="yes" value="0"><b>NO</b>
                         </div>
