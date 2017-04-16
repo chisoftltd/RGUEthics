@@ -272,32 +272,7 @@ if (!empty($_POST['yes'])) {
                             <h4>Have you informed your department's Data Protection Coordinator about your project?<input type="radio" name="yes" value="1"><b>YES</b>
                                 <input type="radio" name="yes" value="0"><b>NO</b> </h4>
                         </div>
-                        <div>
-                            <div id="datetimepicker" class="input-append date">
-                                <input type="text"></input>
-                                <span class="add-on">
-                                    <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
-                                </span>
-                            </div>
-                            <script type="text/javascript"
-                                    src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js">
-                            </script> 
-                            <script type="text/javascript"
-                                    src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js">
-                            </script>
-                            <script type="text/javascript"
-                                    src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
-                            </script>
-                            <script type="text/javascript"
-                                    src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
-                            </script>
-                            <script type="text/javascript">
-                                $('#datetimepicker').datetimepicker({
-                                    format: 'dd/MM/yyyy hh:mm:ss',
-                                    language: 'pt-BR'
-                                });
-                            </script>
-                        </div>
+                      
                         <div class="form-group">
                             <div class="col-xs-6 col-xs-offset-3">
                                 <button type="button" class="btn btn-default" data-toggle="modal" data-target="#termsModal">Agree with the terms and conditions</button>
