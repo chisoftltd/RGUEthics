@@ -197,7 +197,7 @@ $error = false;
                                           " maxlength="60"></textarea>
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <div class="input-group">
                                 <h1>
@@ -206,7 +206,46 @@ $error = false;
                                 <textarea class="glyphicon glyphicon-lock" name="body" id="body" rows="20" cols="60" placeholder="Please describe the arrangements you will make for the security of the data, including how and where it will be stored. i.e. UCL network, *encrypted USB stick, *encrypted laptop etc." maxlength="60"></textarea>
                             </div>
                         </div>
-                        
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <h1>
+                                    <strong>International Transfer</strong>
+                                </h1>
+                                <textarea class="glyphicon glyphicon-lock" name="body" id="body" rows="10" cols="60" placeholder="
+                                          Will identifiable data be transferred outside the UK as part of this study? YES / NO
+                                          <br>
+                                          The eighth principle of the Data Protection Act 1998 prohibits the transfer of personal data to countries or territories outside the European Economic Area (which consists of the 27 EU member states, Iceland, Liechtenstein and Norway).
+                                          <br>
+                                          At the time of writing the following countries have also been deemed adequate for the purposes of the 8th principle Andorra, Argentina, Canada, Faroe Islands, Guernsey, Isle of Man, Israel, Jersey, New Zealand, Switzerland and Uruguay.
+                                          <br>
+                                          The Data Protection Officer has produced guidance on the transfer of data overseas and particular to the United States. This is available from the Data Protection webpages.
+                                          <br>
+                                          If you intend to transfer data to a country not mentioned above, please supply details of adequate safeguards below:
+                                          " maxlength="60"></textarea>
+                                <textarea class="glyphicon glyphicon-lock" name="body" id="body" rows="5" cols="60" maxlength="60"></textarea>
+                                <textarea class="glyphicon glyphicon-lock" name="body" id="body" rows="10" cols="60" placeholder="Use of cloud computing, or the transfer of personal data to other orgainsations providing a specific service e.g. transcriptions services.
+                                          <br>
+                                          If you are intending to use, or are considering using a cloud service (defined as access to computing resources, on demand, via network), or plan on using a third party orgainsation to deliver a service that will involve the transfer of personal data, you should ensure that there is an agreement in place which provides adequate levels of protection so that UCL can meets its obligations and protects the rights of the participants involved. 
+                                          <br>
+                                          " maxlength="60"></textarea>
+                                <textarea class="glyphicon glyphicon-lock" name="body" id="body" rows="5" cols="60" maxlength="60"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <h1>
+                                    <strong>Notification</strong>
+                                </h1>
+                                <h2 style="font-style: italic">(Please note that notification is a prerequisite for registration)</h2>
+                                <div><h2>Have you informed your department's Data Protection Coordinator about your project? </h2>
+                                    <input type="radio" name="yes" value="1"><b>YES</b>
+                                    <input type="radio" name="yes" value="0"><b>NO</b>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="form-group">
                         <hr />

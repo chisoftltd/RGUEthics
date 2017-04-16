@@ -65,7 +65,7 @@ if (isset($_POST['btn-login'])) {
     </head>
     <body>
         <div>
-<?php include 'include/header.php'; ?>
+            <?php include 'include/header.php'; ?>
         </div>
         <div class="container">
 
@@ -82,17 +82,17 @@ if (isset($_POST['btn-login'])) {
                             <hr />
                         </div>
 
-<?php
-if (isset($errMSG)) {
-    ?>
+                        <?php
+                        if (isset($errMSG)) {
+                            ?>
                             <div class="form-group">
                                 <div class="alert alert-danger">
                                     <span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG; ?>
                                 </div>
                             </div>
-    <?php
-}
-?>
+                            <?php
+                        }
+                        ?>
 
                         <div class="form-group">
                             <div class="input-group">
@@ -133,7 +133,7 @@ if (isset($errMSG)) {
 
         </div>
         <div>
-<?php include 'include/footer.php'; ?>
+            <?php include 'include/footer.php'; ?>
 
         </div>
     </body>
