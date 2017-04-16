@@ -191,9 +191,6 @@ $error = false;
 
                         <div class="form-group">
                             <div class="input-group">
-                                <h2>
-                                    <strong>Consent</strong>
-                                </h2>
                                 <textarea class="glyphicon glyphicon-lock" name="body" id="body" rows="20" cols="60" placeholder="Consent requirements for research projects can vary widely. Whether you are intending to use a consent form, information sheet, or verbally, it is recommended to assure compliance with the Data Protection Act and with ethical requirements.
                                           <br>
                                           Please include the information sheet and consent forms you will be using for this project, and or protocol. If you are not including an information sheet and consent form, please explain how the consent will be recorded?
@@ -211,9 +208,6 @@ $error = false;
 
                         <div class="form-group">
                             <div class="input-group">
-                                <h2>
-                                    <strong>Data Storage</strong>
-                                </h2>
                                 <textarea class="glyphicon glyphicon-lock" name="body" id="body" rows="20" cols="60" placeholder="Please describe the arrangements you will make for the security of the data, including how and where it will be stored. i.e. UCL network, *encrypted USB stick, *encrypted laptop etc." maxlength="60"></textarea>
                             </div>
                         </div>
