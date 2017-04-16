@@ -375,31 +375,30 @@ if (!empty($_POST['yes'])) {
     <script>
         $(document).ready(function () {
             $('.container').formValidation({
-                framework: 'bootstrap',
-                icon: {
+            framework: 'bootstrap',
+                    icon: {
                     valid: 'glyphicon glyphicon-ok',
-                    invalid: 'glyphicon glyphicon-remove',
-                    validating: 'glyphicon glyphicon-refresh'
-                },
-                fields: {
+                            invalid: 'glyphicon glyphicon-remove',
+                            validating: 'glyphicon glyphicon-refresh'
+                    },
+                    fields: {
                     agree: {
-                        // The plugin will ignore the hidden field
-                        // By setting excluded: false, the field will be validated as usual
-                        excluded: false,
-                        validators: {
+                    // The plugin will ignore the hidden field
+                    // By setting excluded: false, the field will be validated as usual
+                    excluded: false,
+                            validators: {
                             callback: {
-                                message: 'You must agree with the terms and conditions',
-                                callback: function (value, validator, $field) {
-                                    return value === 'yes';
-                                }
+                            message: 'You must agree with the terms and conditions',
+                                    callback: function (value, validator, $field) {
+                                        return value === 'yes';
+                                    }
                             }
-                        }
-                    }
-                }
-            });
+                            }
 
+                    }
+                    });
 // Update the value of "agree" input when clicking the Agree/Disagree button
-            $('#agreeButton, #disagreeButton').on('click', function () {
+                    $('#agreeButton, #disagreeButton').on('click', function () {
                 var whichButton = $(this).attr('id');
 
                 $('.container')
