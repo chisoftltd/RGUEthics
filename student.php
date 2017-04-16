@@ -200,18 +200,26 @@ $error = false;
 
                         <div class="form-group">
                             <div class="input-group">
-                                <h1>
+                                <h2>
                                     <strong>Data Storage</strong>
-                                </h1>
+                                </h2>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="input-group">
+                                <h2>
+                                    <strong>Data Storage</strong>
+                                </h2>
                                 <textarea class="glyphicon glyphicon-lock" name="body" id="body" rows="20" cols="60" placeholder="Please describe the arrangements you will make for the security of the data, including how and where it will be stored. i.e. UCL network, *encrypted USB stick, *encrypted laptop etc." maxlength="60"></textarea>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="input-group">
-                                <h1>
+                                <h2>
                                     <strong>International Transfer</strong>
-                                </h1>
+                                </h2>
                                 <textarea class="glyphicon glyphicon-lock" name="body" id="body" rows="10" cols="60" placeholder="
                                           Will identifiable data be transferred outside the UK as part of this study? YES / NO
                                           <br>
@@ -235,10 +243,10 @@ $error = false;
 
                         <div class="form-group">
                             <div class="input-group">
-                                <h1>
+                                <h2>
                                     <strong>Notification</strong>
-                                </h1>
-                                <h2 style="font-style: italic">(Please note that notification is a prerequisite for registration)</h2>
+                                </h2>
+                                <h3 style="font-style: italic">(Please note that notification is a prerequisite for registration)</h3>
                                 <div><h2>Have you informed your department's Data Protection Coordinator about your project? </h2>
                                     <input type="radio" name="yes" value="1"><b>YES</b>
                                     <input type="radio" name="yes" value="0"><b>NO</b>
