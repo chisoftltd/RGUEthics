@@ -166,7 +166,7 @@ $error = false;
                             </div>
                         </div> 
                         <h2>
-                            Details of the Project
+                            <strong>Details of the Project</strong>
                         </h2>
                         <div class="form-group">
                             <div class="input-group">
@@ -174,9 +174,9 @@ $error = false;
                             </div>
                         </div> 
 
-                        <h1>
+                        <h2>
                             <strong>Details of Participants</strong>
-                        </h1>
+                        </h2>
 
                         <div class="form-group">
                             <div class="input-group">
@@ -184,9 +184,9 @@ $error = false;
                             </div>
                         </div>
 
-                        <h1>
+                        <h2>
                             <strong>Details of the Data being Processed</strong>
-                        </h1>
+                        </h2>
 
                         <div class="form-group">
                             <div class="input-group">
@@ -194,9 +194,9 @@ $error = false;
                             </div>
                         </div>
 
-                        <h1>
+                        <h2>
                             <strong>Sharing (Disclosure)</strong>
-                        </h1>
+                        </h2>
 
                         <div class="form-group">
                             <div class="input-group">
