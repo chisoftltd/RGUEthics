@@ -270,14 +270,14 @@ if (!empty($_POST['yes'])) {
                             <h4>Have you informed your department's Data Protection Coordinator about your project?<input type="radio" name="yes" value="1"><b>YES</b>
                                 <input type="radio" name="yes" value="0"><b>NO</b> </h4>
                         </div>
-                        
+
                         <div class="form-group">
                             <div class="col-xs-6 col-xs-offset-3">
                                 <button type="button" class="btn btn-default" data-toggle="modal" data-target="#termsModal">Agree with the terms and conditions</button>
                                 <input type="hidden" name="agree" value="no" />
                             </div>
                         </div>
-                        
+
                     </div>
                     <div class="form-group">
                         <hr />
@@ -360,6 +360,39 @@ if (!empty($_POST['yes'])) {
     <?php include 'include/footer.php'; ?>
 
 </div>
-</body>
-</html>
+
+<script>
+    $(document).ready(function () {
+        $('#registrationForm').formValidation({
+            framework: 'bootstrap',
+            agree: {
+                // The plugin will ignore the hidden field
+                // By setting excluded: false, the field will be validated as usual
+                excluded: false,
+                validators: {
+                    callback: {
+                        message: 'You must agree with the terms and conditions',
+                        callback: function (value, validator, $field) {
+                            return value === 'yes';
+                        }
+                    }
+                }
+            }
+        });
+
+        // Update the value of "agree" input when clicking the Agree/Disagree button
+        $('#agreeButton, #disagreeButton').on('click', function () {
+            var whichButton = $(this).attr('id');
+
+            $('#registrationForm')
+                    .find('[name="agree"]')
+                    .val(whichButton === 'agreeButton' ? 'yes' : 'no')
+                    .end()
+                    // Revalidate the field manually
+                    .formValidation('revalidateField', 'agree');
+        });
+    });
+</script>
+< /body>
+< /html>
 <?php ob_end_flush(); ?>
