@@ -249,13 +249,13 @@ if (!empty($_POST['yes'])) {
                             <input type="radio" name="yes" value="1"><b>YES</b>
                             <input type="radio" name="yes" value="0"><b>NO</b>
                         </h4>
-                        <h4 style="font-style: italic"> The eighth principle of the Data Protection Act 1998 prohibits the transfer of personal data to countries or territories outside the European Economic Area (which consists of the 27 EU member states, Iceland, Liechtenstein and Norway).
+                        <h6 style="font-style: italic"> The eighth principle of the Data Protection Act 1998 prohibits the transfer of personal data to countries or territories outside the European Economic Area (which consists of the 27 EU member states, Iceland, Liechtenstein and Norway).
 
                             At the time of writing the following countries have also been deemed adequate for the purposes of the 8th principle Andorra, Argentina, Canada, Faroe Islands, Guernsey, Isle of Man, Israel, Jersey, New Zealand, Switzerland and Uruguay.
                             <br>
                             The Data Protection Officer has produced guidance on the transfer of data overseas and particular to the United States. This is available from the Data Protection webpages.
                             <br>
-                        </h4>
+                        </h6>
                         <div class="form-group">
                             <div class="input-group">
                                 <textarea class="glyphicon glyphicon-lock" style="text-align: justify" name="body" id="body" rows="10" cols="60" placeholder="If you intend to transfer data to a country not mentioned above, please supply details of adequate safeguards below:
