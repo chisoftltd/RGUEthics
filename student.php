@@ -132,18 +132,33 @@ $error = false;
                                         <ul>
                                             <li>
                                                 Research involving health sector organisations:
+                                                <input type="radio" name="yes" value="1"><b>YES</b>
+                                                <input type="radio" name="yes" value="0"><b>NO</b>
+
                                             </li>
                                             <li>
-                                                Research involving children or other vulnerable groups
+                                                Research involving children or other vulnerable groups:
+                                                <input type="radio" name="yes" value="1"><b>YES</b>
+                                                <input type="radio" name="yes" value="0"><b>NO</b>
+
                                             </li>
                                             <li>
-                                                Research involving sensitive topics
+                                                Research involving sensitive topics:
+                                                <input type="radio" name="yes" value="1"><b>YES</b>
+                                                <input type="radio" name="yes" value="0"><b>NO</b>
+
                                             </li>
                                             <li>
-                                                Research involving aerospace/defence organisations
+                                                Research involving aerospace/defence organisations:
+                                                <input type="radio" name="yes" value="1"><b>YES</b>
+                                                <input type="radio" name="yes" value="0"><b>NO</b>
+
                                             </li>
                                             <li>
-                                                Research involving nuclear production organisations
+                                                Research involving nuclear production organisations:
+                                                <input type="radio" name="yes" value="1"><b>YES</b>
+                                                <input type="radio" name="yes" value="0"><b>NO</b>
+
                                             </li>
                                         </ul>
                                     </li>
@@ -158,29 +173,32 @@ $error = false;
                             </div>
                         </div> 
 
+                        <h1>
+                            <strong>Details of Participants</strong>
+                        </h1>
+
                         <div class="form-group">
                             <div class="input-group">
-                                <h1>
-                                    <strong>Details of Participants</strong>
-                                </h1>
                                 <textarea class="glyphicon glyphicon-lock" name="body" id="body" rows="20" cols="60" placeholder="Please provide details of the potential participants for this project, including how they will be selected and recruited." maxlength="60"></textarea>
                             </div>
                         </div>
 
+                        <h1>
+                            <strong>Details of the Data being Processed</strong>
+                        </h1>
+
                         <div class="form-group">
                             <div class="input-group">
-                                <h1>
-                                    <strong>Details of the Data being Processed</strong>
-                                </h1>
                                 <textarea class="glyphicon glyphicon-lock" name="body" id="body" rows="20" cols="60" placeholder="Please describe the details of the personal data that is being collected, including the methods of data collection and analysis." maxlength="60"></textarea>
                             </div>
                         </div>
 
+                        <h1>
+                            <strong>Sharing (Disclosure)</strong>
+                        </h1>
+
                         <div class="form-group">
                             <div class="input-group">
-                                <h1>
-                                    <strong>Sharing (Disclosure)</strong>
-                                </h1>
                                 <textarea class="glyphicon glyphicon-lock" name="body" id="body" rows="20" cols="60" placeholder="Please describe how the outcomes of the research will be disseminated (for example provide an explanation as to where, and how, will the results be published, or other mechanisms you will be using to share the potential participants personal data)." maxlength="60"></textarea>
                             </div>
                         </div>
@@ -198,13 +216,10 @@ $error = false;
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <div class="input-group">
-                                <h2>
-                                    <strong>Data Storage</strong>
-                                </h2>
-                            </div>
-                        </div>
+                        <h2>
+                            <strong>Data Storage</strong>
+                        </h2>
+
 
                         <div class="form-group">
                             <div class="input-group">
@@ -212,11 +227,11 @@ $error = false;
                             </div>
                         </div>
 
+                        <h2>
+                            <strong>International Transfer</strong>
+                        </h2>
                         <div class="form-group">
                             <div class="input-group">
-                                <h2>
-                                    <strong>International Transfer</strong>
-                                </h2>
                                 <textarea class="glyphicon glyphicon-lock" name="body" id="body" rows="10" cols="60" placeholder="
                                           Will identifiable data be transferred outside the UK as part of this study? YES / NO
                                           <br>
@@ -238,11 +253,11 @@ $error = false;
                             </div>
                         </div>
 
+                        <h2>
+                            <strong>Notification</strong>
+                        </h2>
                         <div class="form-group">
                             <div class="input-group">
-                                <h2>
-                                    <strong>Notification</strong>
-                                </h2>
                                 <h3 style="font-style: italic">(Please note that notification is a prerequisite for registration)</h3>
                                 <div><h2>Have you informed your department's Data Protection Coordinator about your project? </h2>
                                     <input type="radio" name="yes" value="1"><b>YES</b>
