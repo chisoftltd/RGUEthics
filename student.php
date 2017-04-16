@@ -25,9 +25,16 @@ if (!empty($_POST['yes'])) {
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"  />
         <link rel="stylesheet" href="style.css" type="text/css" />
         <link rel="stylesheet" href="css/main-style.css">
-        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="/vendor/formvalidation/css/formValidation.min.css">
-    </head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+        <script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+        <script src="http://formvalidation.io/vendor/jquery.steps/js/jquery.steps.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css" rel="stylesheet"/>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="http://formvalidation.io/vendor/jquery.steps/css/jquery.steps.css" rel="stylesheet"/>
+        <link href="http://formvalidation.io/vendor/formvalidation/css/formValidation.min.css" rel="stylesheet"/>
+
     <body>
         <div>
             <?php include 'include/header.php'; ?>
@@ -362,10 +369,6 @@ if (!empty($_POST['yes'])) {
     <?php include 'include/footer.php'; ?>
 
 </div>
-<script src="//code.jquery.com/jquery-2.1.3.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="/vendor/formvalidation/js/formValidation.min.js"></script>
-<script src="/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
 
 <script>
     $(document).ready(function () {
