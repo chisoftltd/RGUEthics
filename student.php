@@ -11,6 +11,90 @@ if (isset($_SESSION['user']) != "") {
 
 $error = false;
 
+if (isset($_POST['btn-register'])) {
+
+    // prevent sql injections/ clear user invalid inputs
+    //First name
+    $firstName = trim($_POST['firstName']);
+    $firstName = strip_tags($firstName);
+    $firstName = htmlspecialchars($firstName);
+    
+    //Last Name
+    $lastName = trim($_POST['lastName']);
+    $lastName = strip_tags($lastName);
+    $lastName = htmlspecialchars($lastName);
+    
+    //Number
+    $number = trim($_POST['number']);
+    $number = strip_tags($number);
+    $number = htmlspecialchars($number);
+    
+    //Program
+    $program = trim($_POST['program']);
+    $program = strip_tags($program);
+    $program = htmlspecialchars($program);
+    
+    //Email
+    $email = trim($_POST['email']);
+    $email = strip_tags($email);
+    $email = htmlspecialchars($email);
+    
+    //Password
+    $pass = trim($_POST['pass']);
+    $pass = strip_tags($pass);
+    $pass = htmlspecialchars($pass);
+    // prevent sql injections / clear user invalid inputs
+
+     if (empty($firstName)) {
+        $error = true;
+        $firstNameError = "Please enter your First Name.";
+    }
+    
+     if (empty($lastName)) {
+        $error = true;
+        $lastNameError = "Please enter your Last Name.";
+    }
+    
+    if (empty($number)) {
+        $error = true;
+        $numberError = "Please enter your Student Number.";
+    }
+    
+    if (empty($program)) {
+        $error = true;
+        $programError = "Please enter your degree programme (eg, BABS; MAHRM, LLB/LLM).";
+    }
+    
+    if (empty($email)) {
+        $error = true;
+        $emailError = "Please enter your email address.";
+    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $error = true;
+        $emailError = "Please enter valid email address.";
+    }
+
+    if (empty($pass)) {
+        $error = true;
+        $passError = "Please enter your password.";
+    }
+
+    // if there's no error, continue to login
+    if (!$error) {
+
+        $password = hash('sha256', $pass); // password hashing using SHA256
+
+        $res = mysql_query("SELECT userId, userName, userPass FROM users WHERE userEmail='$email'");
+        $row = mysql_fetch_array($res);
+        $count = mysql_num_rows($res); // if uname/pass correct it returns must be 1 row
+
+        if ($count == 1 && $row['userPass'] == $password) {
+            $_SESSION['user'] = $row['userId'];
+            header("Location: login.php");
+        } else {
+            $errMSG = "Incorrect Credentials, Try again...";
+        }
+    }
+
 if (!empty($_POST['yes'])) {
     // Yes
 } else {
@@ -257,11 +341,6 @@ if (!empty($_POST['yes'])) {
                             <input type="radio" name="yes" value="1"><b>YES</b>
                             <input type="radio" name="yes" value="0"><b>NO</b>
                         </p>
-                        <h4>
-                            Will identifiable data be transferred outside the UK as part of this study?
-                            <input type="radio" name="yes" value="1"><b>YES</b>
-                            <input type="radio" name="yes" value="0"><b>NO</b>
-                        </h4>
                         <p style="font-style: italic"> The eighth principle of the Data Protection Act 1998 prohibits the transfer of personal data to countries or territories outside the European Economic Area (which consists of the 27 EU member states, Iceland, Liechtenstein and Norway).
 
                             At the time of writing the following countries have also been deemed adequate for the purposes of the 8th principle Andorra, Argentina, Canada, Faroe Islands, Guernsey, Isle of Man, Israel, Jersey, New Zealand, Switzerland and Uruguay.
@@ -297,7 +376,7 @@ if (!empty($_POST['yes'])) {
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" class="btn btn-block btn-primary" name="btn-signup">Register</button>
+                        <button type="submit" class="btn btn-block btn-primary" name="btn-register">Register</button>
                     </div>
 
                     <!-- Terms and conditions modal -->
