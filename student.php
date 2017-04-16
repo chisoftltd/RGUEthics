@@ -146,38 +146,34 @@ if (!empty($_POST['yes'])) {
                                 </p>
                                 <ul>
                                     <li>
-                                        <ul>
-                                            <li>
-                                                Research involving health sector organisations:
-                                                <input type="radio" name="yes" value="1"><b>YES</b>
-                                                <input type="radio" name="yes" value="0"><b>NO</b>
+                                        Research involving health sector organisations:
+                                        <input type="radio" name="yes" value="1"><b>YES</b>
+                                        <input type="radio" name="yes" value="0"><b>NO</b>
 
-                                            </li>
-                                            <li>
-                                                Research involving children or other vulnerable groups:
-                                                <input type="radio" name="yes" value="1"><b>YES</b>
-                                                <input type="radio" name="yes" value="0"><b>NO</b>
+                                    </li>
+                                    <li>
+                                        Research involving children or other vulnerable groups:
+                                        <input type="radio" name="yes" value="1"><b>YES</b>
+                                        <input type="radio" name="yes" value="0"><b>NO</b>
 
-                                            </li>
-                                            <li>
-                                                Research involving sensitive topics:
-                                                <input type="radio" name="yes" value="1"><b>YES</b>
-                                                <input type="radio" name="yes" value="0"><b>NO</b>
+                                    </li>
+                                    <li>
+                                        Research involving sensitive topics:
+                                        <input type="radio" name="yes" value="1"><b>YES</b>
+                                        <input type="radio" name="yes" value="0"><b>NO</b>
 
-                                            </li>
-                                            <li>
-                                                Research involving aerospace/defence organisations:
-                                                <input type="radio" name="yes" value="1"><b>YES</b>
-                                                <input type="radio" name="yes" value="0"><b>NO</b>
+                                    </li>
+                                    <li>
+                                        Research involving aerospace/defence organisations:
+                                        <input type="radio" name="yes" value="1"><b>YES</b>
+                                        <input type="radio" name="yes" value="0"><b>NO</b>
 
-                                            </li>
-                                            <li>
-                                                Research involving nuclear production organisations:
-                                                <input type="radio" name="yes" value="1"><b>YES</b>
-                                                <input type="radio" name="yes" value="0"><b>NO</b>
+                                    </li>
+                                    <li>
+                                        Research involving nuclear production organisations:
+                                        <input type="radio" name="yes" value="1"><b>YES</b>
+                                        <input type="radio" name="yes" value="0"><b>NO</b>
 
-                                            </li>
-                                        </ul>
                                     </li>
                                 </ul>
                             </div>
