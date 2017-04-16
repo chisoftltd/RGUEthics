@@ -282,6 +282,61 @@ if (!empty($_POST['yes'])) {
                         <button type="submit" class="btn btn-block btn-primary" name="btn-signup">Register</button>
                     </div>
 
+                    <!-- Terms and conditions modal -->
+                    <div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="Terms and conditions" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title">Terms and conditions</h3>
+                                </div>
+
+                                <div class="modal-body">
+
+                                    <h2>
+                                        Relevant ethics terms and conditions
+                                    </h2>
+                                    <p>
+                                        We expect that researchers will follow the guidance provided in the framework for research ethics which sets out what we consider best practice for social science research. At a minimum, we require that researchers and research organisations follow the RCUK grant terms and conditions as set out in the research funding guide. A research organisation takes responsibility for the management of the research project and the accountability of funds provided. Terms and conditions apply to the research organisation which by extension includes principal investigators, research teams, finance officers as well as administrators and any relevant individual acting on behalf of the research organisation in regards to an ESRC grant.
+                                    </p>
+                                    <p> 
+                                        The RCUK terms and conditions are mandatory and must be followed by all individuals and organisations involved in ESRC-funded research. The relevant conditions are:
+                                    </p>
+                                    <div>
+                                        <ul>
+                                            <li>
+                                                Overall responsibility for ensuring that all ESRC-funded research is subject to appropriate ethics review and monitoring lies with the research organisation (RO). By submitting a proposal to ESRC, the RO accepts the proposal’s ethics information and confirms that it is prepared to administer any resulting grant on the basis specified in the proposal (and any additional conditions), and is committed to an appropriate and iterative ethics review process.   
+                                            </li>
+                                            <li>
+                                                Research organisations should have clear, transparent and effective procedures for ethics review and governance, and appropriate mechanisms for monitoring the operation of RECs and the decisions they take in relation to ESRC-funded research. 
+                                            </li>
+                                            <li>
+                                                The research organisation should also have in place a clear sanctions policy against an individual in instances where an allegation of misconduct is upheld, and must inform the ESRC of sanctions put in place in cases involving individuals who are receiving ESRC funding (see RCUK Policy and guidelines on governance of good research conduct (external website)).
+                                            </li>
+                                            <li>
+                                                Ethics review should be carried out before any work requiring ethics review is undertaken.
+                                            </li>
+                                            <li>
+                                                Interdisciplinary projects which include medical or health research should follow the Medical Research Council's guidance on the conduct of medical research (external website).
+                                            </li>
+                                            <li>
+                                                Research organisations should have appropriate processes and systems in place to ensure that all ESRC-funded research (including studentships) is conducted in line with the requirements of regulatory and professional bodies, the guidance provided by this Framework for Research Ethics, the ESRC Research Funding Guide, the ESRC Postgraduate Funding Guide, and the RCUK policy and guidelines on the governance of good research conduct (external website). 
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p>
+                                        We reserve the right to undertake audits of organisational arrangements to ensure that they are operating to the expectations outlined in this framework. Records of REC procedures, minutes of meetings, lists of reviewed proposals and research organisation's monitoring reports should also be made available to ESRC on request.
+                                    </p>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" id="agreeButton" data-dismiss="modal">Agree</button>
+                                    <button type="button" class="btn btn-default" id="disagreeButton" data-dismiss="modal">Disagree</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <div class="form-group">
                         <hr />
                     </div>
