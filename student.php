@@ -133,7 +133,7 @@ if (!empty($_POST['yes'])) {
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                                <input type="text" name="startDate" class="form-control" placeholder="Proposed project start date" maxlength="15" />
+                                <input type="date" name="startDate" class="form-control" placeholder="Proposed project start date" maxlength="15" />
                             </div>
                             <span class="text-danger"><?php echo $passError; ?></span>
                         </div> 
@@ -142,7 +142,7 @@ if (!empty($_POST['yes'])) {
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                                <input type="text" name="endDate" class="form-control" placeholder="Proposed project end date" maxlength="15" />
+                                <input type="date" name="endDate" class="form-control" placeholder="Proposed project end date" maxlength="15" />
                             </div>
                             <span class="text-danger"><?php echo $passError; ?></span>
                         </div> 
