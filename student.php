@@ -135,6 +135,7 @@ if (!empty($_POST['yes'])) {
                                 <ul>
                                     <li>
                                         <p>Does the research project involve any of the following risk factors:</p>
+                                        <br>
                                         <ul>
                                             <li>
                                                 Research involving health sector organisations:
