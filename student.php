@@ -10,6 +10,12 @@ if (isset($_SESSION['user']) != "") {
 }
 
 $error = false;
+
+if (!empty($_POST['yes'])) {
+  // Yes
+} else {
+  // No
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -128,7 +134,7 @@ $error = false;
                             <div class="input-group">
                                 <ul>
                                     <li>
-                                        <strong>Does the research project involve any of the following risk factors:</strong>
+                                        Does the research project involve any of the following risk factors:
                                         <ul>
                                             <li>
                                                 Research involving health sector organisations:
@@ -166,7 +172,7 @@ $error = false;
                             </div>
                         </div> 
                         <h3>
-                            <strong>Details of the Project</strong>
+                            Details of the Project
                         </h3>
                         <div class="form-group">
                             <div class="input-group">
@@ -175,7 +181,7 @@ $error = false;
                         </div> 
 
                         <h3>
-                            <strong>Details of Participants</strong>
+                            Details of Participants
                         </h3>
 
                         <div class="form-group">
@@ -185,7 +191,7 @@ $error = false;
                         </div>
 
                         <h3>
-                            <strong>Details of the Data being Processed</strong>
+                            Details of the Data being Processed
                         </h3>
 
                         <div class="form-group">
@@ -195,7 +201,7 @@ $error = false;
                         </div>
 
                         <h3>
-                            <strong>Sharing (Disclosure)</strong>
+                            Sharing (Disclosure)
                         </h3>
 
                         <div class="form-group">
@@ -205,7 +211,7 @@ $error = false;
                         </div>
 
                         <h3>
-                            <strong>Consent</strong>
+                            Consent
                         </h3>
 
                         <div class="form-group">
@@ -218,7 +224,7 @@ $error = false;
                         </div>
 
                         <h3>
-                            <strong>Data Storage</strong>
+                            Data Storage
                         </h3>
 
 
@@ -229,7 +235,7 @@ $error = false;
                         </div>
 
                         <h3>
-                            <strong>International Transfer</strong>
+                            International Transfer
                         </h3>
                         <div class="form-group">
                             <div class="input-group">
@@ -255,7 +261,7 @@ $error = false;
                         </div>
                         <div>
                             <h3>
-                                <strong>Notification</strong>
+                                Notification
                             </h3>
                             <h4 style="font-style: italic">(Please note that notification is a prerequisite for registration)</h4>
                             <h4>Have you informed your department's Data Protection Coordinator about your project? </h4>
