@@ -144,7 +144,7 @@ if (!empty($_POST['yes'])) {
                                 <p>
                                     <strong>Does the research project involve any of the following risk factors:</strong>
                                 </p>
-                                <ul>
+                                <ul style="padding-left: 10px">
                                     <li>
                                         Research involving health sector organisations:
                                         <input type="radio" name="yes" value="1"><b>YES</b>
