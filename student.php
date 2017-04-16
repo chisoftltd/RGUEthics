@@ -165,7 +165,9 @@ $error = false;
                                 </ul>
                             </div>
                         </div> 
-
+                        <h2>
+                            Details of the Project
+                        </h2>
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"> </span>
