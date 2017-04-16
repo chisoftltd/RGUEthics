@@ -257,7 +257,7 @@ $error = false;
                                 <strong>Notification</strong>
                             </h2>
                             <h3 style="font-style: italic">(Please note that notification is a prerequisite for registration)</h3>
-                            <h2>Have you informed your department's Data Protection Coordinator about your project? </h2>
+                            <h3>Have you informed your department's Data Protection Coordinator about your project? </h3>
                             <input type="radio" name="yes" value="1"><b>YES</b>
                             <input type="radio" name="yes" value="0"><b>NO</b>
                         </div>
