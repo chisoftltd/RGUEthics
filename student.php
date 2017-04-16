@@ -270,9 +270,14 @@ if (!empty($_POST['yes'])) {
                             <h4>Have you informed your department's Data Protection Coordinator about your project?<input type="radio" name="yes" value="1"><b>YES</b>
                                 <input type="radio" name="yes" value="0"><b>NO</b> </h4>
                         </div>
-                        <div>
-
+                        
+                        <div class="form-group">
+                            <div class="col-xs-6 col-xs-offset-3">
+                                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#termsModal">Agree with the terms and conditions</button>
+                                <input type="hidden" name="agree" value="no" />
+                            </div>
                         </div>
+                        
                     </div>
                     <div class="form-group">
                         <hr />
