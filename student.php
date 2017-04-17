@@ -97,21 +97,21 @@ if (isset($_POST['btn-register'])) {
     $datastorage = strip_tags($datastorage);
     $datastorage = htmlspecialchars($datastorage);
     
-    $consent = trim($_POST['consent']);
-    $consent = strip_tags($consent);
-    $consent = htmlspecialchars($consent);
+    $anonymity = trim($_POST['anonymity']);
+    $anonymity = strip_tags($anonymity);
+    $anonymity = htmlspecialchars($consent);
     
-    $consent = trim($_POST['consent']);
-    $consent = strip_tags($consent);
-    $consent = htmlspecialchars($consent);
+    $yes5 = trim($_POST['yes5']);
+    $yes5 = strip_tags($yes5);
+    $yes5 = htmlspecialchars($yes5);
     
-    $consent = trim($_POST['consent']);
-    $consent = strip_tags($consent);
-    $consent = htmlspecialchars($consent);
+    $noneu = trim($_POST['noneu']);
+    $noneu = strip_tags($noneu);
+    $noneu = htmlspecialchars($noneu);
     
-    $consent = trim($_POST['consent']);
-    $consent = strip_tags($consent);
-    $consent = htmlspecialchars($consent);
+    $yes6 = trim($_POST['yes6']);
+    $yes6 = strip_tags($yes6);
+    $yes6 = htmlspecialchars($yes6);
     
     $consent = trim($_POST['consent']);
     $consent = strip_tags($consent);
@@ -230,24 +230,24 @@ if (isset($_POST['btn-register'])) {
         $datastorageError = "Please state how you intend to store data.";
     }
 
-    if (empty($consent)) {
+    if (empty($anonymity)) {
         $error = true;
-        $consentError = "Please select if nuclear production organisations are invlove .";
+        $anonymityError = "Please select if nuclear production organisations are invlove .";
     }
 
-    if (empty($consent)) {
+    if (empty($yes5)) {
         $error = true;
-        $consentError = "Please select if nuclear production organisations are invlove .";
+        $yes5Error = "Please select if nuclear production organisations are invlove .";
     }
 
-    if (empty($consent)) {
+    if (empty($noneu)) {
         $error = true;
-        $consentError = "Please select if nuclear production organisations are invlove .";
+        $noneuError = "Please select if nuclear production organisations are invlove .";
     }
 
-    if (empty($consent)) {
+    if (empty($yes6)) {
         $error = true;
-        $consentError = "Please select if nuclear production organisations are invlove .";
+        $yes6Error = "Please select if nuclear production organisations are invlove .";
     }
 
     
@@ -523,8 +523,8 @@ if (isset($_POST['btn-register'])) {
                         </p>
                         <p>
                             Will identifiable data be transferred outside the UK as part of this study?
-                            <input type="radio" name="yes" value="1"><b>YES</b>
-                            <input type="radio" name="yes" value="0"><b>NO</b>
+                            <input type="radio" name="yes5" value="1"><b>YES</b>
+                            <input type="radio" name="ye5" value="0"><b>NO</b>
                         </p>
                         <p style="font-style: italic"> The eighth principle of the Data Protection Act 1998 prohibits the transfer of personal data to countries or territories outside the European Economic Area (which consists of the 27 EU member states, Iceland, Liechtenstein and Norway).
 
@@ -535,7 +535,7 @@ if (isset($_POST['btn-register'])) {
                         </p>
                         <div class="form-group">
                             <div class="input-group">
-                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="body" id="body" rows="10"  placeholder="If you intend to transfer data to a country not mentioned above, please supply details of adequate safeguards below:
+                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="noneu" id="body" rows="10"  placeholder="If you intend to transfer data to a country not mentioned above, please supply details of adequate safeguards below:
                                           " maxlength="60"></textarea>
                             </div>
                         </div>
@@ -544,8 +544,9 @@ if (isset($_POST['btn-register'])) {
                                 <strong>Notification:</strong>
                             </p> 
                             <p style="font-style: italic">(Please note that notification is a prerequisite for registration)</p>
-                            <p>Have you informed your department's Data Protection Coordinator about your project?<input type="radio" name="yes" value="1"><b>YES</b>
-                                <input type="radio" name="yes" value="0"><b>NO</b> </p>
+                            <p>Have you informed your department's Data Protection Coordinator about your project?
+                                <input type="radio" name="yes6" value="1"><b>YES</b>
+                                <input type="radio" name="yes6" value="0"><b>NO</b> </p>
                         </div>
 
                         <div class="form-group">
