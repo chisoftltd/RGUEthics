@@ -370,7 +370,7 @@ if (isset($_POST['btn-register'])) {
                         </p>
                         <div class="form-group">
                             <div class="input-group">
-                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="participants" id="body" rows="20" cols="60" placeholder="Please provide details of the potential participants for this project, including how they will be selected and recruited." maxlength="60"></textarea>
+                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="participants" id="body" rows="20"  placeholder="Please provide details of the potential participants for this project, including how they will be selected and recruited." maxlength="60"></textarea>
                             </div>
                         </div>
 
@@ -380,7 +380,7 @@ if (isset($_POST['btn-register'])) {
 
                         <div class="form-group">
                             <div class="input-group">
-                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="dataDetails" id="body" rows="20" cols="60" placeholder="Please describe the details of the personal data that is being collected, including the methods of data collection and analysis." maxlength="60"></textarea>
+                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="dataDetails" id="body" rows="20"  placeholder="Please describe the details of the personal data that is being collected, including the methods of data collection and analysis." maxlength="60"></textarea>
                             </div>
                         </div>
 
@@ -389,7 +389,7 @@ if (isset($_POST['btn-register'])) {
                         </p>
                         <div class="form-group">
                             <div class="input-group">
-                                <textarea class="glyphicon glyphicon-lock"style="text-align: left; min-width: 100%" name="sharing" id="body" rows="20" cols="60" placeholder="Please describe how the outcomes of the research will be disseminated (for example provide an explanation as to where, and how, will the results be published, or other mechanisms you will be using to share the potential participants personal data)." maxlength="60"></textarea>
+                                <textarea class="glyphicon glyphicon-lock"style="text-align: left; min-width: 100%" name="sharing" id="body" rows="20"  placeholder="Please describe how the outcomes of the research will be disseminated (for example provide an explanation as to where, and how, will the results be published, or other mechanisms you will be using to share the potential participants personal data)." maxlength="60"></textarea>
                             </div>
                         </div>
 
@@ -398,7 +398,7 @@ if (isset($_POST['btn-register'])) {
                         </p>
                         <div class="form-group">
                             <div class="input-group">
-                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="consent" id="body" rows="20" cols="60" placeholder="Consent requirements for research projects can vary widely. Whether you are intending to use a consent form, information sheet, or verbally, it is recommended to assure compliance with the Data Protection Act and with ethical requirements. Please include the information sheet and consent forms you will be using for this project, and or protocol. If you are not including an information sheet and consent form, please explain how the consent will be recorded?
+                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="consent" id="body" rows="20"  placeholder="Consent requirements for research projects can vary widely. Whether you are intending to use a consent form, information sheet, or verbally, it is recommended to assure compliance with the Data Protection Act and with ethical requirements. Please include the information sheet and consent forms you will be using for this project, and or protocol. If you are not including an information sheet and consent form, please explain how the consent will be recorded?
                                           " maxlength="60"></textarea>
                             </div>
                         </div>
@@ -408,7 +408,7 @@ if (isset($_POST['btn-register'])) {
                         </p>
                         <div class="form-group">
                             <div class="input-group">
-                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="datastorage" id="body" rows="20" cols="60" placeholder="Please describe the arrangements you will make for the security of the data, including how and where it will be stored. i.e. UCL network, *encrypted USB stick, *encrypted laptop etc. Describe how you will store your data, who will have access to it, and what happens to the data at the end of the project." maxlength="60"></textarea>
+                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="datastorage" id="body" rows="20"  placeholder="Please describe the arrangements you will make for the security of the data, including how and where it will be stored. i.e. UCL network, *encrypted USB stick, *encrypted laptop etc. Describe how you will store your data, who will have access to it, and what happens to the data at the end of the project." maxlength="60"></textarea>
                             </div>
                         </div>
 
@@ -417,7 +417,7 @@ if (isset($_POST['btn-register'])) {
                         </p>
                         <div class="form-group">
                             <div class="input-group">
-                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="anonymity" id="body" rows="20" cols="60" placeholder="Describe how you will maintain the confidentiality of the research data collected. Also, describe how you will ensure that research participants are anonymised in your data analysis." maxlength="60"></textarea>
+                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="anonymity" id="body" rows="20"  placeholder="Describe how you will maintain the confidentiality of the research data collected. Also, describe how you will ensure that research participants are anonymised in your data analysis." maxlength="60"></textarea>
                             </div>
                         </div>
                         <p>
@@ -437,7 +437,7 @@ if (isset($_POST['btn-register'])) {
                         </p>
                         <div class="form-group">
                             <div class="input-group">
-                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="body" id="body" rows="10" cols="60" placeholder="If you intend to transfer data to a country not mentioned above, please supply details of adequate safeguards below:
+                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="body" id="body" rows="10"  placeholder="If you intend to transfer data to a country not mentioned above, please supply details of adequate safeguards below:
                                           " maxlength="60"></textarea>
                             </div>
                         </div>
