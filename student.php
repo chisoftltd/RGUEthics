@@ -262,7 +262,7 @@ if (isset($_POST['btn-register'])) {
 
                         <div class="form-group">
                             <div class="input-group">
-                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></span>
                                 <input type="text" name="number" class="form-control" placeholder="Student Number" maxlength="15" />
                             </div>
                             <span class="text-danger"><?php echo $passError; ?></span>
@@ -270,7 +270,7 @@ if (isset($_POST['btn-register'])) {
 
                         <div class="form-group">
                             <div class="input-group">
-                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
                                 <input type="text" name="program" class="form-control" placeholder="Degree Programme (eg, BABS; MAHRM, LLB/LLM)" maxlength="15" />
                             </div>
                             <span class="text-danger"><?php echo $passError; ?></span>
@@ -278,7 +278,7 @@ if (isset($_POST['btn-register'])) {
 
                         <div class="form-group">
                             <div class="input-group">
-                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                <span class="input-group-lg"><span class="glyphicon glyphicon-lock"></span></span>
                                 <input type="text" name="status" class="form-control" placeholder="Research, Postgraduate or Undergraduate status" maxlength="15" />
                             </div>
                             <span class="text-danger"><?php echo $passError; ?></span>
