@@ -265,7 +265,6 @@ if (isset($_POST['btn-register'])) {
                             <label class="control-label col-sm-2" for="date">
                                 Date:
                             </label>
-                            <br>
                             <div class="col-sm-10">
                                 <input class="form-control" id="date" name="date" placeholder="Proposed project start date MM/DD/YYYY" type="text"/>
                             </div>
