@@ -263,7 +263,7 @@ if (isset($_POST['btn-register'])) {
 
                         <div class="form-group ">
                             <label class="control-label col-sm-2" for="date">
-                                Date
+                                Date:
                             </label>
                             <br>
                             <div class="col-sm-10">
