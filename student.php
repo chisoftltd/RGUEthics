@@ -34,6 +34,30 @@ if (isset($_POST['btn-register'])) {
     $program = strip_tags($program);
     $program = htmlspecialchars($program);
 
+///////////////    
+    $status = trim($_POST['status']);
+    $status = strip_tags($status);
+    $status = htmlspecialchars($status);
+
+    
+    $supervisor = trim($_POST['supervisor']);
+    $supervisor = strip_tags($supervisor);
+    $supervisor = htmlspecialchars($supervisor);
+
+    
+    $program = trim($_POST['program']);
+    $program = strip_tags($program);
+    $program = htmlspecialchars($program);
+
+    
+    $program = trim($_POST['program']);
+    $program = strip_tags($program);
+    $program = htmlspecialchars($program);
+    
+    $program = trim($_POST['program']);
+    $program = strip_tags($program);
+    $program = htmlspecialchars($program);
+
     //Email
     $email = trim($_POST['email']);
     $email = strip_tags($email);
@@ -65,6 +89,34 @@ if (isset($_POST['btn-register'])) {
         $programError = "Please enter your degree programme (eg, BABS; MAHRM, LLB/LLM).";
     }
 
+    
+    ///////////
+    if (empty($status)) {
+        $error = true;
+        $statusError = "Please enter your Status - Postgraduate or Undergraduate status.";
+    }
+
+    if (empty($supervisor)) {
+        $error = true;
+        $supervisorError = "Please enter your project supervisor name.";
+    }
+
+    if (empty($project)) {
+        $error = true;
+        $projectError = "Please enter your degree project.";
+    }
+
+    if (empty($program)) {
+        $error = true;
+        $programError = "Please enter your degree programme (eg, BABS; MAHRM, LLB/LLM).";
+    }
+
+    if (empty($program)) {
+        $error = true;
+        $programError = "Please enter your degree programme (eg, BABS; MAHRM, LLB/LLM).";
+    }
+
+    
     if (empty($email)) {
         $error = true;
         $emailError = "Please enter your email address.";
@@ -209,6 +261,16 @@ if (isset($_POST['btn-register'])) {
                             <span class="text-danger"><?php echo $passError; ?></span>
                         </div> 
 
+                        <div class="form-group ">
+                                <label class="control-label col-sm-2" for="date">
+                                    Date
+                                </label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
+                                </div>
+                            </div>
+
+                        
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
@@ -507,6 +569,21 @@ if (isset($_POST['btn-register'])) {
         });
     });
 </script>
+
+<script>
+            $(document).ready(function () {
+                var date_input = $('input[name="date"]'); //our date input has the name "date"
+                var container = $('.container form').length > 0 ? $('.container form').parent() : "body";
+                date_input.datepicker({
+                    format: 'mm/dd/yyyy',
+                    container: container,
+                    todayHighlight: true,
+                    autoclose: true,
+                })
+            })
+        </script>
+
+
 </body>
 </html>
 <?php ob_end_flush(); ?>
