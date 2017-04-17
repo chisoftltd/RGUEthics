@@ -278,7 +278,7 @@ if (isset($_POST['btn-register'])) {
 
                         <div class="form-group">
                             <div class="input-group">
-                                <span class="input-group-lg"><span class="glyphicon glyphicon-lock"></span></span>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
                                 <input type="text" name="status" class="form-control" placeholder="Research, Postgraduate or Undergraduate status" maxlength="15" />
                             </div>
                             <span class="text-danger"><?php echo $passError; ?></span>
@@ -320,7 +320,6 @@ if (isset($_POST['btn-register'])) {
 
                         <div class="form-group">
                             <div class="input-group">
-                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
                                 <p>
                                     <strong>Does the research project involve any of the following risk factors:</strong>
                                 </p>
@@ -363,8 +362,7 @@ if (isset($_POST['btn-register'])) {
                         </p>
                         <div class="form-group">
                             <div class="input-group">
-                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="projectDetails" id="body" rows="20" cols="60" placeholder="Provide a brief outline of the aims and objectives of the proposed research project." maxlength="60"></textarea>
+                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="projectDetails" id="body" rows="20" placeholder="Provide a brief outline of the aims and objectives of the proposed research project." maxlength="60"></textarea>
                             </div>
                         </div> 
                         <p>
