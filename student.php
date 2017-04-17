@@ -165,15 +165,15 @@ if (isset($_POST['btn-register'])) {
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet"/>
         <link href="http://formvalidation.io/vendor/jquery.steps/css/jquery.steps.css" rel="stylesheet"/>
         <link href="http://formvalidation.io/vendor/formvalidation/css/formValidation.min.css" rel="stylesheet"/>
-        <!--  jQuery -->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        
+        <!-- Include jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-        <!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
-        <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 
-        <!-- Bootstrap Date-Picker Plugin -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
 
     <body>
         <div>
@@ -270,13 +270,25 @@ if (isset($_POST['btn-register'])) {
                             <span class="text-danger"><?php echo $passError; ?></span>
                         </div> 
 
-                        <div class="form-group ">
-                            <label class="control-label col-sm-2" for="date">
-                                Date:
-                            </label>
-                            <div class="input-group">
-                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                                <input class="form-control" id="date" name="date" placeholder="Proposed project start date MM/DD/YYYY" type="text"/>
+                        <div class="bootstrap-iso">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+
+                                        <!-- Form code begins -->
+                                        <form method="post">
+                                            <div class="form-group"> <!-- Date input -->
+                                                <label class="control-label" for="date">Date</label>
+                                                <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+                                            </div>
+                                            <div class="form-group"> <!-- Submit button -->
+                                                <button class="btn btn-primary " name="submit" type="submit">Submit</button>
+                                            </div>
+                                        </form>
+                                        <!-- Form code ends --> 
+
+                                    </div>
+                                </div>    
                             </div>
                         </div>
 
@@ -581,18 +593,18 @@ if (isset($_POST['btn-register'])) {
 </script>
 
 <script>
-    $(document).ready(function () {
-        var date_input = $('input[name="date"]'); //our date input has the name "date"
-        var container = $('.container form').length > 0 ? $('.container form').parent() : "body";
+    $(document).ready(function(){
+        var date_input=$('input[name="date"]'); //our date input has the name "date"
+        var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
         date_input.datepicker({
-        format: 'mm/dd/yyyy',
-                container: container,
-                todayHighlight: true,
-                autoclose: true,
-        };
-                date_input.datepicker(options);
+            format: 'mm/dd/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        })
     })
 </script>
+
 
 </body>
 </html>
