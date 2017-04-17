@@ -34,29 +34,43 @@ if (isset($_POST['btn-register'])) {
     $program = strip_tags($program);
     $program = htmlspecialchars($program);
 
-///////////////    
     $status = trim($_POST['status']);
     $status = strip_tags($status);
     $status = htmlspecialchars($status);
 
-    
     $supervisor = trim($_POST['supervisor']);
     $supervisor = strip_tags($supervisor);
     $supervisor = htmlspecialchars($supervisor);
 
-    
-    $program = trim($_POST['program']);
-    $program = strip_tags($program);
-    $program = htmlspecialchars($program);
+    $startDate = trim($_POST['startDate']);
+    $startDate = strip_tags($startDate);
+    $startDate = htmlspecialchars($startDate);
 
-    
-    $program = trim($_POST['program']);
-    $program = strip_tags($program);
-    $program = htmlspecialchars($program);
-    
-    $program = trim($_POST['program']);
-    $program = strip_tags($program);
-    $program = htmlspecialchars($program);
+    $endDate = trim($_POST['endDate']);
+    $endDate = strip_tags($endDate);
+    $endDate = htmlspecialchars($endDate);
+
+    $yes0 = trim($_POST['yes0']);
+    $yes0 = strip_tags($yes0);
+    $yes0 = htmlspecialchars($yes0);
+
+    ////
+    //
+    $yes1 = trim($_POST['yes1']);
+    $yes1 = strip_tags($yes1);
+    $yes1 = htmlspecialchars($yes1);
+
+    $yes2 = trim($_POST['yes2']);
+    $yes2 = strip_tags($yes2);
+    $yes2 = htmlspecialchars($yes2);
+
+    $yes3 = trim($_POST['yes3']);
+    $yes3 = strip_tags($yes3);
+    $yes3 = htmlspecialchars($yes3);
+
+    $yes4 = trim($_POST['yes4']);
+    $yes4 = strip_tags($yes4);
+    $yes4 = htmlspecialchars($yes4);
 
     //Email
     $email = trim($_POST['email']);
@@ -67,8 +81,8 @@ if (isset($_POST['btn-register'])) {
     $pass = trim($_POST['pass']);
     $pass = strip_tags($pass);
     $pass = htmlspecialchars($pass);
-    // prevent sql injections / clear user invalid inputs
 
+    // prevent sql injections / clear user invalid inputs
     if (empty($firstName)) {
         $error = true;
         $firstNameError = "Please enter your First Name.";
@@ -89,8 +103,6 @@ if (isset($_POST['btn-register'])) {
         $programError = "Please enter your degree programme (eg, BABS; MAHRM, LLB/LLM).";
     }
 
-    
-    ///////////
     if (empty($status)) {
         $error = true;
         $statusError = "Please enter your Status - Postgraduate or Undergraduate status.";
@@ -106,17 +118,41 @@ if (isset($_POST['btn-register'])) {
         $projectError = "Please enter your degree project.";
     }
 
-    if (empty($program)) {
+    if (empty($startDate)) {
         $error = true;
-        $programError = "Please enter your degree programme (eg, BABS; MAHRM, LLB/LLM).";
+        $startDateError = "Please enter start date.";
     }
 
-    if (empty($program)) {
+    if (empty($endDate)) {
         $error = true;
-        $programError = "Please enter your degree programme (eg, BABS; MAHRM, LLB/LLM).";
+        $endDateError = "Please enter ending date.";
     }
-
     
+    if (empty($yes0)) {
+        $error = true;
+        $yes0Error = "Please select if health sector organisations are invlove .";
+    }
+
+    if (empty($yes1)) {
+        $error = true;
+        $yes1Error = "Please select if children or other vulnerable groups are invlove .";
+    }
+
+    if (empty($yes2)) {
+        $error = true;
+        $yes2Error = "Please select if sensitive topics is invlove .";
+    }
+
+    if (empty($yes3)) {
+        $error = true;
+        $yes3Error = "Please select if aerospace/defence organisations are invlove .";
+    }
+
+    if (empty($yes4)) {
+        $error = true;
+        $yes4Error = "Please select if nuclear production organisations are invlove .";
+    }
+
     if (empty($email)) {
         $error = true;
         $emailError = "Please enter your email address.";
@@ -135,15 +171,18 @@ if (isset($_POST['btn-register'])) {
 
         $password = hash('sha256', $pass); // password hashing using SHA256
 
-        $res = mysql_query("SELECT userId, userName, userPass FROM users WHERE userEmail='$email'");
-        $row = mysql_fetch_array($res);
-        $count = mysql_num_rows($res); // if uname/pass correct it returns must be 1 row
+        $query = "INSERT INTO users(userName,userEmail,userPass) VALUES('$name','$email','$password')";
+        $res = mysql_query($query);
 
-        if ($count == 1 && $row['userPass'] == $password) {
-            $_SESSION['user'] = $row['userId'];
-            header("Location: login.php");
+        if ($res) {
+            $errTyp = "success";
+            $errMSG = "Successfully registered, you may login now";
+            unset($name);
+            unset($email);
+            unset($pass);
         } else {
-            $errMSG = "Incorrect Credentials, Try again...";
+            $errTyp = "danger";
+            $errMSG = "Something went wrong, try again later...";
         }
     }
 }
@@ -168,7 +207,7 @@ if (isset($_POST['btn-register'])) {
 
     <body>
         <div>
-<?php include 'include/header.php'; ?>
+            <?php include 'include/header.php'; ?>
         </div>
         <div class="container">
 
@@ -261,7 +300,7 @@ if (isset($_POST['btn-register'])) {
                             <span class="text-danger"><?php echo $passError; ?></span>
                         </div> 
 
-                        
+
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
@@ -281,38 +320,39 @@ if (isset($_POST['btn-register'])) {
 
                         <div class="form-group">
                             <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
                                 <p>
                                     <strong>Does the research project involve any of the following risk factors:</strong>
                                 </p>
                                 <ul style="padding-left: 20px">
                                     <li>
                                         Research involving health sector organisations:
-                                        <input type="radio" name="yes" value="1"><b>YES</b>
-                                        <input type="radio" name="yes" value="0"><b>NO</b>
+                                        <input type="radio" name="yes0" value="1"><b>YES</b>
+                                        <input type="radio" name="yes0" value="0"><b>NO</b>
 
                                     </li>
                                     <li>
                                         Research involving children or other vulnerable groups:
-                                        <input type="radio" name="yes" value="1"><b>YES</b>
-                                        <input type="radio" name="yes" value="0"><b>NO</b>
+                                        <input type="radio" name="yes1" value="1"><b>YES</b>
+                                        <input type="radio" name="yes1" value="0"><b>NO</b>
 
                                     </li>
                                     <li>
                                         Research involving sensitive topics:
-                                        <input type="radio" name="yes" value="1"><b>YES</b>
-                                        <input type="radio" name="yes" value="0"><b>NO</b>
+                                        <input type="radio" name="yes2" value="1"><b>YES</b>
+                                        <input type="radio" name="yes2" value="0"><b>NO</b>
 
                                     </li>
                                     <li>
                                         Research involving aerospace/defence organisations:
-                                        <input type="radio" name="yes" value="1"><b>YES</b>
-                                        <input type="radio" name="yes" value="0"><b>NO</b>
+                                        <input type="radio" name="yes3" value="1"><b>YES</b>
+                                        <input type="radio" name="yes3" value="0"><b>NO</b>
 
                                     </li>
                                     <li>
                                         Research involving nuclear production organisations:
-                                        <input type="radio" name="yes" value="1"><b>YES</b>
-                                        <input type="radio" name="yes" value="0"><b>NO</b>
+                                        <input type="radio" name="yes4" value="1"><b>YES</b>
+                                        <input type="radio" name="yes4" value="0"><b>NO</b>
 
                                     </li>
                                 </ul>
@@ -323,7 +363,7 @@ if (isset($_POST['btn-register'])) {
                         </p>
                         <div class="form-group">
                             <div class="input-group">
-                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="body" id="body" rows="20" cols="60" placeholder="Provide a brief outline of the aims and objectives of the proposed research project." maxlength="60"></textarea>
+                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="projectDetails" id="body" rows="20" cols="60" placeholder="Provide a brief outline of the aims and objectives of the proposed research project." maxlength="60"></textarea>
                             </div>
                         </div> 
                         <p>
@@ -331,7 +371,7 @@ if (isset($_POST['btn-register'])) {
                         </p>
                         <div class="form-group">
                             <div class="input-group">
-                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="body" id="body" rows="20" cols="60" placeholder="Please provide details of the potential participants for this project, including how they will be selected and recruited." maxlength="60"></textarea>
+                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="participants" id="body" rows="20" cols="60" placeholder="Please provide details of the potential participants for this project, including how they will be selected and recruited." maxlength="60"></textarea>
                             </div>
                         </div>
 
@@ -341,7 +381,7 @@ if (isset($_POST['btn-register'])) {
 
                         <div class="form-group">
                             <div class="input-group">
-                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="body" id="body" rows="20" cols="60" placeholder="Please describe the details of the personal data that is being collected, including the methods of data collection and analysis." maxlength="60"></textarea>
+                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="dataDetails" id="body" rows="20" cols="60" placeholder="Please describe the details of the personal data that is being collected, including the methods of data collection and analysis." maxlength="60"></textarea>
                             </div>
                         </div>
 
@@ -350,7 +390,7 @@ if (isset($_POST['btn-register'])) {
                         </p>
                         <div class="form-group">
                             <div class="input-group">
-                                <textarea class="glyphicon glyphicon-lock"style="text-align: left; min-width: 100%" name="body" id="body" rows="20" cols="60" placeholder="Please describe how the outcomes of the research will be disseminated (for example provide an explanation as to where, and how, will the results be published, or other mechanisms you will be using to share the potential participants personal data)." maxlength="60"></textarea>
+                                <textarea class="glyphicon glyphicon-lock"style="text-align: left; min-width: 100%" name="sharing" id="body" rows="20" cols="60" placeholder="Please describe how the outcomes of the research will be disseminated (for example provide an explanation as to where, and how, will the results be published, or other mechanisms you will be using to share the potential participants personal data)." maxlength="60"></textarea>
                             </div>
                         </div>
 
@@ -359,7 +399,7 @@ if (isset($_POST['btn-register'])) {
                         </p>
                         <div class="form-group">
                             <div class="input-group">
-                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="body" id="body" rows="20" cols="60" placeholder="Consent requirements for research projects can vary widely. Whether you are intending to use a consent form, information sheet, or verbally, it is recommended to assure compliance with the Data Protection Act and with ethical requirements. Please include the information sheet and consent forms you will be using for this project, and or protocol. If you are not including an information sheet and consent form, please explain how the consent will be recorded?
+                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="consent" id="body" rows="20" cols="60" placeholder="Consent requirements for research projects can vary widely. Whether you are intending to use a consent form, information sheet, or verbally, it is recommended to assure compliance with the Data Protection Act and with ethical requirements. Please include the information sheet and consent forms you will be using for this project, and or protocol. If you are not including an information sheet and consent form, please explain how the consent will be recorded?
                                           " maxlength="60"></textarea>
                             </div>
                         </div>
@@ -369,7 +409,7 @@ if (isset($_POST['btn-register'])) {
                         </p>
                         <div class="form-group">
                             <div class="input-group">
-                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="body" id="body" rows="20" cols="60" placeholder="Please describe the arrangements you will make for the security of the data, including how and where it will be stored. i.e. UCL network, *encrypted USB stick, *encrypted laptop etc. Describe how you will store your data, who will have access to it, and what happens to the data at the end of the project." maxlength="60"></textarea>
+                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="datastorage" id="body" rows="20" cols="60" placeholder="Please describe the arrangements you will make for the security of the data, including how and where it will be stored. i.e. UCL network, *encrypted USB stick, *encrypted laptop etc. Describe how you will store your data, who will have access to it, and what happens to the data at the end of the project." maxlength="60"></textarea>
                             </div>
                         </div>
 
@@ -378,7 +418,7 @@ if (isset($_POST['btn-register'])) {
                         </p>
                         <div class="form-group">
                             <div class="input-group">
-                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="body" id="body" rows="20" cols="60" placeholder="Describe how you will maintain the confidentiality of the research data collected. Also, describe how you will ensure that research participants are anonymised in your data analysis." maxlength="60"></textarea>
+                                <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="anonymity" id="body" rows="20" cols="60" placeholder="Describe how you will maintain the confidentiality of the research data collected. Also, describe how you will ensure that research participants are anonymised in your data analysis." maxlength="60"></textarea>
                             </div>
                         </div>
                         <p>
@@ -492,7 +532,7 @@ if (isset($_POST['btn-register'])) {
 
 </div>
 <div>
-<?php include 'include/footer.php'; ?>
+    <?php include 'include/footer.php'; ?>
 
 </div>
 
