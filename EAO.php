@@ -75,9 +75,9 @@ if (isset($_POST['btn-login'])) {
             <?php include 'include/header.php'; ?>
         </div>
         <div class="container">
-            <h2>Basic Table</h2>
-            <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>            
-            <table class="table">
+            <h2>Striped Rows</h2>
+            <p>The .table-striped class adds zebra-stripes to a table:</p>            
+            <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>Firstname</th>
