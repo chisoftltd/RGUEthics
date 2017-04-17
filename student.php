@@ -277,12 +277,9 @@ if (isset($_POST['btn-register'])) {
 
                                         <!-- Form code begins -->
                                         <form method="post">
-                                            <div class="form-group"> <!-- Date input -->
-                                                <label class="control-label" for="date">Date</label>
-                                                <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
-                                            </div>
-                                            <div class="form-group"> <!-- Submit button -->
-                                                <button class="btn btn-primary " name="submit" type="submit">Submit</button>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                <input class="form-control" id="date" name="date" placeholder="Proposed project start date - MM/DD/YYY" type="text"/>
                                             </div>
                                         </form>
                                         <!-- Form code ends --> 
