@@ -72,6 +72,51 @@ if (isset($_POST['btn-register'])) {
     $yes4 = strip_tags($yes4);
     $yes4 = htmlspecialchars($yes4);
 
+    $projectDetails = trim($_POST['projectDetails']);
+    $projectDetails = strip_tags($projectDetails);
+    $projectDetails = htmlspecialchars($projectDetails);
+    
+    $participants = trim($_POST['participants']);
+    $participants = strip_tags($participants);
+    $participants = htmlspecialchars($participants);
+    
+    $dataDetails = trim($_POST['dataDetails']);
+    $dataDetails = strip_tags($dataDetails);
+    $dataDetails = htmlspecialchars($dataDetails);
+    
+    $sharing = trim($_POST['sharing']);
+    $sharing = strip_tags($sharing);
+    $sharing = htmlspecialchars($sharing);
+    
+    $consent = trim($_POST['consent']);
+    $consent = strip_tags($consent);
+    $consent = htmlspecialchars($consent);
+    
+////
+    $datastorage = trim($_POST['datastorage']);
+    $datastorage = strip_tags($datastorage);
+    $datastorage = htmlspecialchars($datastorage);
+    
+    $consent = trim($_POST['consent']);
+    $consent = strip_tags($consent);
+    $consent = htmlspecialchars($consent);
+    
+    $consent = trim($_POST['consent']);
+    $consent = strip_tags($consent);
+    $consent = htmlspecialchars($consent);
+    
+    $consent = trim($_POST['consent']);
+    $consent = strip_tags($consent);
+    $consent = htmlspecialchars($consent);
+    
+    $consent = trim($_POST['consent']);
+    $consent = strip_tags($consent);
+    $consent = htmlspecialchars($consent);
+    
+    $consent = trim($_POST['consent']);
+    $consent = strip_tags($consent);
+    $consent = htmlspecialchars($consent);
+    
     //Email
     $email = trim($_POST['email']);
     $email = strip_tags($email);
@@ -150,9 +195,62 @@ if (isset($_POST['btn-register'])) {
 
     if (empty($yes4)) {
         $error = true;
-        $yes4Error = "Please select if nuclear production organisations are invlove .";
+        $participantsError = "Please select if nuclear production organisations are invlove .";
+    }
+    
+    ///
+    if (empty($projectDetails)) {
+        $error = true;
+        $projectDetailsError = "Please enter the project details.";
+    }
+    
+    if (empty($participants)) {
+        $error = true;
+        $participantsError = "Please list participants.";
+    }
+    
+    if (empty($dataDetails)) {
+        $error = true;
+        $dataDetailsError = "Please enter data storage.";
+    }
+    
+    if (empty($sharing)) {
+        $error = true;
+        $sharingError = "Please state the extent of data sharing.";
+    }
+    
+    if (empty($consent)) {
+        $error = true;
+        $consentError = "Please state if you have the content of participants.";
     }
 
+    ////
+    if (empty($datastorage)) {
+        $error = true;
+        $datastorageError = "Please state how you intend to store data.";
+    }
+
+    if (empty($consent)) {
+        $error = true;
+        $consentError = "Please select if nuclear production organisations are invlove .";
+    }
+
+    if (empty($consent)) {
+        $error = true;
+        $consentError = "Please select if nuclear production organisations are invlove .";
+    }
+
+    if (empty($consent)) {
+        $error = true;
+        $consentError = "Please select if nuclear production organisations are invlove .";
+    }
+
+    if (empty($consent)) {
+        $error = true;
+        $consentError = "Please select if nuclear production organisations are invlove .";
+    }
+
+    
     if (empty($email)) {
         $error = true;
         $emailError = "Please enter your email address.";
