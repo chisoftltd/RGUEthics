@@ -18,53 +18,53 @@ if (isset($_POST['btn-register'])) {
     $firstName = trim($_POST['firstName']);
     $firstName = strip_tags($firstName);
     $firstName = htmlspecialchars($firstName);
-    
+
     //Last Name
     $lastName = trim($_POST['lastName']);
     $lastName = strip_tags($lastName);
     $lastName = htmlspecialchars($lastName);
-    
+
     //Number
     $number = trim($_POST['number']);
     $number = strip_tags($number);
     $number = htmlspecialchars($number);
-    
+
     //Program
     $program = trim($_POST['program']);
     $program = strip_tags($program);
     $program = htmlspecialchars($program);
-    
+
     //Email
     $email = trim($_POST['email']);
     $email = strip_tags($email);
     $email = htmlspecialchars($email);
-    
+
     //Password
     $pass = trim($_POST['pass']);
     $pass = strip_tags($pass);
     $pass = htmlspecialchars($pass);
     // prevent sql injections / clear user invalid inputs
 
-     if (empty($firstName)) {
+    if (empty($firstName)) {
         $error = true;
         $firstNameError = "Please enter your First Name.";
     }
-    
-     if (empty($lastName)) {
+
+    if (empty($lastName)) {
         $error = true;
         $lastNameError = "Please enter your Last Name.";
     }
-    
+
     if (empty($number)) {
         $error = true;
         $numberError = "Please enter your Student Number.";
     }
-    
+
     if (empty($program)) {
         $error = true;
         $programError = "Please enter your degree programme (eg, BABS; MAHRM, LLB/LLM).";
     }
-    
+
     if (empty($email)) {
         $error = true;
         $emailError = "Please enter your email address.";
@@ -94,11 +94,6 @@ if (isset($_POST['btn-register'])) {
             $errMSG = "Incorrect Credentials, Try again...";
         }
     }
-
-if (!empty($_POST['yes'])) {
-    // Yes
-} else {
-    // No
 }
 ?>
 <!DOCTYPE html>
@@ -121,7 +116,7 @@ if (!empty($_POST['yes'])) {
 
     <body>
         <div>
-            <?php include 'include/header.php'; ?>
+<?php include 'include/header.php'; ?>
         </div>
         <div class="container">
 
@@ -157,7 +152,7 @@ if (!empty($_POST['yes'])) {
                             </div>
                             <span class="text-danger"><?php echo $nameError; ?></span>
                         </div>
-                        
+
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
@@ -444,7 +439,7 @@ if (!empty($_POST['yes'])) {
 
 </div>
 <div>
-    <?php include 'include/footer.php'; ?>
+<?php include 'include/footer.php'; ?>
 
 </div>
 
@@ -473,16 +468,16 @@ if (!empty($_POST['yes'])) {
                         }
                     }
                 },
-                  email: {
-                validators: {
-                    notEmpty: {
-                        message: 'The email address is required'
-                    },
-                    emailAddress: {
-                        message: 'The input is not a valid email address'
+                email: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The email address is required'
+                        },
+                        emailAddress: {
+                            message: 'The input is not a valid email address'
+                        }
                     }
-                }
-            },
+                },
                 agree: {
                     // The plugin will ignore the hidden field
                     // By setting excluded: false, the field will be validated as usual
@@ -512,6 +507,6 @@ if (!empty($_POST['yes'])) {
         });
     });
 </script>
-< /body>
-< /html>
+</body>
+</html>
 <?php ob_end_flush(); ?>
