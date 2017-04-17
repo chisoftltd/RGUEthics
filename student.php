@@ -39,21 +39,21 @@ if (isset($_POST['btn-register'])) {
     $status = strip_tags($status);
     $status = htmlspecialchars($status);
 
-    
+
     $supervisor = trim($_POST['supervisor']);
     $supervisor = strip_tags($supervisor);
     $supervisor = htmlspecialchars($supervisor);
 
-    
+
     $program = trim($_POST['program']);
     $program = strip_tags($program);
     $program = htmlspecialchars($program);
 
-    
+
     $program = trim($_POST['program']);
     $program = strip_tags($program);
     $program = htmlspecialchars($program);
-    
+
     $program = trim($_POST['program']);
     $program = strip_tags($program);
     $program = htmlspecialchars($program);
@@ -89,7 +89,7 @@ if (isset($_POST['btn-register'])) {
         $programError = "Please enter your degree programme (eg, BABS; MAHRM, LLB/LLM).";
     }
 
-    
+
     ///////////
     if (empty($status)) {
         $error = true;
@@ -116,7 +116,7 @@ if (isset($_POST['btn-register'])) {
         $programError = "Please enter your degree programme (eg, BABS; MAHRM, LLB/LLM).";
     }
 
-    
+
     if (empty($email)) {
         $error = true;
         $emailError = "Please enter your email address.";
@@ -168,7 +168,7 @@ if (isset($_POST['btn-register'])) {
 
     <body>
         <div>
-<?php include 'include/header.php'; ?>
+            <?php include 'include/header.php'; ?>
         </div>
         <div class="container">
 
@@ -262,15 +262,16 @@ if (isset($_POST['btn-register'])) {
                         </div> 
 
                         <div class="form-group ">
-                                <label class="control-label col-sm-2" for="date">
-                                    Proposed project start date
-                                </label>
-                                <div class="col-sm-10">
-                                    <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
-                                </div>
+                            <label class="control-label col-sm-2" for="date">
+                                Date
+                            </label>
+                            <br>
+                            <div class="col-sm-10">
+                                <input class="form-control" id="date" name="date" placeholder="Proposed project start date MM/DD/YYYY" type="text"/>
                             </div>
+                        </div>
 
-                        
+
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
@@ -501,7 +502,7 @@ if (isset($_POST['btn-register'])) {
 
 </div>
 <div>
-<?php include 'include/footer.php'; ?>
+    <?php include 'include/footer.php'; ?>
 
 </div>
 
@@ -571,17 +572,17 @@ if (isset($_POST['btn-register'])) {
 </script>
 
 <script>
-            $(document).ready(function () {
-                var date_input = $('input[name="date"]'); //our date input has the name "date"
-                var container = $('.container form').length > 0 ? $('.container form').parent() : "body";
-                date_input.datepicker({
-                    format: 'mm/dd/yyyy',
-                    container: container,
-                    todayHighlight: true,
-                    autoclose: true,
-                })
-            })
-        </script>
+    $(document).ready(function () {
+        var date_input = $('input[name="date"]'); //our date input has the name "date"
+        var container = $('.container form').length > 0 ? $('.container form').parent() : "body";
+        date_input.datepicker({
+            format: 'mm/dd/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        })
+    })
+</script>
 
 
 </body>
