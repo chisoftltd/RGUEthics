@@ -39,21 +39,21 @@ if (isset($_POST['btn-register'])) {
     $status = strip_tags($status);
     $status = htmlspecialchars($status);
 
-
+    
     $supervisor = trim($_POST['supervisor']);
     $supervisor = strip_tags($supervisor);
     $supervisor = htmlspecialchars($supervisor);
 
-
+    
     $program = trim($_POST['program']);
     $program = strip_tags($program);
     $program = htmlspecialchars($program);
 
-
+    
     $program = trim($_POST['program']);
     $program = strip_tags($program);
     $program = htmlspecialchars($program);
-
+    
     $program = trim($_POST['program']);
     $program = strip_tags($program);
     $program = htmlspecialchars($program);
@@ -89,7 +89,7 @@ if (isset($_POST['btn-register'])) {
         $programError = "Please enter your degree programme (eg, BABS; MAHRM, LLB/LLM).";
     }
 
-
+    
     ///////////
     if (empty($status)) {
         $error = true;
@@ -116,7 +116,7 @@ if (isset($_POST['btn-register'])) {
         $programError = "Please enter your degree programme (eg, BABS; MAHRM, LLB/LLM).";
     }
 
-
+    
     if (empty($email)) {
         $error = true;
         $emailError = "Please enter your email address.";
@@ -165,19 +165,10 @@ if (isset($_POST['btn-register'])) {
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet"/>
         <link href="http://formvalidation.io/vendor/jquery.steps/css/jquery.steps.css" rel="stylesheet"/>
         <link href="http://formvalidation.io/vendor/formvalidation/css/formValidation.min.css" rel="stylesheet"/>
-        
-        <!-- Include jQuery -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-<!-- Include Date Range Picker -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-
-
 
     <body>
         <div>
-            <?php include 'include/header.php'; ?>
+<?php include 'include/header.php'; ?>
         </div>
         <div class="container">
 
@@ -270,26 +261,7 @@ if (isset($_POST['btn-register'])) {
                             <span class="text-danger"><?php echo $passError; ?></span>
                         </div> 
 
-                        <div class="bootstrap-iso">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-
-                                        <!-- Form code begins -->
-                                        <form method="post">
-                            <div class="input-group">
-                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                                <input class="form-control" id="date" name="date" placeholder="Proposed project start date - MM/DD/YYY" type="text"/>
-                                            </div>
-                                        </form>
-                                        <!-- Form code ends --> 
-
-                                    </div>
-                                </div>    
-                            </div>
-                        </div>
-
-
+                        
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
@@ -520,7 +492,7 @@ if (isset($_POST['btn-register'])) {
 
 </div>
 <div>
-    <?php include 'include/footer.php'; ?>
+<?php include 'include/footer.php'; ?>
 
 </div>
 
@@ -588,21 +560,6 @@ if (isset($_POST['btn-register'])) {
         });
     });
 </script>
-
-<script>
-    $(document).ready(function(){
-      var date_input=$('input[name="date"]'); //our date input has the name "date"
-      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-      var options={
-        format: 'mm/dd/yyyy',
-        container: container,
-        todayHighlight: true,
-        autoclose: true,
-      };
-      date_input.datepicker(options);
-    })
-</script>
-
 </body>
 </html>
 <?php ob_end_flush(); ?>
