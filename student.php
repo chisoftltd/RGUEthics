@@ -363,6 +363,7 @@ if (isset($_POST['btn-register'])) {
                         </p>
                         <div class="form-group">
                             <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
                                 <textarea class="glyphicon glyphicon-lock" style="text-align: left; min-width: 100%" name="projectDetails" id="body" rows="20" cols="60" placeholder="Provide a brief outline of the aims and objectives of the proposed research project." maxlength="60"></textarea>
                             </div>
                         </div> 
