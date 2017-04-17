@@ -585,14 +585,14 @@ if (isset($_POST['btn-register'])) {
         var date_input = $('input[name="date"]'); //our date input has the name "date"
         var container = $('.container form').length > 0 ? $('.container form').parent() : "body";
         date_input.datepicker({
-            format: 'mm/dd/yyyy',
-            container: container,
-            todayHighlight: true,
-            autoclose: true,
-        })
+        format: 'mm/dd/yyyy',
+                container: container,
+                todayHighlight: true,
+                autoclose: true,
+        };
+                date_input.datepicker(options);
     })
 </script>
-
 
 </body>
 </html>
