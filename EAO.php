@@ -82,24 +82,28 @@ if (isset($_POST['btn-login'])) {
                     <tr>
                         <th>Firstname</th>
                         <th>Lastname</th>
-                        <th>Email</th>
+                        <th>Student Number</th>
+                        <th>Project Title</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>John</td>
                         <td>Doe</td>
-                        <td>john@example.com</td>
+                        <td>1609963</td>
+                        <td>Integrated lighting design of older adults' homes</td>
                     </tr>
                     <tr>
                         <td>Mary</td>
                         <td>Moe</td>
-                        <td>mary@example.com</td>
+                        <td>1234567</td>
+                        <td>University websites: home or away?</td>
                     </tr>
                     <tr>
                         <td>July</td>
                         <td>Dooley</td>
-                        <td>july@example.com</td>
+                        <td>1345678</td>
+                        <td>Criminalisation of children in care</td>
                     </tr>
                 </tbody>
             </table>
