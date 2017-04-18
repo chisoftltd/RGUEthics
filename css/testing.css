@@ -37,3 +37,15 @@ body {
     background-origin: padding-box;
     background-size: auto auto;
 }
+
+body, td, div, .p, a, .d {
+    font-size: medium;
+}
+a {
+    text-decoration: none;
+        text-decoration-color: -moz-use-text-color;
+        text-decoration-line: none;
+        text-decoration-style: solid;
+    color: #606;
+    word-wrap: break-word;
+}
