@@ -238,30 +238,34 @@ if (isset($_POST['btn-register'])) {
         $healthyes0 = test_input($_POST["healthyes0"]);
     }
 
-    if (empty($childrenyes1)) {
-        $error = true;
-        $childrenyes1Error = "Please select if children or other vulnerable groups are invlove .";
+    if (empty($_POST["childrenyes1"])) {
+        $childrenyes1Error = "Please select if children or other vulnerable groups are invlove.";
+    } else {
+        $childrenyes1 = test_input($_POST["childrenyes1"]);
     }
 
-    if (empty($sensitiveyes2)) {
-        $error = true;
-        $sensitiveyes2Error = "Please select if sensitive topics is invlove .";
+    if (empty($_POST["sensitiveyes2"])) {
+        $sensitiveyes2Error = "Please select if sensitive topics is invlove.";
+    } else {
+        $sensitiveyes2 = test_input($_POST["sensitiveyes2"]);
     }
 
-    if (empty($aerodefenceyes3)) {
-        $error = true;
-        $aerodefenceyes3Error = "Please select if aerospace/defence organisations are invlove .";
+    if (empty($_POST["aerodefenceyes3"])) {
+        $aerodefenceyes3Error = "Please select if aerospace/defence organisations are invlove.";
+    } else {
+        $aerodefenceyes3 = test_input($_POST["aerodefenceyes3"]);
     }
 
-    if (empty($nuclearyes4)) {
-        $error = true;
-        $nuclearyes4Error = "Please select if nuclear production organisations are invlove .";
+    if (empty($_POST["nuclearyes4"])) {
+        $nuclearyes4Error = "Please select if nuclear production organisations are invlove.";
+    } else {
+        $nuclearyes4 = test_input($_POST["nuclearyes4"]);
     }
 
-    ///
-    if (empty($projectDetails)) {
-        $error = true;
-        $projectDetailsError = "Please enter the project details.";
+    if (empty($_POST["projectDetails"])) {
+        $projectDetailsError = "Please select if nuclear production organisations are invlove.";
+    } else {
+        $projectDetails = test_input($_POST["projectDetails"]);
     }
 
     if (empty($participants)) {
