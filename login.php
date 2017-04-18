@@ -9,7 +9,8 @@ if (!isset($_SESSION['user'])) {
     exit;
 }
 // select loggedin users detail
-$res = mysql_query("SELECT * FROM users WHERE userId=" . $_SESSION['user']);
+$res = mysqli_query($link,("SELECT * FROM users WHERE userId=" . $_SESSION['user'])); 
+
 $userRow = mysql_fetch_array($res);
 ?>
 <!DOCTYPE html>
