@@ -9,7 +9,7 @@ if (!isset($_SESSION['user'])) {
     exit;
 }
 // select loggedin users detail
-$res = mysqli_query($link,("SELECT * FROM users WHERE userId=" . $_SESSION['user'])); 
+$res = mysqli_query($link, ("SELECT * FROM users WHERE userId=" . $_SESSION['user']));
 
 $userRow = mysql_fetch_array($res);
 ?>
@@ -21,6 +21,14 @@ $userRow = mysql_fetch_array($res);
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"  />
         <link rel="stylesheet" href="style.css" type="text/css" />
         <link rel="stylesheet" href="css/main-style.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </head>
     <body>
         <div>

@@ -14,7 +14,7 @@ if (isset($_POST['btn-signup'])) {
     $id = trim($_POST['id']);
     $id = strip_tags($id);
     $id = htmlspecialchars($id);
-    
+
     $name = trim($_POST['name']);
     $name = strip_tags($name);
     $name = htmlspecialchars($name);
@@ -76,8 +76,8 @@ if (isset($_POST['btn-signup'])) {
     if (!$error) {
 
         $query = "INSERT INTO users(userId, userName,userEmail,userPass) VALUES('$id', '$name','$email','$password')";
-        $res = mysqli_query($link,$query);
-        
+        $res = mysqli_query($link, $query);
+
 
         if ($res) {
             $errTyp = "success";
@@ -100,6 +100,14 @@ if (isset($_POST['btn-signup'])) {
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"  />
         <link rel="stylesheet" href="style.css" type="text/css" />
         <link rel="stylesheet" href="css/main-style.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </head>
     <body>
         <div>
@@ -140,7 +148,7 @@ if (isset($_POST['btn-signup'])) {
                             </div>
                             <span class="text-danger"><?php echo $idError; ?></span>
                         </div>
-                        
+
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
