@@ -76,7 +76,8 @@ if (isset($_POST['btn-signup'])) {
     if (!$error) {
 
         $query = "INSERT INTO users(userId, userName,userEmail,userPass) VALUES('$id', '$name','$email','$password')";
-        $res = mysql_query($query);
+        $res = mysqli_query($link,$query);
+        
 
         if ($res) {
             $errTyp = "success";
