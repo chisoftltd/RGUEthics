@@ -24,7 +24,7 @@ $notfyes6Error = $emailError = "";
 
 
 if (isset($_POST['btn-register'])) {
-    
+
     // prevent sql injections / clear user invalid inputs
     if (empty($_POST["firstName"])) {
         $error = true;
@@ -285,7 +285,9 @@ function test_input($data)
         <link href="http://formvalidation.io/vendor/jquery.steps/css/jquery.steps.css" rel="stylesheet"/>
         <link href="http://formvalidation.io/vendor/formvalidation/css/formValidation.min.css" rel="stylesheet"/>
         <style>
-            .error {color: #FF0000;}
+            .error {
+                color: #FF0000;
+            }
         </style>
 
     <body>
@@ -427,28 +429,44 @@ function test_input($data)
                                 </li>
                                 <li>
                                     Research involving children or other vulnerable groups:
-                                    <input type="radio" name="childrenyes1" <?php if (isset($childrenyes1) && $childrenyes1 == "yes") echo "checked"; ?> value="1"><b>YES</b>
-                                    <input type="radio" name="childrenyes1" <?php if (isset($childrenyes1) && $childrenyes1 == "yes") echo "checked"; ?> value="0"><b>NO</b>
+                                    <input type="radio"
+                                           name="childrenyes1" <?php if (isset($childrenyes1) && $childrenyes1 == "yes") echo "checked"; ?>
+                                           value="1"><b>YES</b>
+                                    <input type="radio"
+                                           name="childrenyes1" <?php if (isset($childrenyes1) && $childrenyes1 == "yes") echo "checked"; ?>
+                                           value="0"><b>NO</b>
                                     <span class="error">* <?php echo $childrenyes1Error; ?></span>
                                 </li>
                                 <li>
                                     Research involving sensitive topics:
-                                    <input type="radio" name="sensitiveyes2" <?php if (isset($sensitiveyes2) && $sensitiveyes2 == "yes") echo "checked"; ?> value="1"><b>YES</b>
-                                    <input type="radio" name="sensitiveyes2" <?php if (isset($sensitiveyes2) && $sensitiveyes2 == "yes") echo "checked"; ?> value="0"><b>NO</b>
+                                    <input type="radio"
+                                           name="sensitiveyes2" <?php if (isset($sensitiveyes2) && $sensitiveyes2 == "yes") echo "checked"; ?>
+                                           value="1"><b>YES</b>
+                                    <input type="radio"
+                                           name="sensitiveyes2" <?php if (isset($sensitiveyes2) && $sensitiveyes2 == "yes") echo "checked"; ?>
+                                           value="0"><b>NO</b>
                                     <span class="error">* <?php echo $sensitiveyes2Error; ?></span>
 
                                 </li>
                                 <li>
                                     Research involving aerospace/defence organisations:
-                                    <input type="radio" name="aerodefenceyes3" <?php if (isset($aerodefenceyes3) && $aerodefenceyes3 == "yes") echo "checked"; ?> value="1"><b>YES</b>
-                                    <input type="radio" name="aerodefenceyes3" <?php if (isset($aerodefenceyes3) && $aerodefenceyes3 == "yes") echo "checked"; ?> value="0"><b>NO</b>
+                                    <input type="radio"
+                                           name="aerodefenceyes3" <?php if (isset($aerodefenceyes3) && $aerodefenceyes3 == "yes") echo "checked"; ?>
+                                           value="1"><b>YES</b>
+                                    <input type="radio"
+                                           name="aerodefenceyes3" <?php if (isset($aerodefenceyes3) && $aerodefenceyes3 == "yes") echo "checked"; ?>
+                                           value="0"><b>NO</b>
                                     <span class="error">* <?php echo $aerodefenceyes3Error; ?></span>
 
                                 </li>
                                 <li>
                                     Research involving nuclear production organisations:
-                                    <input type="radio" name="nuclearyes4" <?php if (isset($nuclearyes4) && $nuclearyes4 == "yes") echo "checked"; ?> value="1"><b>YES</b>
-                                    <input type="radio" name="nuclearyes4" <?php if (isset($nuclearyes4) && $nuclearyes4 == "yes") echo "checked"; ?> value="0"><b>NO</b>
+                                    <input type="radio"
+                                           name="nuclearyes4" <?php if (isset($nuclearyes4) && $nuclearyes4 == "yes") echo "checked"; ?>
+                                           value="1"><b>YES</b>
+                                    <input type="radio"
+                                           name="nuclearyes4" <?php if (isset($nuclearyes4) && $nuclearyes4 == "yes") echo "checked"; ?>
+                                           value="0"><b>NO</b>
                                     <span class="error">* <?php echo $nuclearyes4Error; ?></span>
 
                                 </li>
@@ -542,8 +560,12 @@ function test_input($data)
                     </p>
                     <p>
                         Will identifiable data be transferred outside the UK as part of this study?
-                        <input type="radio" name="intlTrfyes5" <?php if (isset($intlTrfyes5) && $intlTrfyes5 == "yes") echo "checked"; ?> value="1"><b>YES</b>
-                        <input type="radio" name="intlTrfyes5" <?php if (isset($intlTrfyes5) && $intlTrfyes5 == "yes") echo "checked"; ?> value="0"><b>NO</b>
+                        <input type="radio"
+                               name="intlTrfyes5" <?php if (isset($intlTrfyes5) && $intlTrfyes5 == "yes") echo "checked"; ?>
+                               value="1"><b>YES</b>
+                        <input type="radio"
+                               name="intlTrfyes5" <?php if (isset($intlTrfyes5) && $intlTrfyes5 == "yes") echo "checked"; ?>
+                               value="0"><b>NO</b>
                         <span class="error">* <?php echo $intlTrfyes5Error; ?></span>
                     </p>
                     <p style="font-style: italic"> The eighth principle of the Data Protection Act 1998 prohibits the
@@ -572,8 +594,12 @@ function test_input($data)
                         <p style="font-style: italic">(Please note that notification is a prerequisite for
                             registration)</p>
                         <p>Have you informed your department's Data Protection Coordinator about your project?
-                            <input type="radio" name="notfyes6" <?php if (isset($notfyes6) && $notfyes6 == "yes") echo "checked"; ?> value="1"><b>YES</b>
-                            <input type="radio" name="notfyes6" <?php if (isset($notfyes6) && $notfyes6 == "yes") echo "checked"; ?> value="0"><b>NO</b>
+                            <input type="radio"
+                                   name="notfyes6" <?php if (isset($notfyes6) && $notfyes6 == "yes") echo "checked"; ?>
+                                   value="1"><b>YES</b>
+                            <input type="radio"
+                                   name="notfyes6" <?php if (isset($notfyes6) && $notfyes6 == "yes") echo "checked"; ?>
+                                   value="0"><b>NO</b>
                             <span class="error">* <?php echo $notfyes6Error; ?></span>
                     </div>
 
@@ -594,8 +620,8 @@ function test_input($data)
                 <div class="form-group">
                     <button type="submit" class="btn btn-block btn-primary" name="btn-register">Register</button>
                 </div>
-<?php
-echo $errMSG ?>
+                <?php
+                echo $errMSG ?>
                 <!-- Terms and conditions modal -->
                 <div class="modal fade" id="termsModal" tabindex="-1" role="dialog"
                      aria-labelledby="Terms and conditions" aria-hidden="true">
@@ -693,10 +719,9 @@ echo $errMSG ?>
                 <div class="form-group">
                     <hr/>
                 </div>
-        </div>
 
-        </form>
-    </div>
+            </form>
+        </div>
 
     </div>
     <div>
