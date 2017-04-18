@@ -14,7 +14,7 @@ $firstName = $lastName = $number = $program = $status = $supervisor = "";
 $startDate = $endDate = $healthyes0 = $childrenyes1 = $sensitiveyes2 = "";
 $aerodefenceyes3 = $nuclearyes4 = $projectDetails = $participants = $dataDetails = "";
 $sharing = $consent = $datastorage = $anonymity = $intlTrfyes5 = $noneu = "";
-$notfyes6 = $email = "";
+$notfyes6 = $email = $project = "";
 
 $firstNameError = $lastNameError = $numberError = $programError = $statusError = $supervisorError = "";
 $startDateError = $endDateError = $healthyes0Error = $childrenyes1Error = $sensitiveyes2Error = "";
@@ -24,119 +24,7 @@ $notfyes6Error = $emailError = "";
 
 
 if (isset($_POST['btn-register'])) {
-
-    // prevent sql injections/ clear user invalid inputs
-    //First name
-    $firstName = trim($_POST['firstName']);
-    $firstName = strip_tags($firstName);
-    $firstName = htmlspecialchars($firstName);
-
-    //Last Name
-    $lastName = trim($_POST['lastName']);
-    $lastName = strip_tags($lastName);
-    $lastName = htmlspecialchars($lastName);
-
-    //Number
-    $number = trim($_POST['number']);
-    $number = strip_tags($number);
-    $number = htmlspecialchars($number);
-
-    //Program
-    $program = trim($_POST['program']);
-    $program = strip_tags($program);
-    $program = htmlspecialchars($program);
-
-    $status = trim($_POST['status']);
-    $status = strip_tags($status);
-    $status = htmlspecialchars($status);
-
-    $supervisor = trim($_POST['supervisor']);
-    $supervisor = strip_tags($supervisor);
-    $supervisor = htmlspecialchars($supervisor);
-
-    $startDate = trim($_POST['startDate']);
-    $startDate = strip_tags($startDate);
-    $startDate = htmlspecialchars($startDate);
-
-    $endDate = trim($_POST['endDate']);
-    $endDate = strip_tags($endDate);
-    $endDate = htmlspecialchars($endDate);
-
-    $healthyes0 = trim($_POST['healthyes0']);
-    $healthyes0 = strip_tags($healthyes0);
-    $healthyes0 = htmlspecialchars($healthyes0);
-
-
-    $childrenyes1 = trim($_POST['childrenyes1']);
-    $childrenyes1 = strip_tags($childrenyes1);
-    $childrenyes1 = htmlspecialchars($childrenyes1);
-
-    $sensitiveyes2 = trim($_POST['sensitiveyes2']);
-    $sensitiveyes2 = strip_tags($sensitiveyes2);
-    $sensitiveyes2 = htmlspecialchars($sensitiveyes2);
-
-    $aerodefenceyes3 = trim($_POST['aerodefenceyes3']);
-    $aerodefenceyes3 = strip_tags($aerodefenceyes3);
-    $aerodefenceyes3 = htmlspecialchars($aerodefenceyes3);
-
-    $nuclearyes4 = trim($_POST['nuclearyes4']);
-    $nuclearyes4 = strip_tags($nuclearyes4);
-    $nuclearyes4 = htmlspecialchars($nuclearyes4);
-
-    $projectDetails = trim($_POST['projectDetails']);
-    $projectDetails = strip_tags($projectDetails);
-    $projectDetails = htmlspecialchars($projectDetails);
-
-    $participants = trim($_POST['participants']);
-    $participants = strip_tags($participants);
-    $participants = htmlspecialchars($participants);
-
-    $dataDetails = trim($_POST['dataDetails']);
-    $dataDetails = strip_tags($dataDetails);
-    $dataDetails = htmlspecialchars($dataDetails);
-
-    $sharing = trim($_POST['sharing']);
-    $sharing = strip_tags($sharing);
-    $sharing = htmlspecialchars($sharing);
-
-    $consent = trim($_POST['consent']);
-    $consent = strip_tags($consent);
-    $consent = htmlspecialchars($consent);
-
-    $datastorage = trim($_POST['datastorage']);
-    $datastorage = strip_tags($datastorage);
-    $datastorage = htmlspecialchars($datastorage);
-
-    $anonymity = trim($_POST['anonymity']);
-    $anonymity = strip_tags($anonymity);
-    $anonymity = htmlspecialchars($consent);
-
-    $intlTrfyes5 = trim($_POST['intlTrfyes5']);
-    $intlTrfyes5 = strip_tags($intlTrfyes5);
-    $intlTrfyes5 = htmlspecialchars($intlTrfyes5);
-
-    $noneu = trim($_POST['noneu']);
-    $noneu = strip_tags($noneu);
-    $noneu = htmlspecialchars($noneu);
-
-    $notfyes6 = trim($_POST['notfyes6']);
-    $notfyes6 = strip_tags($notfyes6);
-    $notfyes6 = htmlspecialchars($notfyes6);
-
-    $consent = trim($_POST['consent']);
-    $consent = strip_tags($consent);
-    $consent = htmlspecialchars($consent);
-
-    //Email
-    $email = trim($_POST['email']);
-    $email = strip_tags($email);
-    $email = htmlspecialchars($email);
-
-    //Password
-    $pass = trim($_POST['pass']);
-    $pass = strip_tags($pass);
-    $pass = htmlspecialchars($pass);
-
+    
     // prevent sql injections / clear user invalid inputs
     if (empty($_POST["firstName"])) {
         $error = true;
@@ -233,122 +121,141 @@ if (isset($_POST['btn-register'])) {
     }
 
     if (empty($_POST["healthyes0"])) {
+        $error = true;
         $healthyes0Error = "Please select if health sector organisations are invlove.";
     } else {
         $healthyes0 = test_input($_POST["healthyes0"]);
     }
 
     if (empty($_POST["childrenyes1"])) {
+        $error = true;
         $childrenyes1Error = "Please select if children or other vulnerable groups are invlove.";
     } else {
         $childrenyes1 = test_input($_POST["childrenyes1"]);
     }
 
     if (empty($_POST["sensitiveyes2"])) {
+        $error = true;
         $sensitiveyes2Error = "Please select if sensitive topics is invlove.";
     } else {
         $sensitiveyes2 = test_input($_POST["sensitiveyes2"]);
     }
 
     if (empty($_POST["aerodefenceyes3"])) {
+        $error = true;
         $aerodefenceyes3Error = "Please select if aerospace/defence organisations are invlove.";
     } else {
         $aerodefenceyes3 = test_input($_POST["aerodefenceyes3"]);
     }
 
     if (empty($_POST["nuclearyes4"])) {
+        $error = true;
         $nuclearyes4Error = "Please select if nuclear production organisations are invlove.";
     } else {
         $nuclearyes4 = test_input($_POST["nuclearyes4"]);
     }
 
     if (empty($_POST["projectDetails"])) {
+        $error = true;
         $projectDetailsError = "Please select if nuclear production organisations are invlove.";
     } else {
         $projectDetails = test_input($_POST["projectDetails"]);
     }
 
-    if (empty($participants)) {
+    if (empty($_POST["participants"])) {
         $error = true;
         $participantsError = "Please list participants.";
+    } else {
+        $participants = test_input($_POST["participants"]);
     }
 
-    if (empty($dataDetails)) {
+    if (empty($_POST["dataDetails"])) {
         $error = true;
         $dataDetailsError = "Please enter data storage.";
+    } else {
+        $dataDetails = test_input($_POST["dataDetails"]);
     }
 
-    if (empty($sharing)) {
+    if (empty($_POST["sharing"])) {
         $error = true;
         $sharingError = "Please state the extent of data sharing.";
+    } else {
+        $sharing = test_input($_POST["sharing"]);
     }
 
-    if (empty($consent)) {
+    if (empty($_POST["consent"])) {
         $error = true;
-        $consentError = "Please state if you have the content of participants.";
+        $consentError = "Please state if you have the consent of participants.";
+    } else {
+        $consent = test_input($_POST["consent"]);
     }
 
-    ////
-    if (empty($datastorage)) {
+    if (empty($_POST["datastorage"])) {
         $error = true;
         $datastorageError = "Please state how you intend to store data.";
+    } else {
+        $datastorage = test_input($_POST["datastorage"]);
     }
 
-    if (empty($anonymity)) {
+    if (empty($_POST["anonymity"])) {
         $error = true;
-        $anonymityError = "Please select if nuclear production organisations are invlove .";
+        $anonymityError = "Please state if participant have anonymity option.";
+    } else {
+        $anonymity = test_input($_POST["anonymity"]);
     }
 
-    if (empty($intlTrfyes5)) {
+    if (empty($_POST["intlTrfyes5"])) {
         $error = true;
-        $intlTrfyes5Error = "Please select if nuclear production organisations are invlove .";
+        $intlTrfyes5Error = "Please indicate if data wil be transfered oversea.";
+    } else {
+        $intlTrfyes5 = test_input($_POST["intlTrfyes5"]);
     }
 
-    if (empty($noneu)) {
+    if (empty($_POST["noneu"])) {
         $error = true;
-        $noneuError = "Please select if nuclear production organisations are invlove .";
+        $noneuError = "Please state if you have the noneu of participants.";
+    } else {
+        $noneu = test_input($_POST["noneu"]);
     }
 
-    if (empty($notfyes6)) {
+    if (empty($_POST["notfyes6"])) {
         $error = true;
-        $notfyes6Error = "Please select if nuclear production organisations are invlove .";
+        $notfyes6Error = "Please have you notify your department's Data Protection Coordinator?.";
+    } else {
+        $notfyes6 = test_input($_POST["notfyes6"]);
     }
 
-
-    if (empty($email)) {
+    if (empty($_POST["email"])) {
         $error = true;
         $emailError = "Please enter your email address.";
-    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $error = true;
-        $emailError = "Please enter valid email address.";
-    }
-
-    if (empty($pass)) {
-        $error = true;
-        $passError = "Please enter your password.";
-    }
-
-    // if there's no error, continue to login
-    if (!$error) {
-
-        $password = hash('sha256', $pass); // password hashing using SHA256
-
-        $query = ("INSERT INTO users($link, (student_number, student_email,student_program,
-student_status,supervisor,project_title,start_date,end_date,project_description,last_name,last_name,
-	health_sector,children,sensitive_topics,aerospace_defence,nuclear_production,
-	participants,sharing,consent,data_storage,anonymity,intl_transfer_uk,intl_transfer,notification) VALUES('$name','$email','$password'))");
-        $res = mysqli_query($query);
-
-        if ($res) {
-            $errTyp = "success";
-            $errMSG = "Successfully registered your project ethics ";
-            unset($name);
-            unset($email);
-            unset($pass);
-        } else {
-            $errTyp = "danger";
-            $errMSG = "Something went wrong, try again later...";
+    } else {
+        $email = test_input($_POST["email"]);
+        // check if e-mail address is well-formed
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $error = true;
+            $emailError = "Please enter valid email address.";
         }
+    }
+
+
+    $query = ("INSERT INTO users($link, (student_number, student_email,student_program,
+    student_status,supervisor,project_title,start_date,end_date,project_description,first_name,last_name,
+	health_sector,children,sensitive_topics,aerospace_defence,nuclear_production,
+	participants,sharing,consent,data_storage,anonymity,intl_transfer_uk,intl_transfer,notification, dataDetails) 
+	VALUES('$number','$email','$program','$status', '$supervisor','$project', '$startDate', '$endDate',
+	'$projectDetails','$firstName','$lastName','$healthyes0', '$childrenyes1', '$sensitiveyes2', '$aerodefenceyes3',
+	'$nuclearyes4', '$participants', '$sharing', '$consent', '$datastorage', '$anonymity', '$intlTrfyes5', '$notfyes6', '$dataDetails'))");
+    $res = mysqli_query($query);
+
+    if ($res) {
+        $errTyp = "success";
+        $errMSG = "Successfully registered your project ethics ";
+        unset($name);
+        unset($email);
+        unset($pass);
+    } else {
+        $errTyp = "danger";
+        $errMSG = "Something went wrong, try again later...";
     }
 }
 
@@ -507,32 +414,39 @@ function test_input($data)
                             <ul style="padding-left: 20px">
                                 <li>
                                     Research involving health sector organisations:
-                                    <input type="radio" name="healthyes0" <?php if (isset($healthyes0) && $healthyes0=="yes") echo "checked";?> value="yes"><b>YES</b>
-                                    <input type="radio" name="healthyes0" <?php if (isset($healthyes0) && $healthyes0=="no") echo "checked";?> value="no"><b>NO</b>
-                                    <span class="error">* <?php echo $healthyes0Error;?></span>
+                                    <input type="radio"
+                                           name="healthyes0" <?php if (isset($healthyes0) && $healthyes0 == "yes") echo "checked"; ?>
+                                           value="yes"><b>YES</b>
+                                    <input type="radio"
+                                           name="healthyes0" <?php if (isset($healthyes0) && $healthyes0 == "no") echo "checked"; ?>
+                                           value="no"><b>NO</b>
+                                    <span class="error">* <?php echo $healthyes0Error; ?></span>
                                 </li>
                                 <li>
                                     Research involving children or other vulnerable groups:
-                                    <input type="radio" name="childrenyes1" value="1"><b>YES</b>
-                                    <input type="radio" name="childrenyes1" value="0"><b>NO</b>
-
+                                    <input type="radio" name="childrenyes1" <?php if (isset($childrenyes1) && $childrenyes1 == "yes") echo "checked"; ?> value="1"><b>YES</b>
+                                    <input type="radio" name="childrenyes1" <?php if (isset($childrenyes1) && $childrenyes1 == "yes") echo "checked"; ?> value="0"><b>NO</b>
+                                    <span class="error">* <?php echo $childrenyes1Error; ?></span>
                                 </li>
                                 <li>
                                     Research involving sensitive topics:
-                                    <input type="radio" name="sensitiveyes2" value="1"><b>YES</b>
-                                    <input type="radio" name="sensitiveyes2" value="0"><b>NO</b>
+                                    <input type="radio" name="sensitiveyes2" <?php if (isset($sensitiveyes2) && $sensitiveyes2 == "yes") echo "checked"; ?> value="1"><b>YES</b>
+                                    <input type="radio" name="sensitiveyes2" <?php if (isset($sensitiveyes2) && $sensitiveyes2 == "yes") echo "checked"; ?> value="0"><b>NO</b>
+                                    <span class="error">* <?php echo $sensitiveyes2Error; ?></span>
 
                                 </li>
                                 <li>
                                     Research involving aerospace/defence organisations:
-                                    <input type="radio" name="aerodefenceyes3" value="1"><b>YES</b>
-                                    <input type="radio" name="aerodefenceyes3" value="0"><b>NO</b>
+                                    <input type="radio" name="aerodefenceyes3" <?php if (isset($aerodefenceyes3) && $aerodefenceyes3 == "yes") echo "checked"; ?> value="1"><b>YES</b>
+                                    <input type="radio" name="aerodefenceyes3" <?php if (isset($aerodefenceyes3) && $aerodefenceyes3 == "yes") echo "checked"; ?> value="0"><b>NO</b>
+                                    <span class="error">* <?php echo $aerodefenceyes3Error; ?></span>
 
                                 </li>
                                 <li>
                                     Research involving nuclear production organisations:
-                                    <input type="radio" name="nuclearyes4" value="1"><b>YES</b>
-                                    <input type="radio" name="nuclearyes4" value="0"><b>NO</b>
+                                    <input type="radio" name="nuclearyes4" <?php if (isset($nuclearyes4) && $nuclearyes4 == "yes") echo "checked"; ?> value="1"><b>YES</b>
+                                    <input type="radio" name="nuclearyes4" <?php if (isset($nuclearyes4) && $nuclearyes4 == "yes") echo "checked"; ?> value="0"><b>NO</b>
+                                    <span class="error">* <?php echo $nuclearyes4Error; ?></span>
 
                                 </li>
                             </ul>
@@ -625,8 +539,9 @@ function test_input($data)
                     </p>
                     <p>
                         Will identifiable data be transferred outside the UK as part of this study?
-                        <input type="radio" name="intlTrfyes5" value="1"><b>YES</b>
-                        <input type="radio" name="intlTrfye5" value="0"><b>NO</b>
+                        <input type="radio" name="intlTrfyes5" <?php if (isset($intlTrfyes5) && $intlTrfyes5 == "yes") echo "checked"; ?> value="1"><b>YES</b>
+                        <input type="radio" name="intlTrfyes5" <?php if (isset($intlTrfyes5) && $intlTrfyes5 == "yes") echo "checked"; ?> value="0"><b>NO</b>
+                        <span class="error">* <?php echo $intlTrfyes5Error; ?></span>
                     </p>
                     <p style="font-style: italic"> The eighth principle of the Data Protection Act 1998 prohibits the
                         transfer of personal data to countries or territories outside the European Economic Area (which
@@ -654,8 +569,9 @@ function test_input($data)
                         <p style="font-style: italic">(Please note that notification is a prerequisite for
                             registration)</p>
                         <p>Have you informed your department's Data Protection Coordinator about your project?
-                            <input type="radio" name="notfyes6" value="1"><b>YES</b>
-                            <input type="radio" name="notfyes6" value="0"><b>NO</b></p>
+                            <input type="radio" name="notfyes6" <?php if (isset($notfyes6) && $notfyes6 == "yes") echo "checked"; ?> value="1"><b>YES</b>
+                            <input type="radio" name="notfyes6" <?php if (isset($notfyes6) && $notfyes6 == "yes") echo "checked"; ?> value="0"><b>NO</b>
+                            <span class="error">* <?php echo $notfyes6Error; ?></span>
                     </div>
 
                     <div class="form-group">
