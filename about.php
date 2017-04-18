@@ -54,44 +54,56 @@ if (isset($_POST['btn-login'])) {
     }
 }
 ?>
-<!DOCTYPE html>
-<html>
+    <!DOCTYPE html>
+    <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title>RGUEthics- About Us</title>
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"  />
-        <link rel="stylesheet" href="style.css" type="text/css" />
+        <link rel="stylesheet" href="style.css" type="text/css"/>
         <link rel="stylesheet" href="css/main-style.css">
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+              crossorigin="anonymous">
 
         <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+              integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+              crossorigin="anonymous">
 
         <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+                crossorigin="anonymous"></script>
     </head>
     <body>
-        <div>
-            <?php include 'include/header.php'; ?>
-        </div>
-        <div class="container">
-            <p>
-            <h3>Web Application Description - RGUEthics</h3>
-            This web application which I called RGUEthics is an online application that will manage RGU student’s experiment ethics. </p>
-        <p>The interface should have a logo, navigation bar with elements like “Home”, “About Us”, “Student”, “Experiment Approval Officers (EAO)”, “Contact US” and “Login”. </p>
-        <p>The interface should have a “News Section” about current government and university policy on research ethics.  </p>
-        <p>The landing page should contain a summary of, a least five, ongoing experiments. Also present on the interface is are logos to Social media platforms like Facebook etc. </p>
-        <p>The application will allow students, after authentication to seek approval for their propose experiment from EAO. EAOs should be able to approve, request additional information or reject an experiment proposal. </p>
-        <p>To implement fairness and objectivity each experiment will be randomly assign to two different EAOs, by an Administrator. 
+    <div>
+        <?php include 'include/header.php'; ?>
+    </div>
+    <div class="container">
+        <h3>Web Application Description - RGUEthics</h3>
+        <p>
+            This web application which I called RGUEthics is an online application that will manage RGU student’s
+            experiment ethics. </p>
+        <p>The interface should have a logo, navigation bar with elements like “Home”, “About Us”, “Student”,
+            “Experiment Approval Officers (EAO)”, “Contact US” and “Login”. </p>
+        <p>The interface should have a “News Section” about current government and university policy on research
+            ethics. </p>
+        <p>The landing page should contain a summary of, a least five, ongoing experiments. Also present on the
+            interface is are logos to Social media platforms like Facebook etc. </p>
+        <p>The application will allow students, after authentication to seek approval for their propose experiment from
+            EAO. EAOs should be able to approve, request additional information or reject an experiment proposal. </p>
+        <p>To implement fairness and objectivity each experiment will be randomly assign to two different EAOs, by an
+            Administrator.
         </p>
-        <p>Furthermore, the application will allow students and staff to submit assessment of EAO and the EAOs in turn will also have same permission for the Administrators.  
+        <p>Furthermore, the application will allow students and staff to submit assessment of EAO and the EAOs in turn
+            will also have same permission for the Administrators.
         </p>
 
     </div>
     <div>
         <?php include 'include/footer.php'; ?>
     </div>
-</body>
-</html>
+    </body>
+    </html>
 <?php ob_end_flush(); ?>
