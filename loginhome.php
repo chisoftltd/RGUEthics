@@ -79,17 +79,13 @@ if (isset($_POST['btn-login'])) {
 
             <div id="login-form">
                 <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
-
                     <div class="col-md-12">
-
                         <div class="form-group">
                             <h2 class="">Sign In.</h2>
                         </div>
-
                         <div class="form-group">
                             <hr />
                         </div>
-
                         <?php
                         if (isset($errMSG)) {
                             ?>
@@ -101,7 +97,6 @@ if (isset($_POST['btn-login'])) {
                             <?php
                         }
                         ?>
-
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
@@ -109,7 +104,6 @@ if (isset($_POST['btn-login'])) {
                             </div>
                             <span class="text-danger"><?php echo $emailError; ?></span>
                         </div>
-
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
@@ -117,28 +111,21 @@ if (isset($_POST['btn-login'])) {
                             </div>
                             <span class="text-danger"><?php echo $passError; ?></span>
                         </div>
-
                         <div class="form-group">
                             <hr />
                         </div>
-
                         <div class="form-group">
                             <button type="submit" class="btn btn-block btn-primary" name="btn-login">Sign In</button>
                         </div>
-
                         <div class="form-group">
                             <hr />
                         </div>
-
                         <div class="form-group">
                             <a href="register.php">Sign Up Here...</a>
                         </div>
-
                     </div>
-
                 </form>
             </div>
-
         </div>
         <div>
             <?php include 'include/footer.php'; ?>
