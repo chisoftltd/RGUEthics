@@ -127,3 +127,23 @@ h2{
     .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
     .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
 }
+#revised-header #revised-logo, #revised-header #revised-search {
+    width: 50%;
+    float: left;
+    min-height: 80px;
+}
+
+#revised-header #revised-logo .logo, #revised-header #revised-search .logo {
+    background: transparent;
+}
+h1.logo {
+    padding: 0;
+}
+h1 {
+    text-transform: none;
+    font-size: 2.5em;
+    font-family: 'Open Sans',arial,sans-serif;
+    padding: .25em;
+    padding-left: 0;
+    color: #606;
+}
