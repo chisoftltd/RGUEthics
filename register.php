@@ -11,6 +11,10 @@ $error = false;
 if (isset($_POST['btn-signup'])) {
 
     // clean user inputs to prevent sql injections
+    $id = trim($_POST['id']);
+    $id = strip_tags($id);
+    $id = htmlspecialchars($id);
+    
     $name = trim($_POST['name']);
     $name = strip_tags($name);
     $name = htmlspecialchars($name);
@@ -58,13 +62,20 @@ if (isset($_POST['btn-signup'])) {
         $passError = "Password must have atleast 6 characters.";
     }
 
+    if (empty($id)) {
+        $error = true;
+        $idError = "Please enter id.";
+    } else if (strlen($id) < 0 || strlen($id) > 7) {
+        $error = true;
+        $idError = "ID must have atleast 7 digits.";
+    }
     // password encrypt using SHA256();
     $password = hash('sha256', $pass);
 
     // if there's no error, continue to signup
     if (!$error) {
 
-        $query = "INSERT INTO users(userName,userEmail,userPass) VALUES('$name','$email','$password')";
+        $query = "INSERT INTO users(userId, userName,userEmail,userPass) VALUES('$id', '$name','$email','$password')";
         $res = mysql_query($query);
 
         if ($res) {
@@ -121,6 +132,14 @@ if (isset($_POST['btn-signup'])) {
                         }
                         ?>
 
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                <input type="number" name="id" class="form-control" placeholder="Enter ID Number" maxlength="50" value="<?php echo $name ?>" />
+                            </div>
+                            <span class="text-danger"><?php echo $idError; ?></span>
+                        </div>
+                        
                         <div class="form-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
