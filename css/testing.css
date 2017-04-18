@@ -49,3 +49,100 @@ a {
     color: #606;
     word-wrap: break-word;
 }
+div#skip {
+    height: 100em;
+    margin-top: -100em;
+    font-size: 1%;
+}
+body, div, td, .p, .s {
+    color: ;
+}
+body, td, div, .p, a, .d {
+    font-size: ;
+}
+div#wrapper {
+    background-color: #fff;
+    color: #333;
+    width: 960px;
+    margin: 0 auto;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-bottom: 0px;
+        margin-left: auto;
+}
+#revised-header {
+    *zoom: 1;
+    margin-bottom: 10px;
+    z-index: 500;
+    background: #fff;
+        background-color: rgb(255, 255, 255);
+        background-image: none;
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-position: 0% 0%;
+        background-clip: border-box;
+        background-origin: padding-box;
+        background-size: auto auto;
+}
+#revised-header::before, #revised-header::after {
+    display: table;
+    content: "";
+}
+
+#revised-header #revised-nav {
+    *zoom: 1;
+    margin: 10px 0;
+        margin-top: 10px;
+        margin-right: 0px;
+        margin-bottom: 10px;
+        margin-left: 0px;
+}
+#revised-header #revised-nav::before, #revised-header #revised-nav::after {
+    display: table;
+    content: "";
+}
+div#wrapper {
+    color: #333;
+}
+body {
+    font-size: 62.5%;
+    font-family: 'Open Sans',arial,sans-serif;
+}
+body {
+    line-height: 1;
+    color: black;
+}
+
+#revised-header #revised-nav ul {
+    float: right;
+    margin: 0;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    padding: 0;
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+    list-style: none;
+        list-style-type: none;
+        list-style-image: none;
+        list-style-position: outside;
+}
+ul {
+    list-style: disc;
+        list-style-type: disc;
+        list-style-image: none;
+        list-style-position: outside;
+}
+ul, ol {
+    margin-bottom: 1em;
+    padding-left: 2em;
+}
+ol, ul {
+    list-style: none;
+        list-style-type: none;
+        list-style-image: none;
+        list-style-position: outside;
+}

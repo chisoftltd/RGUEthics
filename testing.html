@@ -1,89 +1,404 @@
-<?php
-ob_start();
-session_start();
-require_once 'dbconnect.php';
-
-// it will never let you open index(login) page if session is set
-if (isset($_SESSION['user']) != "") {
-header("Location: login.php");
-exit;
-}
-
-$error = false;
-
-if (!empty($_POST['yes'])) {
-// Yes
-} else {
-// No
-}
-?>
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Coding Cage - Login & Registration System</title>
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"  />
-        <link rel="stylesheet" href="style.css" type="text/css" />
-        <link rel="stylesheet" href="css/main-style.css">
-        <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" media="screen"
-              href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
-        
-        <!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
-        <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
+<html lang="en"><head>
+        <title> - Robert Gordon University</title>
 
-        <!-- Inline CSS based on choices in "Settings" tab -->
-        <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
 
-        <!-- Extra JavaScript/CSS added manually in "Settings" tab -->
-        <!-- Include jQuery -->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-        <!-- Include Date Range Picker -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-    </head>
-    <body>
-        <!-- HTML Form (wrapped in a .bootstrap-iso div) -->
-        <div class="bootstrap-iso">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <form class="form-horizontal" method="post">
-                            <div class="form-group ">
-                                <label class="control-label col-sm-2" for="date">
-                                    Date
-                                </label>
-                                <div class="col-sm-10">
-                                    <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-10 col-sm-offset-2">
-                                    <button class="btn btn-primary " name="submit" type="submit">
-                                        Submit
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+
+        <script src="//siteimproveanalytics.com/js/siteanalyze_51623367.js" async="" type="text/javascript"></script><script src="//www.google-analytics.com/analytics.js" async=""></script><script src="/js/jquery-1.7.2.min.js"></script>
+        <script src="/js/jquery-ui.min.js"></script>
+
+        <script type="text/javascript" src="/js/global.js?Release%2062%20%28b24441%29"></script>
+        <!--[if lt IE 9]><script src="/js/html5.js"></script><![endif]-->
+
+        <link rel="stylesheet" href="css/testing.css" type="text/css" media="screen,print">
+        <!--[if lte IE 7]><link rel="stylesheet" href="/css/screen-ie.css?Release%2062%20%28b24441%29" type="text/css" media="screen" /><![endif]-->
+        <!--[if lte IE 6]><link rel="stylesheet" href="/css/screen-ie6.css?Release%2062%20%28b24441%29" type="text/css" media="screen" /><![endif]-->
+        <link rel="stylesheet" href="/css/print.css?Release%2062%20%28b24441%29" type="text/css" media="print">
+
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+
+        <link rel="canonical" href="http://www.rgu.ac.uk/CC2DE780-1494-11DF-ABFB000D609CAA9E/">
+
+
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+
+        <link rel="alternate" type="application/rss+xml" href="http://www.rgu.ac.uk/dmNews/feedRSS" title="RGU News RSS Feed">
+        <link rel="alternate" type="application/rss+xml" href="http://www.rgu.ac.uk/dmEvent/feedRSS" title="RGU Events RSS Feed">
 
         <script>
-            $(document).ready(function () {
-                var date_input = $('input[name="date"]'); //our date input has the name "date"
-                var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
-                date_input.datepicker({
-                    format: 'mm/dd/yyyy',
-                    container: container,
-                    todayHighlight: true,
-                    autoclose: true,
-                })
-            })
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-1430677-4', 'auto');
+            ga('send', 'pageview');
+
         </script>
-    </body>
-</html>
-<?php ob_end_flush(); ?>
+
+        <script type="text/javascript">
+            /*<![CDATA[*/
+            (function () {
+                var sz = document.createElement('script');
+                sz.type = 'text/javascript';
+                sz.async = true;
+                sz.src = '//siteimproveanalytics.com/js/siteanalyze_51623367.js'; var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(sz, s);
+            })();
+            /*]]>*/
+        </script>
+
+
+
+        <link rel="stylesheet" href="/css/revised.css?Release%2062%20%28b24441%29" type="text/css"> </head>
+
+    <body>
+        <a id="top"></a>
+
+        <div id="skip">
+            Skip to:
+            <a href="#navigation">Navigation</a>,
+            <a href="#content">page content</a>,
+            <a href="#">sitemap</a>
+        </div>
+
+        <div id="wrapper">
+            <div id="revised-header">
+
+                <div id="revised-nav">
+                    <ul><li><a href="/">Home</a></li><li><a href="/about/about-home">About</a></li><li><a href="/rgyou">RGyoU</a></li><li><a href="/staff-and-current-students">Staff &amp; Current Students</a></li><li class="last"><a href="/a-to-z">A to Z</a></li></ul> 
+                </div><!--#revised-nav-->
+
+                <div id="revised-logo"><h1 class="logo"><a href="/">Robert Gordon University, Aberdeen</a></h1></div><!--#revised-logo-->
+
+
+                <div id="revised-search">
+
+                    <form action="/">
+                        <fieldset>
+                            <label for="search-q">Search</label>
+                            <input title="Enter Keyword" name="q" id="search-q" value="" type="text">
+                            <input value="" title="Go" type="submit">
+                        </fieldset>
+                        <input name="type" value="searchParser" type="hidden">
+                        <input name="view" value="displayPageStandard" type="hidden">
+                    </form>
+
+                </div>
+
+                <div id="revised-main-nav">
+                    <ul><li><a href="/areas-of-study">Areas of Study</a></li><li><a href="/future-students">Future Students</a></li><li><a href="/student-life">Student Life</a></li><li><a href="/alumni-and-giving">Alumni &amp; Giving</a></li><li><a href="/research">Research</a></li><li><a href="/business-services">Business Services</a></li><li><a href="/news-and-events">News &amp; Events</a></li><li class="last"><a href="/contact-us">Contact us</a></li></ul> 
+                </div>
+
+
+
+            </div><!--#revised-header-->
+
+            <div id="content">
+                <h1><span>Search Results</span></h1>
+
+
+                <div id="rgyouSearch">
+                    <a href="https://you.rgu.ac.uk/search/Pages/results.aspx?k=&amp;r=site%3D%22https%3A%2F%2Fyou%2Ergu%2Eac%2Euk%2Forg%22" title="Search RGyoU for: ''"><img src="wsimages/searchonrgu.png" alt="Search on RGyoU" height="59" width="129"></a>
+                    <h4>Can't find what you're looking for?</h4>
+                    The search results below show you information available on the public RGU website.<br>
+                    Current students and staff may also wish to <a href="https://you.rgu.ac.uk/search/Pages/results.aspx?k=&amp;r=site%3D%22https%3A%2F%2Fyou%2Ergu%2Eac%2Euk%2Forg%22" title="Search RGyoU for: ''">search the RGyoU intranet</a>,
+                    where you'll find a University-wide library of information covering a wide range of topics. (Login required)
+                </div>
+                <div id="searchResults">
+                    <style><!--
+                        body,.d,.p,.s{background-color:}
+
+
+                        body,td,div,.p,a,.d{font-size: }
+                        body,div,td,.p,.s{color:}
+                        .s,.f,.f a{font-size: 80%}
+                        .l{font-size: 110%}
+                        .l{color: #606}
+                        a:link,.w,.w a:link{color:}
+                        a:visited,.f a:visited{color:}
+                        a:active,.f a:active{color:}
+                        .t{color:}
+                        .t{background-color:}
+                        .z{display:none}
+                        .f,.f:link,.f a:link{color:#6f6f6f}
+                        .i,.i:link{color:#a90a08}
+                        .a,.a:link{color:#008000}
+                        div.n {margin-top: 1ex}
+                        .n a{font-size: 10pt; color:}
+                        .n .i{font-size: 10pt; font-weight:bold}
+                        .q a:visited,.q a:link,.q a:active,.q {text-decoration: none; color:#0000cc;}
+                        .b,.b a{font-size: 12pt; color:#0000cc; font-weight:bold}
+                        .d{font-family:; 
+                           margin-right:1em; margin-left:1em;}
+                        .left{text-align: left;}
+                        .right{text-align: right;}   
+                        -->
+                    </style>
+                    <script type="text/javascript">
+                    <!--
+                        function resetForms() {
+                            for (var i = 0; i < document.forms.length; i++) {
+                                document.forms[i].reset();
+                            }
+                        }
+                        //--></script>
+                    <br><table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody><tr>
+                                <td style="text-align: right;" nowrap="1"><font size="-1"><a href="/?type=searchParser&amp;view=displayPageStandard&amp;sort=&amp;client=google-csbe&amp;num=100&amp;output=xml_no_dtd&amp;as_eq=&amp;btng=Search%20RGU&amp;lr=&amp;as_oq=The%20Back%20Propagation%20Algorithm&amp;as_q=chapter%203&amp;as_dt=i&amp;as_epq=&amp;__allowredirect=1&amp;as_occt=any&amp;ie=utf8&amp;as_sitesearch=&amp;objectid=&amp;oe=utf8&amp;as_lq=&amp;cx=007996432213537772069%3Aycibrwdpho8&amp;adkw=AELymgUjdNQ97UYPqEEWBFHOTJnn7rozyB-B7dYeaermdmjkm_xcIKphnq2ZzVstHocutTTOBXC2jqwHw7mZpusPPxWfA4rgrv8nBCeOJ_vfOaPx0ehne2It1YW9WfYE92s_RLh922Ml5ikqWCwJjg4IQjr8Bd6GGJ4VtcPwssZScJr1hTAhj_lGwG1EK01gMsQ3Hi_3VDav&amp;hl=en&amp;boostcse=0&amp;proxycustom=<ADVANCED/>">Advanced Search</a>&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                                    </font></td>
+                            </tr>
+                        </tbody></table>
+                    <table border="0" cellpadding="2" cellspacing="2" width="100%">
+                        <tbody><tr>
+                                <td class="t">
+                                    Searched for
+                                    <b><font color="">chapter 3 The OR Back OR Propagation OR Algorithm</font></b>.
+                                    &nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="t">
+                                    Results 
+                                    <b>1 - 20</b>
+                                    of about <b>625</b>.
+
+                                    Search took 
+                                    <b>0.15</b> seconds.
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    <hr class="z">
+                    <table width="100%">
+                        <tbody><tr></tr>
+                        </tbody></table>
+                    <p>
+                        <span class="p"><font color="#c00">Did you mean:&nbsp;</font></span><a href="/?type=searchParser&amp;view=displayPageStandard&amp;q=chapter 3 The OR Backpropagation OR Algorithm&amp;spell=1&amp;client=google-csbe&amp;num=100&amp;output=xml_no_dtd&amp;lr=&amp;ie=utf8&amp;oe=utf8">chapter 3 The OR <b><i>Backpropagation</i></b> OR Algorithm</a>
+                    </p>
+                    <div>
+                        <p>
+                            <font size="-2"><b>[PDF] <img alt="PDF" src="/rguGoogleMiniSearch/icons/icon_pdf.gif" height="16" width="16"></b></font> <a href="https://openair.rgu.ac.uk/bitstream/handle/10059/358/Viswanathan%20E%20Chapter%203.pdf"><span class="l"><b>Chapter 3</b> Introduction to Taguchi Methods</span></a><br>
+                            <span class="f"><b>Chapter 3</b>. Introduction to Taguchi Methods. 3.1 Background &amp; Overview of <br>
+                                Taguchi Methods. After the ... inspection can put quality <b>back</b> into the product.</span>
+                            <br>
+                            <font color="#008000" size="-1">openair.rgu.ac.uk/bitstream/handle/10059/358/Viswanathan%20E%20Chapter%203.pdf</font>
+                        </p>
+                        <p>
+                            <font size="-2"><b>[PDF] <img alt="PDF" src="/rguGoogleMiniSearch/icons/icon_pdf.gif" height="16" width="16"></b></font> <a href="https://openair.rgu.ac.uk/bitstream/handle/10059/284/EMuthuramanThesisChapter1.pdf?sequence=5"><span class="l"><b>Chapter</b> 1 Introduction</span></a><br>
+                            <span class="f">shelf” networks such as <b>Back Propagation</b> trained Multilayer Perceptrons, Radial. <br>
+                                Basis Networks and .... <b>Chapter 3</b>: Evolution by Devolved Action. In this chapter&nbsp;...</span>
+                            <br>
+                            <font color="#008000" size="-1">openair.rgu.ac.uk/bitstream/handle/10059/284/EMuthuramanThesisChapter1.pdf?sequence=5</font>
+                        </p>
+                        <p>
+                            <font size="-2"><b>[PDF] <img alt="PDF" src="/rguGoogleMiniSearch/icons/icon_pdf.gif" height="16" width="16"></b></font> <a href="https://openair.rgu.ac.uk/bitstream/10059/339/4/Jennifer+Brown+thesis+D+Chapter+3+April+09.pdf"><span class="l">Jennifer Brown thesis D <b>Chapter 3</b> April 09.pdf</span></a><br>
+                            <span class="f"><b>Chapter 3</b>. The research design for a holistic approach to .... city, suburban and <br>
+                                rural areas who were often referred <b>back</b> to primary care for follow-.</span>
+                            <br>
+                            <font color="#008000" size="-1">openair.rgu.ac.uk/bitstream/10059/339/4/Jennifer+Brown+thesis+D+Chapter+3+April+09.pdf</font>
+                        </p>
+                        <p>
+                            <font size="-2"><b>[PDF] <img alt="PDF" src="/rguGoogleMiniSearch/icons/icon_pdf.gif" height="16" width="16"></b></font> <a href="https://openair.rgu.ac.uk/bitstream/10059/358/3/Viswanathan+C+Chapter+1.pdf"><span class="l">Viswanathan C <b>Chapter</b> 1.pdf</span></a><br>
+                            <span class="f"><b>Chapter</b> 1. Introduction. 1.1 Introduction to <b>Chapter</b>. This <b>chapter</b> starts by ... <br>
+                                adoption of popular and simple “off the shelf” networks such as <b>Back</b> ... Page <b>3</b>&nbsp;...</span>
+                            <br>
+                            <font color="#008000" size="-1">openair.rgu.ac.uk/bitstream/10059/358/3/Viswanathan+C+Chapter+1.pdf</font>
+                        </p>
+                        <p>
+                            <font size="-2"><b>[PDF] <img alt="PDF" src="/rguGoogleMiniSearch/icons/icon_pdf.gif" height="16" width="16"></b></font> <a href="https://www.rgu.ac.uk/files/dmfile/bereavement-and-bereavement-care-literature-review.pdf"><span class="l">Literature Review on Bereavement and Bereavement Care</span></a><br>
+                            <span class="f">(<b>Chapter 3</b>) moves more fully into the review by outlining the complications ...... <br>
+                                <b>back</b> to work soon after the funeral, retrospectively reflected it had been a.</span>
+                            <br>
+                            <font color="#008000" size="-1">www.rgu.ac.uk/files/dmfile/bereavement-and-bereavement-care-literature-review.pdf</font>
+                        </p>
+                        <p>
+                            <font size="-2"><b>[PDF] <img alt="PDF" src="/rguGoogleMiniSearch/icons/icon_pdf.gif" height="16" width="16"></b></font> <a href="https://openair.rgu.ac.uk/bitstream/10059/358/10/Viswanathan+J+Chapter+8.pdf"><span class="l">Viswanathan J <b>Chapter</b> 8.pdf</span></a><br>
+                            <span class="f">The results of these are given in <b>Chapter 3</b>, although references ... <b>Propagation</b>, <br>
+                                the method reduces the network training time significantly. This is discussed in&nbsp;...</span>
+                            <br>
+                            <font color="#008000" size="-1">openair.rgu.ac.uk/bitstream/10059/358/10/Viswanathan+J+Chapter+8.pdf</font>
+                        </p>
+                        <p>
+                            <font size="-2"><b>[PDF] <img alt="PDF" src="/rguGoogleMiniSearch/icons/icon_pdf.gif" height="16" width="16"></b></font> <a href="https://openair.rgu.ac.uk/bitstream/handle/10059/284/GMuthuramanThesisChapter3.pdf?sequence=7"><span class="l"><b>Chapter 3</b> Evolution and Devolved Action</span></a><br>
+                            <span class="f"><b>Chapter 3</b>. Evolution and Devolved Action. 3.1 Introduction to the Chapter ... 2) <br>
+                                An Evolutionary <b>Algorithm</b> was required to allow the network to combine the.</span>
+                            <br>
+                            <font color="#008000" size="-1">openair.rgu.ac.uk/bitstream/handle/10059/284/GMuthuramanThesisChapter3.pdf?sequence=7</font>
+                        </p>
+                        <p>
+                            <font size="-2"><b>[PDF] <img alt="PDF" src="/rguGoogleMiniSearch/icons/icon_pdf.gif" height="16" width="16"></b></font> <a href="https://openair.rgu.ac.uk/bitstream/handle/10059/284/FMuthuramanThesisChapter2.pdf"><span class="l"><b>Chapter</b> 2 Review of Previous work within the Research Group</span></a><br>
+                            <span class="f">the <b>algorithm</b> runs, the system is limited in that: 1) It is applied only to simple tasks<br>
+                                . 2) It uses only the basic McCulloch-Pitts neuron model. <b>3</b>) The whole network&nbsp;...</span>
+                            <br>
+                            <font color="#008000" size="-1">openair.rgu.ac.uk/bitstream/handle/10059/284/FMuthuramanThesisChapter2.pdf</font>
+                        </p>
+                        <p>
+                            <font size="-2"><b></b></font> <a href="https://openair.rgu.ac.uk/handle/10059/1259"><span class="l">An application of genetic algorithms to chemotherapy treatment.</span></a><br>
+                            <span class="f">Chapter 1 gives some biomedical background to the problem of cancer and its ... <br>
+                                methods applicable to the problem under investigation is given in <b>Chapter 3</b> with <br>
+                                ... The main contributions are: (1) a novel application of the Genetic <b>Algorithm</b>&nbsp;...</span>
+                            <br>
+                            <font color="#008000" size="-1">openair.rgu.ac.uk/handle/10059/1259</font><font size="-1"> - 27k</font>
+                        </p>
+                        <p>
+                            <font size="-2"><b>[MS WORD] <img alt="DOC" src="/rguGoogleMiniSearch/icons/icon_doc.gif" height="16" width="16"></b></font> <a href="http://www2.rgu.ac.uk/subj/ats/teachingweb/studies/contextual07/stage4/Crit.EvStudyGuide06-07.doc"><span class="l">Guide to Academic Presentation</span></a><br>
+                            <span class="f"><b>Chapter 3</b> Computer Technology &amp; The Meaning of Craft ... as scanning chapters, <br>
+                                searching Library databases, reviewing bibliographies at the <b>back</b> of relevant&nbsp;...</span>
+                            <br>
+                            <font color="#008000" size="-1">www2.rgu.ac.uk/subj/ats/teachingweb/studies/contextual07/stage4/Crit.EvStudyGuide06-07.doc</font>
+                        </p>
+                        <p>
+                            <font size="-2"><b>[PDF] <img alt="PDF" src="/rguGoogleMiniSearch/icons/icon_pdf.gif" height="16" width="16"></b></font> <a href="https://openair.rgu.ac.uk/bitstream/handle/10059/792/David%20Robertson%20PhD%20thesis.pdf"><span class="l">David Robertson PhD thesis.pdf</span></a><br>
+                            <span class="f">Oct 25, 2012 <b>...</b> development of an <b>algorithm</b> to support this process is proposed. ..... <b>Chapter</b> 4: <br>
+                                Analysis and Findings. <b>3</b> definition of occupational therapy;&nbsp;...</span>
+                            <br>
+                            <font color="#008000" size="-1">openair.rgu.ac.uk/bitstream/handle/10059/792/David%20Robertson%20PhD%20thesis.pdf</font>
+                        </p>
+                        <p>
+                            <font size="-2"><b>[PDF] <img alt="PDF" src="/rguGoogleMiniSearch/icons/icon_pdf.gif" height="16" width="16"></b></font> <a href="https://www.rgu.ac.uk/file/microgeneration-of-renewables-pdf-300kb"><span class="l">Microgeneration of Renewables (PDF 300KB)</span></a><br>
+                            <span class="f"><b>Chapter 3</b> explores six important market drivers for future development and .... the <br>
+                                case of electricity generation, a generated surplus can be sold <b>back</b> to the grid.</span>
+                            <br>
+                            <font color="#008000" size="-1">www.rgu.ac.uk/file/microgeneration-of-renewables-pdf-300kb</font>
+                        </p>
+                        <p>
+                            <font size="-2"><b>[MS WORD] <img alt="DOC" src="/rguGoogleMiniSearch/icons/icon_doc.gif" height="16" width="16"></b></font> <a href="http://www2.rgu.ac.uk/subj/ats/teachingweb/studies/contextual2/representation.doc"><span class="l">Contextual and Critical Studies – Mini-Programme 1</span></a><br>
+                            <span class="f">Each programme runs across <b>3</b> weeks, and includes a lecture on Mondays at <br>
+                                1.00 .... Cultural representation and signifying practices. pp 223-77 (A long <br>
+                                <b>chapter</b>. ..... the day, but after 4pm they go out overnight and are due <b>back</b> the <br>
+                                next day.</span>
+                            <br>
+                            <font color="#008000" size="-1">www2.rgu.ac.uk/subj/ats/teachingweb/studies/contextual2/representation.doc</font>
+                        </p>
+                        <p>
+                            <font size="-2"><b></b></font> <a href="http://www2.rgu.ac.uk/celt/pgcerttlt/how/how_bib.htm"><span class="l">How students learn: what learning involves</span></a><br>
+                            <span class="f">Instructional Technology : Foundations, edited by R.M. Gagné; Lawrence <br>
+                                Erlbaum, Hillsdale, N.J., USA, 1987. (<b>Chapter 3</b> provides a useful review of the <br>
+                                findings&nbsp;...</span>
+                            <br>
+                            <font color="#008000" size="-1">www2.rgu.ac.uk/celt/pgcerttlt/how/how_bib.htm</font><font size="-1"> - 6k</font>
+                        </p>
+                        <p>
+                            <font size="-2"><b>[PDF] <img alt="PDF" src="/rguGoogleMiniSearch/icons/icon_pdf.gif" height="16" width="16"></b></font> <a href="http://www2.rgu.ac.uk/ora/stephen_switzer/Switzer.pdf"><span class="l"><b>Chapter</b> I: Biography</span></a><br>
+                            <span class="f"><b>3</b>. If becoming a gardener was a disappointment of Switzer's expectations17 he <br>
+                                .... 1708 there was a set <b>back</b>, “Mr Wise has given the care of the gardens to&nbsp;...</span>
+                            <br>
+                            <font color="#008000" size="-1">www2.rgu.ac.uk/ora/stephen_switzer/Switzer.pdf</font>
+                        </p>
+                        <p>
+                            <font size="-2"><b>[PDF] <img alt="PDF" src="/rguGoogleMiniSearch/icons/icon_pdf.gif" height="16" width="16"></b></font> <a href="https://openair.rgu.ac.uk/bitstream/handle/10059/1230/Ibrahim%20PhD%202014%20Towards.pdf?sequence=1"><span class="l">Variance Decomposition of Oil Price</span></a><br>
+                            <span class="f">10 The decline in the US oil consumption is shown in figure 3.2 in <b>Chapter 3</b> of <br>
+                                this ..... must be holding <b>back</b> production, presumably to keep prices high, and.</span>
+                            <br>
+                            <font color="#008000" size="-1">openair.rgu.ac.uk/bitstream/handle/10059/1230/Ibrahim%20PhD%202014%20Towards.pdf?sequence=1</font>
+                        </p>
+                        <p>
+                            <font size="-2"><b>[PDF] <img alt="PDF" src="/rguGoogleMiniSearch/icons/icon_pdf.gif" height="16" width="16"></b></font> <a href="https://openair.rgu.ac.uk/bitstream/handle/10059/1220/Smith%20PhD%202015%20BECOMING.pdf?sequence=1"><span class="l">Interpretation of Texts (Stage II)</span></a><br>
+                            <span class="f">Chapter 2: Solution Focused Brief Therapy . ... <b>Chapter 3</b>: Methodology . ...... <br>
+                                dynasty of family patriarchs (and matriarchs) going <b>back</b> through my. Grandfather<br>
+                                &nbsp;...</span>
+                            <br>
+                            <font color="#008000" size="-1">openair.rgu.ac.uk/bitstream/handle/10059/1220/Smith%20PhD%202015%20BECOMING.pdf?sequence=1</font>
+                        </p>
+                        <p>
+                            <font size="-2"><b>[PDF] <img alt="PDF" src="/rguGoogleMiniSearch/icons/icon_pdf.gif" height="16" width="16"></b></font> <a href="https://www.rgu.ac.uk/files/dmfile/bereavement-and-bereavement-care-final-report.pdf"><span class="l">Bereavement and Bereavement Care</span></a><br>
+                            <span class="f"><b>iii</b>. Contents. <b>Chapter</b> 1: Introduction. ... <b>Chapter</b> 2: Study design . .... Table <b>3</b>. <br>
+                                Roles of interviewees employed in palliative care and hospice services. 21. <br>
+                                Table 4.</span>
+                            <br>
+                            <font color="#008000" size="-1">www.rgu.ac.uk/files/dmfile/bereavement-and-bereavement-care-final-report.pdf</font>
+                        </p>
+                        <p>
+                            <font size="-2"><b>[PDF] <img alt="PDF" src="/rguGoogleMiniSearch/icons/icon_pdf.gif" height="16" width="16"></b></font> <a href="https://openair.rgu.ac.uk/bitstream/10059/466/3/Nana%20PhD.pdf"><span class="l">Nana PhD.pdf</span></a><br>
+                            <span class="f">iii. ABSTRACT. The objectives of this thesis are twofold: firstly, demonstrate that <br>
+                                the ..... <b>CHAPTER 3</b> THE ADAPTABILITY OF THE CRIMINAL LAW IN DEALING <br>
+                                ...... imposed on collective entities as far <b>back</b> as the Roman era and Schlegel7.</span>
+                            <br>
+                            <font color="#008000" size="-1">openair.rgu.ac.uk/bitstream/10059/466/3/Nana%20PhD.pdf</font>
+                        </p>
+                        <p>
+                            <font size="-2"><b>[PDF] <img alt="PDF" src="/rguGoogleMiniSearch/icons/icon_pdf.gif" height="16" width="16"></b></font> <a href="https://openair.rgu.ac.uk/bitstream/10059/1116/1/Al-Mufarji"><span class="l"><b>Chapter</b> 2</span></a><br>
+                            <span class="f">The resultant drawdown pressures were then used to <b>back</b>-calculate ... liquid <br>
+                                flows, ii) integration of CFD with <b>3</b>-dimensional reservoir simulator and <b>iii</b>) the.</span>
+                            <br>
+                            <font color="#008000" size="-1">openair.rgu.ac.uk/bitstream/10059/1116/1/Al-Mufarji</font>
+                        </p>
+                    </div><center>
+                        <div class="n"><table border="0" cellpadding="0" cellspacing="0" width="1%">
+                                <tbody><tr align="center" valign="top">
+                                        <td nowrap="1" valign="bottom"><font size="-1">
+                                            Result&nbsp;Page:&nbsp;</font></td><td></td><td>&nbsp;<span style="font-size: 100%;" class="i">1</span>&nbsp;</td><td>&nbsp;<a style="font-size: 100%;" href="/?type=searchParser&amp;view=displayPageStandard&amp;sort=&amp;client=google-csbe&amp;num=100&amp;output=xml_no_dtd&amp;as_eq=&amp;btng=Search%20RGU&amp;lr=&amp;as_oq=The%20Back%20Propagation%20Algorithm&amp;as_q=chapter%203&amp;as_dt=i&amp;as_epq=&amp;__allowredirect=1&amp;as_occt=any&amp;ie=utf8&amp;as_sitesearch=&amp;objectid=&amp;oe=utf8&amp;as_lq=&amp;cx=007996432213537772069%3Aycibrwdpho8&amp;adkw=AELymgUjdNQ97UYPqEEWBFHOTJnn7rozyB-B7dYeaermdmjkm_xcIKphnq2ZzVstHocutTTOBXC2jqwHw7mZpusPPxWfA4rgrv8nBCeOJ_vfOaPx0ehne2It1YW9WfYE92s_RLh922Ml5ikqWCwJjg4IQjr8Bd6GGJ4VtcPwssZScJr1hTAhj_lGwG1EK01gMsQ3Hi_3VDav&amp;hl=en&amp;boostcse=0&amp;start=100">2</a>&nbsp;</td><td>&nbsp;<a style="font-size: 100%;" href="/?type=searchParser&amp;view=displayPageStandard&amp;sort=&amp;client=google-csbe&amp;num=100&amp;output=xml_no_dtd&amp;as_eq=&amp;btng=Search%20RGU&amp;lr=&amp;as_oq=The%20Back%20Propagation%20Algorithm&amp;as_q=chapter%203&amp;as_dt=i&amp;as_epq=&amp;__allowredirect=1&amp;as_occt=any&amp;ie=utf8&amp;as_sitesearch=&amp;objectid=&amp;oe=utf8&amp;as_lq=&amp;cx=007996432213537772069%3Aycibrwdpho8&amp;adkw=AELymgUjdNQ97UYPqEEWBFHOTJnn7rozyB-B7dYeaermdmjkm_xcIKphnq2ZzVstHocutTTOBXC2jqwHw7mZpusPPxWfA4rgrv8nBCeOJ_vfOaPx0ehne2It1YW9WfYE92s_RLh922Ml5ikqWCwJjg4IQjr8Bd6GGJ4VtcPwssZScJr1hTAhj_lGwG1EK01gMsQ3Hi_3VDav&amp;hl=en&amp;boostcse=0&amp;start=200">3</a>&nbsp;</td><td>&nbsp;<a style="font-size: 100%;" href="/?type=searchParser&amp;view=displayPageStandard&amp;sort=&amp;client=google-csbe&amp;num=100&amp;output=xml_no_dtd&amp;as_eq=&amp;btng=Search%20RGU&amp;lr=&amp;as_oq=The%20Back%20Propagation%20Algorithm&amp;as_q=chapter%203&amp;as_dt=i&amp;as_epq=&amp;__allowredirect=1&amp;as_occt=any&amp;ie=utf8&amp;as_sitesearch=&amp;objectid=&amp;oe=utf8&amp;as_lq=&amp;cx=007996432213537772069%3Aycibrwdpho8&amp;adkw=AELymgUjdNQ97UYPqEEWBFHOTJnn7rozyB-B7dYeaermdmjkm_xcIKphnq2ZzVstHocutTTOBXC2jqwHw7mZpusPPxWfA4rgrv8nBCeOJ_vfOaPx0ehne2It1YW9WfYE92s_RLh922Ml5ikqWCwJjg4IQjr8Bd6GGJ4VtcPwssZScJr1hTAhj_lGwG1EK01gMsQ3Hi_3VDav&amp;hl=en&amp;boostcse=0&amp;start=300">4</a>&nbsp;</td><td>&nbsp;<a style="font-size: 100%;" href="/?type=searchParser&amp;view=displayPageStandard&amp;sort=&amp;client=google-csbe&amp;num=100&amp;output=xml_no_dtd&amp;as_eq=&amp;btng=Search%20RGU&amp;lr=&amp;as_oq=The%20Back%20Propagation%20Algorithm&amp;as_q=chapter%203&amp;as_dt=i&amp;as_epq=&amp;__allowredirect=1&amp;as_occt=any&amp;ie=utf8&amp;as_sitesearch=&amp;objectid=&amp;oe=utf8&amp;as_lq=&amp;cx=007996432213537772069%3Aycibrwdpho8&amp;adkw=AELymgUjdNQ97UYPqEEWBFHOTJnn7rozyB-B7dYeaermdmjkm_xcIKphnq2ZzVstHocutTTOBXC2jqwHw7mZpusPPxWfA4rgrv8nBCeOJ_vfOaPx0ehne2It1YW9WfYE92s_RLh922Ml5ikqWCwJjg4IQjr8Bd6GGJ4VtcPwssZScJr1hTAhj_lGwG1EK01gMsQ3Hi_3VDav&amp;hl=en&amp;boostcse=0&amp;start=400">5</a>&nbsp;</td><td>&nbsp;<a style="font-size: 100%;" href="/?type=searchParser&amp;view=displayPageStandard&amp;sort=&amp;client=google-csbe&amp;num=100&amp;output=xml_no_dtd&amp;as_eq=&amp;btng=Search%20RGU&amp;lr=&amp;as_oq=The%20Back%20Propagation%20Algorithm&amp;as_q=chapter%203&amp;as_dt=i&amp;as_epq=&amp;__allowredirect=1&amp;as_occt=any&amp;ie=utf8&amp;as_sitesearch=&amp;objectid=&amp;oe=utf8&amp;as_lq=&amp;cx=007996432213537772069%3Aycibrwdpho8&amp;adkw=AELymgUjdNQ97UYPqEEWBFHOTJnn7rozyB-B7dYeaermdmjkm_xcIKphnq2ZzVstHocutTTOBXC2jqwHw7mZpusPPxWfA4rgrv8nBCeOJ_vfOaPx0ehne2It1YW9WfYE92s_RLh922Ml5ikqWCwJjg4IQjr8Bd6GGJ4VtcPwssZScJr1hTAhj_lGwG1EK01gMsQ3Hi_3VDav&amp;hl=en&amp;boostcse=0&amp;start=500">6</a>&nbsp;</td><td>&nbsp;<a style="font-size: 100%;" href="/?type=searchParser&amp;view=displayPageStandard&amp;sort=&amp;client=google-csbe&amp;num=100&amp;output=xml_no_dtd&amp;as_eq=&amp;btng=Search%20RGU&amp;lr=&amp;as_oq=The%20Back%20Propagation%20Algorithm&amp;as_q=chapter%203&amp;as_dt=i&amp;as_epq=&amp;__allowredirect=1&amp;as_occt=any&amp;ie=utf8&amp;as_sitesearch=&amp;objectid=&amp;oe=utf8&amp;as_lq=&amp;cx=007996432213537772069%3Aycibrwdpho8&amp;adkw=AELymgUjdNQ97UYPqEEWBFHOTJnn7rozyB-B7dYeaermdmjkm_xcIKphnq2ZzVstHocutTTOBXC2jqwHw7mZpusPPxWfA4rgrv8nBCeOJ_vfOaPx0ehne2It1YW9WfYE92s_RLh922Ml5ikqWCwJjg4IQjr8Bd6GGJ4VtcPwssZScJr1hTAhj_lGwG1EK01gMsQ3Hi_3VDav&amp;hl=en&amp;boostcse=0&amp;start=600">7</a>&nbsp;</td><td nowrap="1">&nbsp;<span class="b"><a style="color: #606;" href="/?type=searchParser&amp;view=displayPageStandard&amp;sort=&amp;client=google-csbe&amp;num=100&amp;output=xml_no_dtd&amp;as_eq=&amp;btng=Search%20RGU&amp;lr=&amp;as_oq=The%20Back%20Propagation%20Algorithm&amp;as_q=chapter%203&amp;as_dt=i&amp;as_epq=&amp;__allowredirect=1&amp;as_occt=any&amp;ie=utf8&amp;as_sitesearch=&amp;objectid=&amp;oe=utf8&amp;as_lq=&amp;cx=007996432213537772069%3Aycibrwdpho8&amp;adkw=AELymgUjdNQ97UYPqEEWBFHOTJnn7rozyB-B7dYeaermdmjkm_xcIKphnq2ZzVstHocutTTOBXC2jqwHw7mZpusPPxWfA4rgrv8nBCeOJ_vfOaPx0ehne2It1YW9WfYE92s_RLh922Ml5ikqWCwJjg4IQjr8Bd6GGJ4VtcPwssZScJr1hTAhj_lGwG1EK01gMsQ3Hi_3VDav&amp;hl=en&amp;boostcse=0&amp;start=100">Next</a></span></td>
+                                    </tr>
+                                </tbody></table></div>
+                    </center><center>
+                        <br>
+                        <br>
+                        <p>
+                            <font face="arial,sans-serif" color="#2f2f2f" size="-1">
+                            Powered by Google</font>
+                        </p>
+                    </center>
+                    <span class="p"> </span>
+                </div>
+            </div>
+
+            <div class="center-align footer-wrap">
+
+
+
+                <div class="footer-social-links">
+
+                    <h3></h3>
+                    <p style="text-align: center;"><strong>Follow us</strong></p>
+                    <p style="text-align: center;"><a title="Follow RGU on Facebook (opens in new window)" onclick="ga('send', 'event', 'Follow', 'fromFooter', 'Facebook');" href="/link/facebook-small" target="_blank"><img style="border: 0px;" src="/images/dmImage/SourceImage/Facebook-Col-51.jpg" alt="Follow RGU on Facebook (opens in new window)" title="Follow RGU on Facebook (opens in new window)" height="27" width="27"></a>&nbsp; &nbsp;<a title="Follow RGU on Twitter (opens in new window)" onclick="ga('send', 'event', 'Follow', 'fromFooter', 'Twitter');" href="/link/twitter" target="_blank"><img style="border: 0px;" src="/images/dmImage/SourceImage/twitter col 35.jpg" alt="Follow RGU on Twitter (opens in new window)" title="Follow RGU on Twitter (opens in new window)" height="27" width="27"></a>&nbsp; &nbsp;<a title="RGU LinkedIn (opens in a new window)" onclick="ga('send', 'event', 'Follow', 'fromFooter', 'LinkedIn');" href="/link/linkedin-university-page" target="_blank"><img style="border: 0px;" src="/images/dmImage/SourceImage/LinkedIn-Col-51.jpg" alt="RGU LinkedIn (opens in a new window)" title="RGU LinkedIn (opens in a new window)" height="27" width="27"></a>&nbsp; &nbsp;<a title="RGU YouTube (opens in new window)" onclick="ga('send', 'event', 'Follow', 'fromFooter', 'YouTube');" href="/link/youtube-small" target="_blank"><img style="border: 0px;" src="/images/dmImage/SourceImage/YouTube-Col-51.jpg" alt="RGU YouTube (opens in new window)" title="RGU YouTube (opens in new window)" height="27" width="27"></a>&nbsp; &nbsp;<a title="University Instagram (opens in new window)" onclick="ga('send', 'event', 'Follow', 'fromFooter', 'Instagram');" href="/link/instagram" target="_blank"><img style="border: 0px;" src="https://www.rgu.ac.uk/images/dmImage/SourceImage/Instagram-Col.jpg" alt="Instagram" height="27" width="27"></a></p> 
+                </div>
+
+                <div id="footer">
+
+
+                    <ul><li><a href="/footer/accessibility">Accessibility</a></li><li><a href="/footer/sitemap">Sitemap</a></li><li><a href="/footer/disclaimer">Disclaimer</a></li><li><a href="/footer/freedom-of-information">Freedom of information</a></li><li><a href="/footer/privacy-and-cookie-statement">Privacy and cookie statement</a></li><li><a href="/footer/complaints">Complaints</a></li><li><a href="/footer/copyright-2017">Copyright ©2017</a></li></ul>
+                </div><!-- #footer -->
+                <div id="contact">
+                    <address class="vcard">
+                        <a class="fn org url" href="http://www.rgu.ac.uk/">Robert Gordon University</a>,
+                        <span class="adr">
+                            <span class="street-address">Garthdee House, Garthdee Road</span>,
+                            <span class="locality">Aberdeen</span>,
+                            <span class="postal-code">AB10 7QB</span>,
+                            <span class="region">Scotland</span>,
+                            <abbr class="country-name" title="United Kingdom">UK</abbr></span>
+                        <br>
+                        A Scottish charity, registration No. SC013781
+                    </address>
+
+                    <div id="desktopMobile">
+
+                        <a href="?showDesktopVersion=true">Desktop Version</a>
+
+                    </div>
+
+                </div><!-- #contact -->
+            </div><!-- #wrapper -->
+
+        </div>
+
+        <script type="text/javascript" src="/js/dog-revised.js?Release%2062%20%28b24441%29"></script>
+
+
+    </body></html>
