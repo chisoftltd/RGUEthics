@@ -503,8 +503,8 @@ function test_input($data)
                             <ul style="padding-left: 20px">
                                 <li>
                                     Research involving health sector organisations:
-                                    <input type="radio" name="healthyes0" <?php if (isset($healthyes0) && $healthyes0=="yes") echo "checked";?> value="1"><b>YES</b>
-                                    <input type="radio" name="healthyes0" <?php if (isset($healthyes0) && $healthyes0=="no") echo "checked";?> value="0"><b>NO</b>
+                                    <input type="radio" name="healthyes0" <?php if (isset($healthyes0) && $healthyes0=="yes") echo "checked";?> value="yes"><b>YES</b>
+                                    <input type="radio" name="healthyes0" <?php if (isset($healthyes0) && $healthyes0=="no") echo "checked";?> value="no"><b>NO</b>
                                     <span class="error">* <?php echo $healthyes0Error;?></span>
                                 </li>
                                 <li>
