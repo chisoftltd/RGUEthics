@@ -40,6 +40,7 @@
         </ul>
     </nav>
     <article class="article">
+        <h1 style="color: deepskyblue">Disclaimer</h1>
         <h2>Whilst subject to the provisions of the law, I disclaims liability for any damages resulting from the
             inappropriate use of any content on this site including infringement of copyright or defamation.</h2>
         <h3>This website contains information intended as a guide for applicants for ethics relating to ongoing or

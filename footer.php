@@ -5,7 +5,7 @@
         </p>
         <ul class="footer-links">
             <li><a href="index.php">Home</a></li>
-            <li><a href="index.html">Disclaimer</a></li>
+            <li><a href="disclamer.php">Disclaimer</a></li>
             <li><a href="index.html">Freedom of information</a></li>
             <li><a href="index.html">Privacy and cookie statement</a></li>
             <li><a href="index.html">Complaints</a></li>
