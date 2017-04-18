@@ -64,7 +64,7 @@ if (isset($_POST['btn-signup'])) {
 
     if (empty($id)) {
         $error = true;
-        $idError = "Please enter id.";
+        $idError = "Please enter ID Number.";
     } else if (strlen($id) < 0 || strlen($id) > 7) {
         $error = true;
         $idError = "ID must have atleast 7 digits.";
