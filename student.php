@@ -620,8 +620,7 @@ function test_input($data)
                 <div class="form-group">
                     <button type="submit" class="btn btn-block btn-primary" name="btn-register">Register</button>
                 </div>
-                <?php
-                echo $errMSG ?>
+                <input type="submit" name="submit" value="Submit">
                 <!-- Terms and conditions modal -->
                 <div class="modal fade" id="termsModal" tabindex="-1" role="dialog"
                      aria-labelledby="Terms and conditions" aria-hidden="true">
