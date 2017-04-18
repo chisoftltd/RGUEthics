@@ -10,8 +10,18 @@ if (isset($_SESSION['user']) != "") {
 }
 
 $error = false;
-$firstName = $lastName = $number = $program = $status =$supervisor ="";
-$startDate = $endDate = "";
+$firstName = $lastName = $number = $program = $status = $supervisor = "";
+$startDate = $endDate = $healthyes0 = $childrenyes1 = $sensitiveyes2 = "";
+$aerodefenceyes3 = $nuclearyes4 = $projectDetails = $participants = $dataDetails = "";
+$sharing = $consent = $datastorage = $anonymity = $intlTrfyes5 = $noneu = "";
+$notfyes6 = $email = "";
+
+$firstNameError = $lastNameError = $numberError = $programError = $statusError = $supervisorError = "";
+$startDateError = $endDateError = $healthyes0Error = $childrenyes1Error = $sensitiveyes2Error = "";
+$aerodefenceyes3Error = $nuclearyes4Error = $projectDetailsError = $participantsError = $dataDetailsError = "";
+$sharingError = $consentError = $datastorageError = $anonymityError = $intlTrfyes5Error = $noneuError = "";
+$notfyes6Error = $emailError = "";
+
 
 if (isset($_POST['btn-register'])) {
 
@@ -93,7 +103,6 @@ if (isset($_POST['btn-register'])) {
     $consent = strip_tags($consent);
     $consent = htmlspecialchars($consent);
 
-////
     $datastorage = trim($_POST['datastorage']);
     $datastorage = strip_tags($datastorage);
     $datastorage = htmlspecialchars($datastorage);
@@ -129,55 +138,104 @@ if (isset($_POST['btn-register'])) {
     $pass = htmlspecialchars($pass);
 
     // prevent sql injections / clear user invalid inputs
-    if (empty($firstName)) {
+    if (empty($_POST["firstName"])) {
         $error = true;
         $firstNameError = "Please enter your First Name.";
+    } else {
+        $firstName = test_input($_POST["firstName"]);
+        if (!preg_match("/^[a-zA-Z ]*$/", $firstName)) {
+            $firstNameError = "Only letters and white space allowed";
+        }
     }
 
-    if (empty($lastName)) {
+    if (empty($_POST["lastName"])) {
         $error = true;
-        $lastNameError = "Please enter your Last Name.";
+        $lastNameError = "Please enter your last Name.";
+    } else {
+        $lastName = test_input($_POST["lastName"]);
+        if (!preg_match("/^[a-zA-Z ]*$/", $lastName)) {
+            $lastNameError = "Only letters and white space allowed";
+        }
     }
 
-    if (empty($number)) {
+    if (empty($_POST["number"])) {
         $error = true;
-        $numberError = "Please enter your Student Number.";
+        $numberError = "Please enter your last Name.";
+    } else {
+        $number = test_input($_POST["number"]);
+        if (!preg_match("/^[0-9 ]*$/", $number)) {
+            $numberError = "Only digits allowed";
+        }
     }
 
-    if (empty($program)) {
+    if (empty($_POST["program"])) {
         $error = true;
         $programError = "Please enter your degree programme (eg, BABS; MAHRM, LLB/LLM).";
+    } else {
+        $program = test_input($_POST["program"]);
+        if (!preg_match("/^[a-zA-Z ]*$/", $program)) {
+            $programError = "Only letters and white space allowed";
+        }
     }
 
-    if (empty($status)) {
+    if (empty($_POST["status"])) {
         $error = true;
         $statusError = "Please enter your Status - Postgraduate or Undergraduate status.";
+    } else {
+        $status = test_input($_POST["status"]);
+        if (!preg_match("/^[a-zA-Z ]*$/", $status)) {
+            $statusError = "Only letters and white space allowed";
+        }
     }
 
-    if (empty($supervisor)) {
+    if (empty($_POST["supervisor"])) {
         $error = true;
         $supervisorError = "Please enter your project supervisor name.";
+    } else {
+        $supervisor = test_input($_POST["supervisor"]);
+        if (!preg_match("/^[a-zA-Z ]*$/", $supervisor)) {
+            $supervisorError = "Only letters and white space allowed";
+        }
     }
 
-    if (empty($project)) {
+    if (empty($_POST["project"])) {
         $error = true;
-        $projectError = "Please enter your degree project.";
+        $projectError = "Please enter your project title.";
+    } else {
+        $project = test_input($_POST["project"]);
+        if (!preg_match("/^[a-zA-Z ]*$/", $project)) {
+            $projectError = "Only letters and white space allowed";
+        }
     }
-
     if (empty($startDate)) {
         $error = true;
         $startDateError = "Please enter start date.";
     }
 
-    if (empty($endDate)) {
+    if (empty($_POST["startDate"])) {
         $error = true;
-        $endDateError = "Please enter ending date.";
+        $startDateError = "Please enter start date.";
+    } else {
+        $startDate = test_input($_POST["startDate"]);
+        if (!preg_match("/-[0-9]*$/", $startDate)) {
+            $startDateError = "Only / - and digits are allowed";
+        }
     }
 
-    if (empty(!$healthyes0)) {
-        if()
+    if (empty($_POST["endDate"])) {
         $error = true;
-        $healthyes0Error = "Please select if health sector organisations are invlove .";
+        $endDateError = "Please enter start date.";
+    } else {
+        $endDate = test_input($_POST["endDate"]);
+        if (!preg_match("/-[0-9]*$/", $endDate)) {
+            $endDateError = "Only /  - and digits are allowed";
+        }
+    }
+
+    if (empty($_POST["healthyes0"])) {
+        $healthyes0Error = "Please select if health sector organisations are invlove.";
+    } else {
+        $healthyes0 = test_input($_POST["healthyes0"]);
     }
 
     if (empty($childrenyes1)) {
@@ -272,7 +330,7 @@ if (isset($_POST['btn-register'])) {
         $password = hash('sha256', $pass); // password hashing using SHA256
 
         $query = ("INSERT INTO users($link, (student_number, student_email,student_program,
-student_status,supervisor,project_title,start_date,end_date,project_description,first_name,last_name,
+student_status,supervisor,project_title,start_date,end_date,project_description,last_name,last_name,
 	health_sector,children,sensitive_topics,aerospace_defence,nuclear_production,
 	participants,sharing,consent,data_storage,anonymity,intl_transfer_uk,intl_transfer,notification) VALUES('$name','$email','$password'))");
         $res = mysqli_query($query);
@@ -289,6 +347,15 @@ student_status,supervisor,project_title,start_date,end_date,project_description,
         }
     }
 }
+
+function test_input($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
 ?>
     <!DOCTYPE html>
     <html>
@@ -410,7 +477,6 @@ student_status,supervisor,project_title,start_date,end_date,project_description,
                         <span class="text-danger"><?php echo $passError; ?></span>
                     </div>
 
-
                     <div class="form-group">
                         <div class="input-group">
                             <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
@@ -419,7 +485,6 @@ student_status,supervisor,project_title,start_date,end_date,project_description,
                         </div>
                         <span class="text-danger"><?php echo $passError; ?></span>
                     </div>
-
 
                     <div class="form-group">
                         <div class="input-group">
@@ -438,9 +503,9 @@ student_status,supervisor,project_title,start_date,end_date,project_description,
                             <ul style="padding-left: 20px">
                                 <li>
                                     Research involving health sector organisations:
-                                    <input type="radio" name="healthyes0" value="1"><b>YES</b>
-                                    <input type="radio" name="healthyes0" value="0"><b>NO</b>
-
+                                    <input type="radio" name="healthyes0" <?php if (isset($healthyes0) && $healthyes0=="yes") echo "checked";?> value="1"><b>YES</b>
+                                    <input type="radio" name="healthyes0" <?php if (isset($healthyes0) && $healthyes0=="no") echo "checked";?> value="0"><b>NO</b>
+                                    <span class="error">* <?php echo $healthyes0Error;?></span>
                                 </li>
                                 <li>
                                     Research involving children or other vulnerable groups:
