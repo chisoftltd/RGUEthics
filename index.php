@@ -32,9 +32,9 @@
                 </ul>
             </nav>
             <article class="article">             
-                <h1>Research Ethics and Integrity</h1>
-                <h1>Full Assessment Guidance Notes</h1>
-                <h2>A Full Research Ethics  and Integrity Assessment is required when the research project involves;</h2>
+                <h2>Research Ethics and Integrity</h2>
+                <h3>Full Assessment Guidance Notes</h3>
+                <h4>A Full Research Ethics  and Integrity Assessment is required when the research project involves;</h4>
                 <ul>
                     <li>‘vulnerable’ human subjects (e.g. children, people who may not be fluent in English, people who may have cognitive disabilities, and – <br> especially where the research is to be undertaken in a developing country - people in limited economic circumstances)</li>
                     <br>

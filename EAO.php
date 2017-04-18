@@ -41,9 +41,9 @@ if (isset($_POST['btn-login'])) {
 
         $password = hash('sha256', $pass); // password hashing using SHA256
 
-        $res = mysql_query("SELECT userId, userName, userPass FROM users WHERE userEmail='$email'");
-        $row = mysql_fetch_array($res);
-        $count = mysql_num_rows($res); // if uname/pass correct it returns must be 1 row
+        $res = mysqli_query("SELECT userId, userName, userPass FROM users WHERE userEmail='$email'");
+        $row = mysqli_fetch_array($res);
+        $count = mysqli_num_rows($res); // if uname/pass correct it returns must be 1 row
 
         if ($count == 1 && $row['userPass'] == $password) {
             $_SESSION['user'] = $row['userId'];
@@ -66,7 +66,6 @@ if (isset($_POST['btn-login'])) {
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>RGUEthics - Experiment Approval Officers (EAO)</title>
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"  />
         <link rel="stylesheet" href="style.css" type="text/css" />
         <link rel="stylesheet" href="css/main-style.css">
     </head>

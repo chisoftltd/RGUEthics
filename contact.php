@@ -16,7 +16,6 @@ $error = false;
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Coding Cage - Login & Registration System</title>
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"  />
         <link rel="stylesheet" href="style.css" type="text/css" />
         <link rel="stylesheet" href="css/main-style.css">
     </head>
@@ -26,9 +25,9 @@ $error = false;
         </div>
         <div>
             <form action="sendemail.php" method="post" style="margin: 0 auto; width:250px;">
-                <label>Subject of email:</label><br>
+                <label for="subject">Subject of email:</label><br>
                 <input type="text" name="subject" id="subject"/><br>
-                <label>Body of email:</label><br>
+                <label for="body">Body of email:</label><br>
                 <textarea name="body" id="body" rows="10" cols="35"></textarea><br>
                 <input type="submit" name=submit value="Submit"/>
             </form>
