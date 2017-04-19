@@ -13,27 +13,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $projdesc = test_input($_POST["projdesc"]);
     $strdate = test_input($_POST["statdate"]);
     $endate = test_input($_POST["endate"]);
-    $health = test_input($_POST["health"]);
-    $vulnerable = test_input($_POST["vulnerable"]);
-    $sensitive = test_input($_POST["sensitive"]);
-    $aerodef = test_input($_POST["aerodef"]);
-    $nuclear = test_input($_POST["nuclear"]);
     $datadetail = test_input($_POST["datadetails"]);
     $datasto = test_input($_POST["datastorage"]);
 
 
     if (!empty($name) && !empty($email) && !empty($superv) && !empty($depart) && !empty($projtop) && !empty($projdesc) && !empty($strdate) && !empty($endate)
-        && !empty($health) && !empty($vulnerable) && !empty($sensitive) && !empty($aerodef) && !empty($nuclear) && !empty($datadetail) && !empty($datasto) && !empty($number)
+        && !empty($datadetail) && !empty($datasto) && !empty($number)
     ) {
         $connMSG = "Successfully registered your project ethics ";
         $query = "INSERT INTO ethics VALUES ('$number','$name', '$email', '$superv', '$depart','$projtop', '$projdesc', '$strdate', '$endate',
-        '$vulnerable', '$sensitive', '$aerodef', '$nuclear', '$datadetail', '$datasto')";
+        '$datadetail', '$datasto')";
         $res = mysqli_query($link, $query);
 
         if ($res) {
             $errTyp = "success";
             $errMSG = "Successfully registered your project ethics ";
-        } else{
+        } else {
             $errTyp = "danger";
             $errMSG = "Data insertion failed";
         }
@@ -115,38 +110,18 @@ function test_input($data)
             <input type="date" class="form-control" id="enddate" name="endate">
         </div>
         <div class="form-group">
-            <h2>Does the research project involve any of the following risk factors:</h2>
-            <div class="checkbox">
-                <label><input type="checkbox" value="" name="health">Research involving health sector
-                    organisations</label>
-            </div>
-            <div class="checkbox">
-                <label><input type="checkbox" value="" name="vulnerable">Research involving children or other vulnerable
-                    groups</label>
-            </div>
-            <div class="checkbox">
-                <label><input type="checkbox" value="" name="sensitive">Research involving sensitive topics</label>
-            </div>
-            <div class="checkbox">
-                <label><input type="checkbox" value="" name="aerodef">Research involving aerospace/defence organisations</label>
-            </div>
-            <div class="checkbox">
-                <label><input type="checkbox" value="" name="nuclear">Research involving nuclear production
-                    organisations</label>
-            </div>
-            <div class="form-group">
-                <label for="comment">Details of the Data being Processed</label>
-                <textarea class="form-control" rows="5" id="comment" name="datadetails"
-                          placeholder="Please describe the details of the personal data that is being collected, including the methods of data collection and analysis."></textarea>
-            </div>
-            <div class="form-group">
-                <label for="comment">Data Storage</label>
-                <textarea class="form-control" rows="5" id="comment" name="datastorage"
-                          placeholder="Please describe the arrangements you will make for the security of the data, including how and where it will be stored."></textarea>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-block btn-primary">Register</button>
-            </div>
+            <label for="comment">Details of the Data being Processed</label>
+            <textarea class="form-control" rows="5" id="comment" name="datadetails"
+                      placeholder="Please describe the details of the personal data that is being collected, including the methods of data collection and analysis."></textarea>
+        </div>
+        <div class="form-group">
+            <label for="comment">Data Storage</label>
+            <textarea class="form-control" rows="5" id="comment" name="datastorage"
+                      placeholder="Please describe the arrangements you will make for the security of the data, including how and where it will be stored."></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-block btn-primary">Register</button>
+        </div>
     </form>
     <?php
     if (isset($errMSG)) {
