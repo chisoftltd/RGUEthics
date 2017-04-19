@@ -60,79 +60,81 @@ function test_input($data)
     $data = htmlspecialchars($data);
     return $data;
 }
+
 ?>
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>RGUEthics- Login Page</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="css/main-style.css">
-    </head>
-    <body>
-    <div>
-        <?php include 'include/header.php'; ?>
-    </div>
-    <div class="container">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>RGUEthics- Login Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/main-style.css">
+</head>
+<body>
+<div>
+    <?php include 'include/header.php'; ?>
+</div>
+<div class="container">
 
-        <div id="login-form">
-            <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="on">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <h2 class="">Sign In.</h2>
-                    </div>
-                    <div class="form-group">
-                        <hr />
-                    </div>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-                            <input type="email" name="email" class="form-control" placeholder="Your Email" value="<?php echo $email; ?>" maxlength="40" />
-                        </div>
-                        <span class="text-danger"><?php echo $emailError; ?></span>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                            <input type="password" name="pass" class="form-control" placeholder="Your Password" maxlength="15" />
-                        </div>
-                        <span class="text-danger"><?php echo $passError; ?></span>
-                    </div>
-                    <div class="form-group">
-                        <hr />
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-block btn-primary">Sign In</button>
-                    </div>
-                    <div class="form-group">
-                        <hr />
-                    </div>
-                    <div class="form-group">
-                        <a href="register.php">Sign Up Here...</a>
-                    </div>
-                </div>
-            </form>
-
-            <?php
-            if (isset($errMSG)) {
-                ?>
+    <div id="login-form">
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="on">
+            <div class="col-md-12">
                 <div class="form-group">
-                    <div class="alert alert-danger-<?php echo ($errTyp == "success") ? "success" : $errTyp; ?>">
-                        <span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG; ?>
-                    </div>
+                    <h2 class="">Sign In.</h2>
                 </div>
-                <?php
-            }
-            ?>
-        </div>
-    </div>
-    <div>
-        <?php include 'include/footer.php'; ?>
+                <div class="form-group">
+                    <hr/>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                        <input type="email" name="email" class="form-control" placeholder="Your Email"
+                               value="<?php echo $email; ?>" maxlength="40"/>
+                    </div>
+                    <span class="text-danger"><?php echo $emailError; ?></span>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                        <input type="password" name="pass" class="form-control" placeholder="Your Password"
+                               maxlength="15"/>
+                    </div>
+                    <span class="text-danger"><?php echo $passError; ?></span>
+                </div>
+                <div class="form-group">
+                    <hr/>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-block btn-primary">Sign In</button>
+                </div>
+                <div class="form-group">
+                    <hr/>
+                </div>
+                <div class="form-group">
+                    <a href="register.php">Sign Up Here...</a>
+                </div>
+            </div>
+        </form>
 
+        <?php
+        if (isset($errMSG)) {
+            ?>
+            <div class="form-group">
+                <div class="alert alert-danger-<?php echo ($errTyp == "success") ? "success" : $errTyp; ?>">
+                    <span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG; ?>
+                </div>
+            </div>
+            <?php
+        }
+        ?>
     </div>
-    </body>
-    </html>
-<?php ob_end_flush(); ?>
+</div>
+<div>
+    <?php include 'include/footer.php'; ?>
+
+</div>
+</body>
+</html>
