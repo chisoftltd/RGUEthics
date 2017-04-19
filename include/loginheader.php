@@ -24,4 +24,21 @@ and open the template in the editor.
             <li> <a href="login.php">Login</a></li>
         </ul>
     </nav>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <br>
+            <li><a href="student.php">Student</a></li>
+            <br>
+            <li><a href="EAO.php">Experiment Approval Officers (EAO)</a></li>
+            <br>
+            <li><a href="about.php">About Us</a></li>
+            <br>
+            <li><a href="contact.php">Contact</a></li>
+            <br>
+            <li><a href="login.php">Login</a></li>
+            <br>
+        </ul>
+    </nav>
+
 </header>

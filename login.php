@@ -31,23 +31,6 @@ $userRow = mysqli_fetch_array($res);
 <nav class="navbar navbar-default navbar-fixed-top">
 
     <div class="container">
-        <nav class="nav">
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <br>
-                <li><a href="student.php">Student</a></li>
-                <br>
-                <li><a href="EAO.php">Experiment Approval Officers (EAO)</a></li>
-                <br>
-                <li><a href="about.php">About Us</a></li>
-                <br>
-                <li><a href="contact.php">Contact</a></li>
-                <br>
-                <li><a href="login.php">Login</a></li>
-                <br>
-            </ul>
-        </nav>
-
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
                     aria-expanded="false" aria-controls="navbar">
