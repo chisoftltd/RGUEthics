@@ -3,11 +3,11 @@ ob_start();
 session_start();
 require_once 'dbconnect.php';
 
-// if session is not set this will redirect to login page
+/* if session is not set this will redirect to login page
 if (!isset($_SESSION['user'])) {
     header("Location: login.php");
     exit;
-}
+}*/
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = test_input($_POST["username"]);
@@ -94,7 +94,7 @@ function test_input($data)
     <div class="container">
 
         <div id="login-form">
-            <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="on">
                 <div class="col-md-12">
                     <div class="form-group">
                         <h2 class="">Sign In.</h2>
