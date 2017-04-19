@@ -26,7 +26,7 @@ $userRow = mysqli_fetch_array($res);
 </head>
 <body>
 <div>
-    <?php include 'include/header.php'; ?>
+    <?php include 'include/loginheader.php'; ?>
 </div>
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -38,15 +38,14 @@ $userRow = mysqli_fetch_array($res);
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://www.codingcage.com">Coding Cage</a>
+            <a class="navbar-brand" href="http://www.gov.scot/Topics/Research/by-topic/health-community-care/chief-scientist-office/6864/6866">Research Ethics - The Scottish Government</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a
-                            href="http://www.codingcage.com/2015/01/user-registration-and-login-script-using-php-mysql.html">Back
-                        to Article</a></li>
-                <li><a href="http://www.codingcage.com/search/label/jQuery">jQuery</a></li>
-                <li><a href="http://www.codingcage.com/search/label/PHP">PHP</a></li>
+                            href="http://www.gov.scot/Topics/Research/by-topic/health-community-care/chief-scientist-office/6864/6866">Research Ethics - The Scottish Government</a></li>
+                <li><a href="http://www.rgu.ac.uk/">RGU</a></li>
+                <li><a href="http://www.rgu.ac.uk/about/schools-and-departments/school-of-pharmacy-and-life-sciences/ethics-procedures/">Ethics Procedures</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
 
