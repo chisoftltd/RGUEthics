@@ -237,8 +237,13 @@ if (isset($_POST['btn-register'])) {
         }
     }
 
+    $query= "INSERT INTO ethics VALUES ('$number','$email','$program','$status', '$supervisor','$project', '$startDate', '$endDate',
+	'$projectDetails','$firstName','$lastName','$healthyes0', '$childrenyes1', '$sensitiveyes2', '$aerodefenceyes3',
+	'$nuclearyes4', '$participants', '$sharing', '$consent', '$datastorage', '$anonymity', '$intlTrfyes5', '$notfyes6', '$dataDetails')";
+    $res = mysqli_query($link,$query);
 
-    $query = ("INSERT INTO users($link, (student_number, student_email,student_program,
+/*
+    $query = ("INSERT INTO ethics($link, (student_number, student_email,student_program,
     student_status,supervisor,project_title,start_date,end_date,project_description,first_name,last_name,
 	health_sector,children,sensitive_topics,aerospace_defence,nuclear_production,
 	participants,sharing,consent,data_storage,anonymity,intl_transfer_uk,intl_transfer,notification, dataDetails) 
@@ -246,6 +251,7 @@ if (isset($_POST['btn-register'])) {
 	'$projectDetails','$firstName','$lastName','$healthyes0', '$childrenyes1', '$sensitiveyes2', '$aerodefenceyes3',
 	'$nuclearyes4', '$participants', '$sharing', '$consent', '$datastorage', '$anonymity', '$intlTrfyes5', '$notfyes6', '$dataDetails'))");
     $res = mysqli_query($query);
+*/
 
     if ($res) {
         $errTyp = "success";
@@ -396,7 +402,7 @@ function test_input($data)
                     <div class="form-group">
                         <div class="input-group">
                             <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                            <input type="text" name="startDate" class="form-control"
+                            <input type="date" name="startDate" class="form-control"
                                    placeholder="Proposed project start date" maxlength="15"/>
                         </div>
                         <span class="text-danger"><?php echo $passError; ?></span>
@@ -405,7 +411,7 @@ function test_input($data)
                     <div class="form-group">
                         <div class="input-group">
                             <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                            <input type="text" name="endDate" class="form-control"
+                            <input type="date" name="endDate" class="form-control"
                                    placeholder="Proposed project end date" maxlength="15"/>
                         </div>
                         <span class="text-danger"><?php echo $passError; ?></span>
