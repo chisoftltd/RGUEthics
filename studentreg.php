@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($name) && !empty($email) && !empty($superv) && !empty($depart) && !empty($projtop) && !empty($projdesc) && !empty($strdate) && !empty($endate)
         && !empty($datadetail) && !empty($datasto) && !empty($number)
     ) {
-        $connMSG = "Successfully registered your project ethics ";
+
         $query = "INSERT INTO projethics VALUES ('$number','$name', '$email', '$superv', '$depart','$projtop', '$projdesc', '$strdate', '$endate',
         '$datadetail', '$datasto')";
         $res = mysqli_query($link, $query);
@@ -129,7 +129,11 @@ function test_input($data)
         ?>
         <div class="form-group">
             <div class="alert alert-<?php echo ($errTyp == "success") ? "success" : $errTyp; ?>">
-                <span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG; ?>
+                <span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG;
+                
+                echo $res;
+                ?>
+
             </div>
         </div>
         <?php
