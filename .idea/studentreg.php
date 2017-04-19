@@ -77,7 +77,14 @@
             <div class="checkbox">
                 <label><input type="checkbox" value="">Research involving nuclear production organisations</label>
             </div>
-        </div>
+            <div class="form-group">
+                <label for="comment">Details of the Data being Processed</label>
+                <textarea class="form-control" rows="5" id="comment" placeholder="Please describe the details of the personal data that is being collected, including the methods of data collection and analysis."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="comment">Data Storage</label>
+                <textarea class="form-control" rows="5" id="comment" placeholder="Please describe the arrangements you will make for the security of the data, including how and where it will be stored."></textarea>
+            </div>
     </form>
 </div>
 
