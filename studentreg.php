@@ -83,7 +83,9 @@
                 <textarea class="form-control" rows="5" id="comment"
                           placeholder="Please describe the arrangements you will make for the security of the data, including how and where it will be stored."></textarea>
             </div>
-            <button type="submit" class="btn btn-block btn-primary">Register</button>
+            <div class="form-group">
+                <button type="submit" class="btn btn-block btn-primary">Register</button>
+            </div>
     </form>
 </div>
 <div>
