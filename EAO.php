@@ -49,7 +49,7 @@ if (!$link) {
         while ($row2 = mysqli_fetch_row($result2)) {
             echo '<tr>';
             foreach ($row2 as $key => $value) {
-                echo '<td>', '<a href="">', $value[0], '</a>', $value($count-1),'</td>';
+                echo '<td>', $value[0],'</td>';
             }
             echo '</tr>';
         }
