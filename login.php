@@ -11,7 +11,7 @@ if (!isset($_SESSION['user'])) {
 // select loggedin users detail
 $res = mysqli_query($link, ("SELECT * FROM users WHERE userId=" . $_SESSION['user']));
 
-$userRow = mysql_fetch_array($res);
+$userRow = mysqli_fetch_array($res);
 ?>
 <!DOCTYPE html>
 <html>
