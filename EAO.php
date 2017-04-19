@@ -60,5 +60,10 @@ if (!$link) {
 <div>
     <?php include 'include/footer.php'; ?>
 </div>
+<script>
+    $(".container").delegate("td", "click", function() {
+        window.location.href = $(this).find("form").attr("action");
+    });
+</script>
 </body>
 </html>
