@@ -22,6 +22,13 @@ $aerodefenceyes3Error = $nuclearyes4Error = $projectDetailsError = $participants
 $sharingError = $consentError = $datastorageError = $anonymityError = $intlTrfyes5Error = $noneuError = "";
 $notfyes6Error = $emailError = "";
 
+if ($_SERVER['REQUEST_METHOD']=='POST'){
+    $name=$_POST['firstName'];
+
+
+    if(!empty($name)&& )
+
+}
 
 if (isset($_POST['btn-register'])) {
 
