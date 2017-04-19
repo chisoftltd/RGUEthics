@@ -12,6 +12,7 @@ if (!isset($_SESSION['user'])) {
 $error = false;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
     $email = test_input($_POST["email"]);
     $pass = test_input($_POST["pass"]);
 
@@ -116,6 +117,10 @@ function test_input($data)
                 <div class="form-group">
                     <a href="register.php">Sign Up Here...</a>
                 </div>
+            </div>
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
             </div>
         </form>
 

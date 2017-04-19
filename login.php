@@ -5,7 +5,7 @@ require_once 'dbconnect.php';
 
 // if session is not set this will redirect to login page
 if (!isset($_SESSION['user'])) {
-    header("Location: loginhome.php");
+    header('Location: loginhome.php');
     exit;
 }
 // select loggedin users detail
