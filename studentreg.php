@@ -129,9 +129,11 @@ function test_input($data)
         ?>
         <div class="form-group">
             <div class="alert alert-<?php echo ($errTyp == "success") ? "success" : $errTyp; ?>">
-                <span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG;
-echo "<br>";
+                <span class="glyphicon glyphicon-info-sign"></span>
+                <?php
                 echo $res;
+                echo "<br>";
+                echo $errMSG;
                 ?>
 
             </div>
