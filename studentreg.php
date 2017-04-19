@@ -21,20 +21,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $datasto = test_input($_POST["datastorage"]);
 
 
-if (!empty($name)&& !empty($email) && !empty($superv)&& !empty($depart)&& !empty($projtop)&& !empty($projdesc)&& !empty($strdate)&& !empty($endate)
-    && !empty($health)&& !empty($vulnerable)&& !empty($sensitive)&& !empty($aerodef)&& !empty($nuclear)&& !empty($datadetail)&& !empty($datasto)){
-    $errMSG = "Successfully registered your project ethics ";
-    }
-} else{
-$dataMSG = "Something went wrong, try again later...";
-}
+    if (!empty($name) && !empty($email) && !empty($superv) && !empty($depart) && !empty($projtop) && !empty($projdesc) && !empty($strdate) && !empty($endate)
+        && !empty($health) && !empty($vulnerable) && !empty($sensitive) && !empty($aerodef) && !empty($nuclear) && !empty($datadetail) && !empty($datasto)
+    ) {
+        $connMSG = "Successfully registered your project ethics ";
+        $query = "INSERT INTO ethics VALUES ('$name', '$email', '$superv', '$depart','$projtop', '$projdesc', '$strdate', '$endate',
+        '$vulnerable', '$sensitive', '$aerodef', '$nuclear', '$datadetail', '$datasto')";
+        $res = mysqli_query($link, $query);
 
-function test_input($data) {
+        if ($res) {
+            $errTyp = "success";
+            $errMSG = "Successfully registered your project ethics ";
+        } else{
+            $errTyp = "danger";
+            $errMSG = "Data insertion failed";
+        }
+    } else {
+        $errTyp = "danger";
+        $errMSG = "Something went wrong, try again later...";
+    }
+}
+function test_input($data)
+{
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -54,8 +68,7 @@ function test_input($data) {
 </div>
 
 <div class="container">
-    <form>
-
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="on">
         <div class="form-group">
             <label for="usr">Name:</label>
             <input type="text" class="form-control" id="usr" name="user">
@@ -98,10 +111,12 @@ function test_input($data) {
         <div class="form-group">
             <h2>Does the research project involve any of the following risk factors:</h2>
             <div class="checkbox">
-                <label><input type="checkbox" value="" name="health">Research involving health sector organisations</label>
+                <label><input type="checkbox" value="" name="health">Research involving health sector
+                    organisations</label>
             </div>
             <div class="checkbox">
-                <label><input type="checkbox" value="" name="vulnerable">Research involving children or other vulnerable groups</label>
+                <label><input type="checkbox" value="" name="vulnerable">Research involving children or other vulnerable
+                    groups</label>
             </div>
             <div class="checkbox">
                 <label><input type="checkbox" value="" name="sensitive">Research involving sensitive topics</label>
@@ -110,7 +125,8 @@ function test_input($data) {
                 <label><input type="checkbox" value="" name="aerodef">Research involving aerospace/defence organisations</label>
             </div>
             <div class="checkbox">
-                <label><input type="checkbox" value="" name="nuclear">Research involving nuclear production organisations</label>
+                <label><input type="checkbox" value="" name="nuclear">Research involving nuclear production
+                    organisations</label>
             </div>
             <div class="form-group">
                 <label for="comment">Details of the Data being Processed</label>
@@ -126,6 +142,17 @@ function test_input($data) {
                 <button type="submit" class="btn btn-block btn-primary">Register</button>
             </div>
     </form>
+    <?php
+    if (isset($errMSG)) {
+        ?>
+        <div class="form-group">
+            <div class="alert alert-<?php echo ($errTyp == "success") ? "success" : $errTyp; ?>">
+                <span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG; ?>
+            </div>
+        </div>
+        <?php
+    }
+    ?>
 </div>
 <div>
     <?php include 'include/footer.php'; ?>
@@ -134,4 +161,3 @@ function test_input($data) {
 
 </body>
 </html>
-
