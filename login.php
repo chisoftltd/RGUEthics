@@ -45,9 +45,11 @@ $userRow = mysqli_fetch_array($res);
             <ul class="nav navbar-nav">
                 <li class="active"><a
                             href="EAO.php">Experiment Approval Officers (EAO)</a></li>
-                <li> <a href="admin.php">Administrator</a></li>
+                <li><a href="admin.php">Administrator</a></li>
                 <li><a href="http://www.rgu.ac.uk/">RGU</a></li>
-                <li><a href="http://www.rgu.ac.uk/about/schools-and-departments/school-of-pharmacy-and-life-sciences/ethics-procedures/">Ethics Procedures</a></li>
+                <li>
+                    <a href="http://www.rgu.ac.uk/about/schools-and-departments/school-of-pharmacy-and-life-sciences/ethics-procedures/">Ethics
+                        Procedures</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
 
@@ -65,49 +67,44 @@ $userRow = mysqli_fetch_array($res);
         </div><!--/.nav-collapse -->
     </div>
 </nav>
+<div class="pageContent">
+    <nav class="nav">
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <br>
+            <li><a href="about.php">About Us</a></li>
+            <br>
+            <li><a href="contact.php">Contact</a></li>
+            <br>
+            <li><a href="login.php">Login</a></li>
+            <br>
+        </ul>
+    </nav>
+    <article class="article">
+        <h2>Research Ethics and Integrity</h2>
+        <h3>Full Assessment Guidance Notes</h3>
+        <h4>A Full Research Ethics and Integrity Assessment is required when the research project involves;</h4>
+        <ul>
+            <li>vulnerable human subjects (e.g. children, people who may not be fluent in English, people who may have
+                cognitive disabilities, and – <br> especially where the research is to be undertaken in a developing
+                country - people in limited economic circumstances)
+            </li>
+            <br>
+            <li>invasive procedures or addressing sensitive issues (e.g. video-taping without informed consent,
+                questions about sexuality or about criminal<br> behaviour)
+            </li>
+            <br>
+            <li>and/or</li>
+            <br>
+            <li>biophysical research which requires extraordinary permission from landowners, involves significant
+                disturbance to vulnerable species or habitats,<br> sampling rare/endangered or harmful taxa/species,
+                and/or transporting samples/specimens between countries or significant ‘boundaries’.
+            </li>
+            <br>
+        </ul>
 
-<nav class="nav">
-    <ul>
-        <li><a href="index.php">Home</a></li>
-        <br>
-        <li><a href="student.php">Student</a></li>
-        <br>
-        <li><a href="EAO.php">Experiment Approval Officers (EAO)</a></li>
-        <br>
-        <li><a href="about.php">About Us</a></li>
-        <br>
-        <li><a href="contact.php">Contact</a></li>
-        <br>
-        <li><a href="login.php">Login</a></li>
-        <br>
-    </ul>
-</nav>
-
-<article class="article">
-    <h2>Research Ethics and Integrity</h2>
-    <h3>Full Assessment Guidance Notes</h3>
-    <h4>A Full Research Ethics and Integrity Assessment is required when the research project involves;</h4>
-    <ul>
-        <li>vulnerable human subjects (e.g. children, people who may not be fluent in English, people who may have
-            cognitive disabilities, and – <br> especially where the research is to be undertaken in a developing
-            country - people in limited economic circumstances)
-        </li>
-        <br>
-        <li>invasive procedures or addressing sensitive issues (e.g. video-taping without informed consent,
-            questions about sexuality or about criminal<br> behaviour)
-        </li>
-        <br>
-        <li>and/or</li>
-        <br>
-        <li>biophysical research which requires extraordinary permission from landowners, involves significant
-            disturbance to vulnerable species or habitats,<br> sampling rare/endangered or harmful taxa/species,
-            and/or transporting samples/specimens between countries or significant ‘boundaries’.
-        </li>
-        <br>
-    </ul>
-
-</article>
-
+    </article>
+</div>
 <div>
     <?php include 'include/footer.php'; ?>
 </div>
