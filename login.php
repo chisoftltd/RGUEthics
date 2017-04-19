@@ -59,7 +59,7 @@ $userRow = mysqli_fetch_array($res);
                         <span class="glyphicon glyphicon-user"></span>&nbsp;Hi' <?php echo $userRow['userEmail']; ?>
                         &nbsp;<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="logout.php?logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Sign Out</a>
+                        <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Sign Out</a>
                         </li>
                     </ul>
                 </li>
