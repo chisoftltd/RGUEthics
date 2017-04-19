@@ -3,32 +3,17 @@ ob_start();
 session_start();
 require_once 'dbconnect.php';
 
-/* if session is not set this will redirect to login page
+// if session is not set this will redirect to login page
 if (!isset($_SESSION['user'])) {
     header("Location: login.php");
     exit;
-}*/
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = test_input($_POST["username"]);
-    $email = test_input($_POST["email"]);
-
-    // Check connection
-    if ($link->connect_error) {
-        die("Connection failed: " . $link->connect_error);
-    }
-
-    if (!empty($name) && !empty($email)){
-
-    }
-
 }
 
 $error = false;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = test_input($_POST["username"]);
     $email = test_input($_POST["email"]);
+    $pass = test_input($_POST["pass"]);
 
     // Check connection
     if ($link->connect_error) {
