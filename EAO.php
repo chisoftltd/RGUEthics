@@ -48,7 +48,7 @@ if (!$link) {
         while ($row2 = mysqli_fetch_row($result2)) {
             echo '<tr>';
             foreach ($row2 as $key => $value) {
-                echo '<td>', '<a href="">$value[0]</a>', $value[mysqli_num_rows($result2)-1], '</td>';
+                echo '<td>', '<a href="">$value</a>', '</td>';
             }
             echo '</tr>';
         }
