@@ -19,10 +19,6 @@
         <ul>
             <li><a href="index.php">Home</a></li>
             <br>
-            <li><a href="student.php">Student</a></li>
-            <br>
-            <li><a href="EAO.php">Experiment Approval Officers (EAO)</a></li>
-            <br>
             <li><a href="about.php">About Us</a></li>
             <br>
             <li><a href="contact.php">Contact</a></li>

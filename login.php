@@ -29,6 +29,24 @@ $userRow = mysqli_fetch_array($res);
     <?php include 'include/loginheader.php'; ?>
 </div>
 <nav class="navbar navbar-default navbar-fixed-top">
+
+    <nav class="nav">
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <br>
+            <li><a href="student.php">Student</a></li>
+            <br>
+            <li><a href="EAO.php">Experiment Approval Officers (EAO)</a></li>
+            <br>
+            <li><a href="about.php">About Us</a></li>
+            <br>
+            <li><a href="contact.php">Contact</a></li>
+            <br>
+            <li><a href="login.php">Login</a></li>
+            <br>
+        </ul>
+    </nav>
+
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -38,12 +56,13 @@ $userRow = mysqli_fetch_array($res);
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://www.gov.scot/Topics/Research/by-topic/health-community-care/chief-scientist-office/6864/6866">Research Ethics - The Scottish Government</a>
+            <a class="navbar-brand" href="studentreg.php">Student</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a
-                            href="http://www.gov.scot/Topics/Research/by-topic/health-community-care/chief-scientist-office/6864/6866">Research Ethics - The Scottish Government</a></li>
+                            href="EAO.php">Experiment Approval Officers (EAO)</a></li>
+                <li> <a href="admin.php">Administrator</a></li>
                 <li><a href="http://www.rgu.ac.uk/">RGU</a></li>
                 <li><a href="http://www.rgu.ac.uk/about/schools-and-departments/school-of-pharmacy-and-life-sciences/ethics-procedures/">Ethics Procedures</a></li>
             </ul>
@@ -64,18 +83,31 @@ $userRow = mysqli_fetch_array($res);
     </div>
 </nav>
 
-<div id="wrapper">
-    <div class="container">
-        <div class="page-header">
-            <h3>Coding Cage - Programming Blog</h3>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <h1>Focuses on PHP, MySQL, Ajax, jQuery, Web Design and more...</h1>
-            </div>
-        </div>
-    </div>
-</div>
+<article class="article">
+    <h2>Research Ethics and Integrity</h2>
+    <h3>Full Assessment Guidance Notes</h3>
+    <h4>A Full Research Ethics and Integrity Assessment is required when the research project involves;</h4>
+    <ul>
+        <li>vulnerable human subjects (e.g. children, people who may not be fluent in English, people who may have
+            cognitive disabilities, and – <br> especially where the research is to be undertaken in a developing
+            country - people in limited economic circumstances)
+        </li>
+        <br>
+        <li>invasive procedures or addressing sensitive issues (e.g. video-taping without informed consent,
+            questions about sexuality or about criminal<br> behaviour)
+        </li>
+        <br>
+        <li>and/or</li>
+        <br>
+        <li>biophysical research which requires extraordinary permission from landowners, involves significant
+            disturbance to vulnerable species or habitats,<br> sampling rare/endangered or harmful taxa/species,
+            and/or transporting samples/specimens between countries or significant ‘boundaries’.
+        </li>
+        <br>
+    </ul>
+
+</article>
+
 <div>
     <?php include 'include/footer.php'; ?>
 </div>
