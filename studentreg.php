@@ -4,6 +4,7 @@
 require_once 'dbconnect.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $number = test_input($_POST["usernumber"]);
     $name = test_input($_POST["user"]);
     $email = test_input($_POST["email"]);
     $superv = test_input($_POST["superv"]);
@@ -22,10 +23,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     if (!empty($name) && !empty($email) && !empty($superv) && !empty($depart) && !empty($projtop) && !empty($projdesc) && !empty($strdate) && !empty($endate)
-        && !empty($health) && !empty($vulnerable) && !empty($sensitive) && !empty($aerodef) && !empty($nuclear) && !empty($datadetail) && !empty($datasto)
+        && !empty($health) && !empty($vulnerable) && !empty($sensitive) && !empty($aerodef) && !empty($nuclear) && !empty($datadetail) && !empty($datasto) && !empty($number)
     ) {
         $connMSG = "Successfully registered your project ethics ";
-        $query = "INSERT INTO ethics VALUES ('$name', '$email', '$superv', '$depart','$projtop', '$projdesc', '$strdate', '$endate',
+        $query = "INSERT INTO ethics VALUES ('$number','$name', '$email', '$superv', '$depart','$projtop', '$projdesc', '$strdate', '$endate',
         '$vulnerable', '$sensitive', '$aerodef', '$nuclear', '$datadetail', '$datasto')";
         $res = mysqli_query($link, $query);
 
@@ -70,7 +71,12 @@ function test_input($data)
 <div class="container">
     <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="on">
         <div class="form-group">
-            <label for="usr">Name:</label>
+            <label for="usr">Student Number:</label>
+            <input type="number" class="form-control" id="usr" name="usernumber">
+        </div>
+
+        <div class="form-group">
+            <label for="usr">Student Name:</label>
             <input type="text" class="form-control" id="usr" name="user">
         </div>
 
