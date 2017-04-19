@@ -16,6 +16,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $datadetail = test_input($_POST["datadetails"]);
     $datasto = test_input($_POST["datastorage"]);
 
+    // Check connection
+    if ($link->connect_error) {
+        die("Connection failed: " . $link->connect_error);
+    }
 
     if (!empty($name) && !empty($email) && !empty($superv) && !empty($depart) && !empty($projtop) && !empty($projdesc) && !empty($strdate) && !empty($endate)
         && !empty($datadetail) && !empty($datasto) && !empty($number)
@@ -24,6 +28,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $query = "INSERT INTO projethics VALUES ('$number','$name', '$email', '$superv', '$depart','$projtop', '$projdesc', '$strdate', '$endate',
         '$datadetail', '$datasto')";
         $res = mysqli_query($link, $query);
+
+        if ($link->query($query) === TRUE) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . $link->error;
+        }
 
         if ($res) {
             $errTyp = "success";
@@ -129,7 +139,12 @@ function test_input($data)
         ?>
         <div class="form-group">
             <div class="alert alert-<?php echo ($errTyp == "success") ? "success" : $errTyp; ?>">
-                <span class="glyphicon glyphicon-info-sign"></span><?php  echo "<br>"; echo $errMSG; echo "<br>"; echo $res; echo "<br>"; echo $errMSG; ?>
+                <span class="glyphicon glyphicon-info-sign"></span><?php echo "<br>";
+                echo $errMSG;
+                echo "<br>";
+                echo $res;
+                echo "<br>";
+                echo $errMSG; ?>
             </div>
         </div>
         <?php
