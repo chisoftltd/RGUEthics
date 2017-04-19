@@ -237,21 +237,21 @@ if (isset($_POST['btn-register'])) {
         }
     }
 
-    $query= "INSERT INTO ethics VALUES ('$number','$email','$program','$status', '$supervisor','$project', '$startDate', '$endDate',
+    $query = "INSERT INTO ethics VALUES ('$number','$email','$program','$status', '$supervisor','$project', '$startDate', '$endDate',
 	'$projectDetails','$firstName','$lastName','$healthyes0', '$childrenyes1', '$sensitiveyes2', '$aerodefenceyes3',
 	'$nuclearyes4', '$participants', '$sharing', '$consent', '$datastorage', '$anonymity', '$intlTrfyes5', '$notfyes6', '$dataDetails')";
-    $res = mysqli_query($link,$query);
+    $res = mysqli_query($link, $query);
 
-/*
-    $query = ("INSERT INTO ethics($link, (student_number, student_email,student_program,
-    student_status,supervisor,project_title,start_date,end_date,project_description,first_name,last_name,
-	health_sector,children,sensitive_topics,aerospace_defence,nuclear_production,
-	participants,sharing,consent,data_storage,anonymity,intl_transfer_uk,intl_transfer,notification, dataDetails) 
-	VALUES('$number','$email','$program','$status', '$supervisor','$project', '$startDate', '$endDate',
-	'$projectDetails','$firstName','$lastName','$healthyes0', '$childrenyes1', '$sensitiveyes2', '$aerodefenceyes3',
-	'$nuclearyes4', '$participants', '$sharing', '$consent', '$datastorage', '$anonymity', '$intlTrfyes5', '$notfyes6', '$dataDetails'))");
-    $res = mysqli_query($query);
-*/
+    /*
+        $query = ("INSERT INTO ethics($link, (student_number, student_email,student_program,
+        student_status,supervisor,project_title,start_date,end_date,project_description,first_name,last_name,
+        health_sector,children,sensitive_topics,aerospace_defence,nuclear_production,
+        participants,sharing,consent,data_storage,anonymity,intl_transfer_uk,intl_transfer,notification, dataDetails)
+        VALUES('$number','$email','$program','$status', '$supervisor','$project', '$startDate', '$endDate',
+        '$projectDetails','$firstName','$lastName','$healthyes0', '$childrenyes1', '$sensitiveyes2', '$aerodefenceyes3',
+        '$nuclearyes4', '$participants', '$sharing', '$consent', '$datastorage', '$anonymity', '$intlTrfyes5', '$notfyes6', '$dataDetails'))");
+        $res = mysqli_query($query);
+    */
 
     if ($res) {
         $errTyp = "success";
