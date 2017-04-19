@@ -24,14 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 }
 
-function test_input($data)
-{
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
-
 $error = false;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -74,6 +66,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $errMSG = "Incorrect Credentials, Try again...";
         }
     }
+}
+
+function test_input($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
 }
 ?>
     <!DOCTYPE html>
@@ -120,7 +120,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <hr />
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-block btn-primary" name="btn-login">Sign In</button>
+                        <button type="submit" class="btn btn-block btn-primary">Sign In</button>
                     </div>
                     <div class="form-group">
                         <hr />
