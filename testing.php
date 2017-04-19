@@ -32,16 +32,16 @@ if (!$link) {
     <?php
     /* connect to the db */
 
-    mysqli_select_db('localdb',$link);
+    mysqli_select_db($link,"localdb");
 
     /* show tables */
-    $result = mysqli_query('SHOW TABLES',$link) or die('cannot show tables');
+    $result = mysqli_query($link,"Show tables") or die('cannot show tables');
     while($tableName = mysqli_fetch_row($result)) {
 
         $table = $tableName[0];
 
         echo '<h3>',$table,'</h3>';
-        $result2 = mysqli_query('SHOW COLUMNS FROM '.$table) or die('cannot show columns from '.$table);
+        $result2 = mysqli_query($link, 'SHOW COLUMNS FROM '.$table) or die('cannot show columns from '.$table);
         if(mysqli_num_rows($result2)) {
             echo '<table cellpadding="0" cellspacing="0" class="table table-striped">';
             echo '<tr><th>Field</th><th>Type</th><th>Null</th><th>Key</th><th>Default<th>Extra</th></tr>';
