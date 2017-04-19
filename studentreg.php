@@ -144,7 +144,8 @@ function test_input($data)
                 echo "<br>";
                 echo $res;
                 echo "<br>";
-                echo $errMSG; ?>
+                echo $errMSG;
+                include 'EAO.php'; ?>
             </div>
         </div>
         <?php

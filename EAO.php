@@ -12,7 +12,7 @@ if (!$link) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bootstrap Example</title>
+    <title>RGUEthics - Experiment Approval Officers (EAO</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -48,7 +48,7 @@ if (!$link) {
         while ($row2 = mysqli_fetch_row($result2)) {
             echo '<tr>';
             foreach ($row2 as $key => $value) {
-                echo '<td>', $value, '</td>';
+                echo '<td>', '<a href="">$value[0]', $value[mysqli_num_rows($result2)-1], '</td>';
             }
             echo '</tr>';
         }
