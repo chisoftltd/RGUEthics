@@ -103,18 +103,13 @@ function test_input($data)
         <div class="form-group">
             <label for="stadate">Start Date:</label>
             <input type="date" class="form-control" id="stadate" name="statdate">
+            <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
         </div>
 
         <div class="form-group">
             <label for="enddate">Expected End Date:</label>
             <input type="date" class="form-control" id="enddate" name="endate">
-        </div>
-
-        <div class="form-group">
-            <div class="input-group input-append date" id="datePicker">
-                <label class="col-xs-3 control-label">Date</label>
-                <input type="text" class="form-control" name="date"/>
-            </div>
+            <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
         </div>
 
         <div class="form-group">
