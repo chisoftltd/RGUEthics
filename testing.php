@@ -41,7 +41,7 @@ if (!$link) {
         $table = $tableName[0];
 
         echo '<h3>',$table,'</h3>';
-        $result2 = mysqli_query($link, 'SHOW COLUMNS FROM '.$table) or die('cannot show columns from '.$table);
+        $result2 = mysqli_query($link, 'select Number, Name, supervisor, ProjectTopic, StartDate, Endate from'.$table) or die('cannot show columns from '.$table);
         if(mysqli_num_rows($result2)) {
             echo '<table cellpadding="0" cellspacing="0" class="table table-striped">';
             echo '<tr><th>Field</th><th>Type</th><th>Null</th><th>Key</th><th>Default<th>Extra</th></tr>';
