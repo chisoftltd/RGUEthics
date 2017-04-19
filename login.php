@@ -66,6 +66,23 @@ $userRow = mysqli_fetch_array($res);
     </div>
 </nav>
 
+<nav class="nav">
+    <ul>
+        <li><a href="index.php">Home</a></li>
+        <br>
+        <li><a href="student.php">Student</a></li>
+        <br>
+        <li><a href="EAO.php">Experiment Approval Officers (EAO)</a></li>
+        <br>
+        <li><a href="about.php">About Us</a></li>
+        <br>
+        <li><a href="contact.php">Contact</a></li>
+        <br>
+        <li><a href="login.php">Login</a></li>
+        <br>
+    </ul>
+</nav>
+
 <article class="article">
     <h2>Research Ethics and Integrity</h2>
     <h3>Full Assessment Guidance Notes</h3>
