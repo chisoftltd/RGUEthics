@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         && !empty($datadetail) && !empty($datasto) && !empty($number)
     ) {
         $connMSG = "Successfully registered your project ethics ";
-        $query = "INSERT INTO ethics VALUES ('$number','$name', '$email', '$superv', '$depart','$projtop', '$projdesc', '$strdate', '$endate',
+        $query = "INSERT INTO projethics VALUES ('$number','$name', '$email', '$superv', '$depart','$projtop', '$projdesc', '$strdate', '$endate',
         '$datadetail', '$datasto')";
         $res = mysqli_query($link, $query);
 
