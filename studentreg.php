@@ -109,6 +109,17 @@ function test_input($data)
             <label for="enddate">Expected End Date:</label>
             <input type="date" class="form-control" id="enddate" name="endate">
         </div>
+
+        <div class="form-group">
+            <label class="col-xs-3 control-label">Date</label>
+            <div class="col-xs-5 date">
+                <div class="input-group input-append date" id="datePicker">
+                    <input type="text" class="form-control" name="date" />
+                    <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+            </div>
+        </div>
+
         <div class="form-group">
             <label for="comment">Details of the Data being Processed</label>
             <textarea class="form-control" rows="5" id="comment" name="datadetails"
