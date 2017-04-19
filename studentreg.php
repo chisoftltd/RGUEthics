@@ -1,11 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Chisoft
- * Date: 2017-04-19
- * Time: 14:32
- */
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
