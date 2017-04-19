@@ -112,12 +112,12 @@ function test_input($data)
 
         <div class="form-group">
             <label for="stadate">Start Date:</label>
-            <input type="date" class="form-control" id="stadate" name="statdate">
+            <input type="date" class="form-control" id="stadate" name="statdate" placeholder="YYYY-MM-DD">
         </div>
 
         <div class="form-group">
             <label for="enddate">Expected End Date:</label>
-            <input type="date" class="form-control" id="enddate" name="endate">
+            <input type="date" class="form-control" id="enddate" name="endate" placeholder="YYYY-MM-DD>
         </div>
 
         <div class="form-group">
