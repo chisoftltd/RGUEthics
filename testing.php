@@ -44,7 +44,7 @@ if (!$link) {
     $result2 = mysqli_query($link, "SELECT Number, Name, supervisor, ProjectTopic, StartDate, Endate FROM projethics") or die('cannot show columns from ' . $table);
     if (mysqli_num_rows($result2)) {
         echo '<table cellpadding="0" cellspacing="0" class="table table-striped">';
-        echo '<tr><th>Field</th><th>Type</th><th>Null</th><th>Key</th><th>Default<th>Extra</th></tr>';
+        echo '<tr><th>Number</th><th>Name</th><th>Supervisor</th><th>Project Topic</th><th>Start Date<th>End Date</th></tr>';
         while ($row2 = mysqli_fetch_row($result2)) {
             echo '<tr>';
             foreach ($row2 as $key => $value) {
