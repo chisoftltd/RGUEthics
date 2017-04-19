@@ -78,6 +78,7 @@
                 <label for="comment">Data Storage</label>
                 <textarea class="form-control" rows="5" id="comment" placeholder="Please describe the arrangements you will make for the security of the data, including how and where it will be stored."></textarea>
             </div>
+            <button type="submit" class="btn btn-default">Register</button>
     </form>
 </div>
 
