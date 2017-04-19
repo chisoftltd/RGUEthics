@@ -138,8 +138,6 @@ function test_input($data)
 </div>
 <div>
     <?php include 'include/footer.php'; ?>
-
 </div>
-
 </body>
 </html>
