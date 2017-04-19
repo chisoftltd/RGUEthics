@@ -9,6 +9,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+<div>
+    <?php include 'include/header.php'; ?>
+</div>
 
 <div class="container">
     <form>
@@ -81,6 +84,10 @@
             </div>
             <button type="submit" class="btn btn-default">Register</button>
     </form>
+</div>
+<div>
+    <?php include 'include/footer.php'; ?>
+
 </div>
 
 </body>
