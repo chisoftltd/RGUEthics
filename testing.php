@@ -1,34 +1,64 @@
 <?php
-function build_table($array){
-    // start table
-    $html = '<table>';
-    // header row
-    $html .= '<tr>';
-    foreach($array[0] as $key=>$value){
-        $html .= '<th>' . htmlspecialchars($key) . '</th>';
-    }
-    $html .= '</tr>';
 
-    // data rows
-    foreach( $array as $key=>$value){
-        $html .= '<tr>';
-        foreach($value as $key2=>$value2){
-            $html .= '<td>' . htmlspecialchars($value2) . '</td>';
-        }
-        $html .= '</tr>';
-    }
+require_once 'dbconnect.php';
 
-    // finish table and return it
-
-    $html .= '</table>';
-    return $html;
+// Check connection
+if (!$link) {
+    die("Connection failed: " . mysqli_connect_error());
 }
 
-$array = array(
-    array('first'=>'tom', 'last'=>'smith', 'email'=>'tom@example.org', 'company'=>'example ltd'),
-    array('first'=>'hugh', 'last'=>'blogs', 'email'=>'hugh@example.org', 'company'=>'example ltd'),
-    array('first'=>'steph', 'last'=>'brown', 'email'=>'steph@example.org', 'company'=>'example ltd')
-);
-
-echo build_table($array);
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>RGUEthics - Experiment Approval Officers (EAO)</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="css/main-style.css">
+</head>
+<body>
+<div>
+    <?php include 'include/header.php'; ?>
+</div>
+<div class="container">
+
+    <?php
+    /* connect to the db */
+
+    mysqli_select_db('localdb',$link);
+
+    /* show tables */
+    $result = mysqli_query('SHOW TABLES',$link) or die('cannot show tables');
+    while($tableName = mysqli_fetch_row($result)) {
+
+        $table = $tableName[0];
+
+        echo '<h3>',$table,'</h3>';
+        $result2 = mysqli_query('SHOW COLUMNS FROM '.$table) or die('cannot show columns from '.$table);
+        if(mysqli_num_rows($result2)) {
+            echo '<table cellpadding="0" cellspacing="0" class="table table-striped">';
+            echo '<tr><th>Field</th><th>Type</th><th>Null</th><th>Key</th><th>Default<th>Extra</th></tr>';
+            while($row2 = mysqli_fetch_row($result2)) {
+                echo '<tr>';
+                foreach($row2 as $key=>$value) {
+                    echo '<td>',$value,'</td>';
+                }
+                echo '</tr>';
+            }
+            echo '</table><br />';
+        }
+    }
+    ?>
+</div>
+<div>
+    <?php include 'include/footer.php'; ?>
+</div>
+</body>
+</html>
