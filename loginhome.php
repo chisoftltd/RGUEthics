@@ -3,11 +3,6 @@ ob_start();
 session_start();
 require_once 'dbconnect.php';
 
-// if session is not set this will redirect to login page
-if (!isset($_SESSION['user'])) {
-    header("Location: login.php");
-    exit;
-}
 
 $error = false;
 
@@ -52,6 +47,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $errMSG = "Incorrect Credentials, Try again...";
         }
     }
+
+    // if session is not set this will redirect to login page
+    if (!isset($_SESSION['user'])) {
+        header("Location: login.php");
+        exit;
+    }
+
 }
 
 function test_input($data)
@@ -118,10 +120,7 @@ function test_input($data)
                     <a href="register.php">Sign Up Here...</a>
                 </div>
             </div>
-            <div class="container" style="background-color:#f1f1f1">
-                <button type="button" class="cancelbtn">Cancel</button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
-            </div>
+
         </form>
 
         <?php
@@ -139,7 +138,6 @@ function test_input($data)
 </div>
 <div>
     <?php include 'include/footer.php'; ?>
-
 </div>
 </body>
 </html>
