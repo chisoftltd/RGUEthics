@@ -114,7 +114,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </head>
     <body>
         <div>
-            <?php include 'include/header.php'; ?>
+            <?php include 'include/loginheader.php'; ?>
         </div>
         <div>
             <hr>
