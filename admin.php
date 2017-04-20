@@ -41,8 +41,10 @@ if (!$link) {
     $result = mysqli_query($link, "Show tables") or die('cannot show tables');
     while ($tableName = mysqli_fetch_row($result)) {
 
+        $table = $tableName[0];
+
         echo '<h3>', $table, '</h3>';
-        $result2 = mysqli_query($link, "SELECT * FROM ".$result2) or die('cannot show columns from ' . $table);
+        $result2 = mysqli_query($link, "SELECT * FROM " . $table) or die('cannot show columns from ' . $table);
         $count = mysqli_num_rows($result2);
         if (mysqli_num_rows($result2)) {
             echo '<table cellpadding="0" cellspacing="0" class="table table-striped">';
@@ -58,10 +60,10 @@ if (!$link) {
         }
     }
 
-    $sql = "SHOW COLUMNS FROM".$result2;
-    $result = mysqli_query($link,$sql);
-    while($row = mysqli_fetch_array($result)){
-        echo $row['Field']."<br>";
+    $sql = "SHOW COLUMNS FROM" . $table;
+    $result = mysqli_query($link, $sql);
+    while ($row = mysqli_fetch_array($result)) {
+        echo $row['Field'] . "<br>";
     }
     ?>
 </div>
