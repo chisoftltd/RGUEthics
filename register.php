@@ -73,10 +73,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $res = mysqli_query($link, $query);
 
 
-        if (!mysqli_query($link, "SET a=1")) {
-            printf("Errormessage: %s\n", mysqli_error($link));
-        }
-        
         if ($res) {
             $errTyp = "success";
             $errMSG = "Successfully registered, you may login now";
@@ -103,7 +99,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         return $data;
     }
 }
-echo error_reporting(E_ALL);
+if (!mysqli_query($link, "SET a=1")) {
+    printf("Errormessage: %s\n", mysqli_error($link));
+}
+//echo error_reporting(E_ALL);
 ?>
 <!DOCTYPE html>
 <html>
