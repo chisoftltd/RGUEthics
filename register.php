@@ -84,6 +84,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $errMSG = "Something went wrong, try again later...";
         }
     }
+    // if session is not set this will redirect to login page
+    if (!isset($_SESSION['user'])) {
+        header("Location: studentreg.php");
+        exit;
+    }
 
     // clean user inputs to prevent sql injections
     function test_input($data)
@@ -122,7 +127,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="container">
 
             <div id="login-form">
-                <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
+                <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="on">
 
                     <div class="col-md-12">
 
@@ -191,7 +196,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </div>
 
                         <div class="form-group">
-                            <a href="index.php">Sign in Here...</a>
+                            <a href="loginhome.php">Sign in Here...</a>
                         </div>
 
                     </div>
