@@ -50,9 +50,16 @@ if (!$link) {
         echo '<tr><th>Number</th><th>Name</th><th>Supervisor</th><th>Project Topic</th><th>Start Date<th>End Date</th></tr>';
         while ($row2 = mysqli_fetch_row($result2)) {
             echo '<tr>';
-            foreach ($row2 as $key => $value) {
+            echo "<td><a href='' onclick='projpages()'>" . $row2[Number] . "</a></td>";
+            echo "<td>" . $row2[Name] . "</td>";
+            echo "<td>" . $row2[supervisor] . "</td>";
+            echo "<td>" . $row2[ProjectTopic] . "</td>";
+            echo "<td>" . $row2[StartDate] . "</td>";
+            echo "<td>" . $row2[Endate] . "</td>";
+            echo "</tr>";
+            /*foreach ($row2 as $key => $value) {
                 echo '<td>', $value,'</td>';
-            }
+            }*/
             echo '</tr>';
         }
         echo '</table><br />';
