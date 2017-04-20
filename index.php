@@ -44,7 +44,7 @@
         <p>You need to assess whether your project needs an ethical submission. This can be done by completing the RESSA
             form and based on the outcome decide whether an application is needed.</p>
         <p><a class="more"
-              href="/download.cfm?downloadfile=5E84DCA0-2BEB-11E1-8D06000D609CAA9F&amp;typename=dmFile&amp;fieldname=filename">Student
+              href="http://www.rgu.ac.uk/download.cfm?downloadfile=5E84DCA0-2BEB-11E1-8D06000D609CAA9F&typename=dmFile&fieldname=filename">Student
                 and Supervisor Appraisal (RESSA) Form</a></p>
         <h3>Assessment of Research Ethics is very important expecially when the following groups are involved:</h3>
         <ul>
