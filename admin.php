@@ -59,12 +59,6 @@ if (!$link) {
             echo '</table><br />';
         }
     }
-
-    $sql = "SHOW COLUMNS FROM" . $table;
-    $result = mysqli_query($link, $sql);
-    while ($row = mysqli_fetch_array($result)) {
-        echo $row['Field'] . "<br>";
-    }
     ?>
 </div>
 <div>
