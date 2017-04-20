@@ -26,6 +26,9 @@ if (!$link) {
 <div>
     <?php include 'include/loginheader.php'; ?>
 </div>
+<div>
+    <hr>
+</div>
 <div class="container">
 
     <?php

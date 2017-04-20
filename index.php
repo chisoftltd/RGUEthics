@@ -14,6 +14,9 @@
 <div>
     <?php include 'include/header.php'; ?>
 </div>
+<div>
+    <hr>
+</div>
 <div class="pageContent">
     <nav class="nav">
         <ul>
