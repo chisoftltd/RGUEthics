@@ -4,13 +4,13 @@
             <strong>Follow us</strong>
         </p>
         <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html">Disclaimer</a></li>
-            <li><a href="index.html">Freedom of information</a></li>
-            <li><a href="index.html">Privacy and cookie statement</a></li>
-            <li><a href="index.html">Complaints</a></li>
-            <li><a href="index.html">Copyright ©2017</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="http://www.rgu.ac.uk/footer/disclaimer/disclaimer/">Disclaimer</a></li>
+            <li><a href="http://www.rgu.ac.uk/about/governance/information-governance/freedom-of-information/freedom-of-information/">Freedom of information</a></li>
+            <li><a href="http://www.rgu.ac.uk/footer/privacy-and-cookie-statement/privacy-and-cookie-statement/">Privacy and cookie statement</a></li>
+            <li><a href="http://www.rgu.ac.uk/footer/complaints/complaints/">Complaints</a></li>
+            <li><a href="http://www.rgu.ac.uk/footer/copyright-2017/copyright/">Copyright ©2017</a></li>
+            <li><a href="contact.php">Contact</a></li>
         </ul>
     </nav>
 </footer>
