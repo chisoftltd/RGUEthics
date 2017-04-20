@@ -69,10 +69,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // if there's no error, continue to signup
     if (!$error) {
 
-        $query = "INSERT INTO users(userId, userName,userEmail,userPass) VALUES('$id', '$name','$email','$password')";
+        $query = "INSERT INTO users(userId, userName,userEmail,userPass) VALUES('$id', '$name','$email','$pass')";
         $res = mysqli_query($link, $query);
 
 
+        if (!mysqli_query($link, "SET a=1")) {
+            printf("Errormessage: %s\n", mysqli_error($link));
+        }
+        
         if ($res) {
             $errTyp = "success";
             $errMSG = "Successfully registered, you may login now";
@@ -98,9 +102,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $data = htmlspecialchars($data);
         return $data;
     }
-}
-if (!mysqli_query($link, "SET a=1")) {
-    printf("Errormessage: %s\n", mysqli_error($link));
 }
 echo error_reporting(E_ALL);
 ?>
