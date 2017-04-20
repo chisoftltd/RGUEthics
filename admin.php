@@ -26,6 +26,7 @@ if (!$link) {
 <div>
     <?php include 'include/header.php'; ?>
 </div>
+
 <div>
     <hr>
 </div>
@@ -36,13 +37,12 @@ if (!$link) {
 
     mysqli_select_db($link, "localdb");
 
-    show tables
+    //show tables
     $result = mysqli_query($link, "Show tables") or die('cannot show tables');
     while ($tableName = mysqli_fetch_row($result)) {
 
-
         echo '<h3>', $table, '</h3>';
-        $result2 = mysqli_query($link, "SELECT * FROM" . $result2) or die('cannot show columns from ' . $table);
+        $result2 = mysqli_query($link, "SELECT * FROM ".$result2) or die('cannot show columns from ' . $table);
         $count = mysqli_num_rows($result2);
         if (mysqli_num_rows($result2)) {
             echo '<table cellpadding="0" cellspacing="0" class="table table-striped">';
@@ -56,7 +56,13 @@ if (!$link) {
             }
             echo '</table><br />';
         }
-    }    //}
+    }
+
+    $sql = "SHOW COLUMNS FROM".$result2;
+    $result = mysqli_query($link,$sql);
+    while($row = mysqli_fetch_array($result)){
+        echo $row['Field']."<br>";
+    }
     ?>
 </div>
 <div>
