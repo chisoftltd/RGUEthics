@@ -99,6 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         return $data;
     }
 }
+echo error_reporting(E_ALL);
 ?>
 <!DOCTYPE html>
 <html>
