@@ -23,17 +23,16 @@ if (!$link) {
     <link rel="stylesheet" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="css/main-style.css">
     <style type="text/css">
-        tr.header
-        {
-            font-weight:bold;
+        tr.header {
+            font-weight: bold;
         }
-        tr.alt
-        {
+
+        tr.alt {
             background-color: #777777;
         }
     </style>
     <script type="text/javascript">
-        $(document).ready(function(){
+        $(document).ready(function () {
             $('.striped tr:even').addClass('alt');
         });
     </script>
@@ -48,7 +47,7 @@ if (!$link) {
 
     //   $server = mysqli_connect("localhost","root", "");
     //   $db =  mysqli_select_db("MyDatabase",$server);
-    $query = mysqli_query($link, "select Number, Name, supervisor from projethics");
+    $query = mysqli_query($link, "SELECT Number, Name, supervisor FROM projethics");
     ?>
     <table class="striped">
         <tr class="header">
@@ -59,9 +58,10 @@ if (!$link) {
         <?php
         while ($row = mysqli_fetch_array($query)) {
             echo "<tr>";
-            echo "<td>".$row[ID]."</td>";
-            echo "<td>".$row[Name]."</td>";
-            echo "<td>".$row[Title]."</td>";
+            echo "<td>" . $row[Number] . "</td>";
+            echo "<td>" . $row[Name] . "</td>";
+            echo "<td>" . $row[supervisor] . "</td>";
+            echo "<td><a href=''>link</a></td>";
             echo "</tr>";
         }
 
