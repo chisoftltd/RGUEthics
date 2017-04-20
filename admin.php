@@ -34,38 +34,29 @@ if (!$link) {
     <?php
     /* connect to the db */
 
-    /*mysqli_select_db($link,"localdb");
+    mysqli_select_db($link, "localdb");
 
-     show tables
-    $result = mysqli_query($link,"Show tables") or die('cannot show tables');
-    while($tableName = mysqli_fetch_row($result)) {
+    show tables
+    $result = mysqli_query($link, "Show tables") or die('cannot show tables');
+    while ($tableName = mysqli_fetch_row($result)) {
 
-        $table = $tableName[0];
-    CREATE TABLE apprOfficer (
-    officer int,
-    name varchar(255),
-    approdate date,
-    project varchar(255),
-    student varchar(255),
-    supervisor varchar(255)
-);
-*/
-    echo '<h3>', $table, '</h3>';
-    $result2 = mysqli_query($link, "SELECT officer, name, approdate, project, student, supervisor FROM apprOfficer") or die('cannot show columns from ' . $table);
-    $count = mysqli_num_rows($result2);
-    if (mysqli_num_rows($result2)) {
-        echo '<table cellpadding="0" cellspacing="0" class="table table-striped">';
-        echo '<tr><th>Approval Number</th><th>Staff Name</th><th>Approval Date</th><th>Project Topic</th><th>Student<th>Supervisor</th></tr>';
-        while ($row2 = mysqli_fetch_row($result2)) {
-            echo '<tr>';
-            foreach ($row2 as $key => $value) {
-                echo '<td>', $value,'</td>';
+
+        echo '<h3>', $table, '</h3>';
+        $result2 = mysqli_query($link, "SELECT * FROM" . $result2) or die('cannot show columns from ' . $table);
+        $count = mysqli_num_rows($result2);
+        if (mysqli_num_rows($result2)) {
+            echo '<table cellpadding="0" cellspacing="0" class="table table-striped">';
+            echo '<tr><th>Approval Number</th><th>Staff Name</th><th>Approval Date</th><th>Project Topic</th><th>Student<th>Supervisor</th></tr>';
+            while ($row2 = mysqli_fetch_row($result2)) {
+                echo '<tr>';
+                foreach ($row2 as $key => $value) {
+                    echo '<td>', $value, '</td>';
+                }
+                echo '</tr>';
             }
-            echo '</tr>';
+            echo '</table><br />';
         }
-        echo '</table><br />';
-    }
-    //}
+    }    //}
     ?>
 </div>
 <div>
@@ -75,7 +66,7 @@ if (!$link) {
     <?php include 'include/loginheader.php'; ?>
 </div>
 <script>
-    $(".container").delegate("td", "click", function() {
+    $(".container").delegate("td", "click", function () {
         window.location.href = $(this).find("form").attr("action");
     });
 </script>

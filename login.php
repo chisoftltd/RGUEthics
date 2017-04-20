@@ -46,9 +46,9 @@ $userRow = mysqli_fetch_array($res);
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a
+               <li class="active"><a
                             href="EAO.php">Experiment Approval Officers (EAO)</a></li>
-                <li><a href="admin.php">Administrator</a></li>
+                <!--<li> <a href="admin.php">Administrator</a></li> -->
                 <li><a href="http://www.rgu.ac.uk/">RGU</a></li>
                 <li>
                     <a href="http://www.rgu.ac.uk/about/schools-and-departments/school-of-pharmacy-and-life-sciences/ethics-procedures/">Ethics
@@ -81,7 +81,7 @@ $userRow = mysqli_fetch_array($res);
             <br>
             <li><a href="EAO.php">Experiment Approval Officers (EAO)</a></li>
             <br>
-            <li><a href="admin.php">Administrator</a></li>
+            <!--<li> <a href="admin.php">Administrator</a></li> -->
             <br>
             <li><a href="contact.php">Contact</a></li>
             <br>
