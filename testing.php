@@ -58,7 +58,7 @@ if (!$link) {
         <?php
         while ($row = mysqli_fetch_array($query)) {
             echo "<tr>";
-            echo "<td>" . $row[Number] . "</td>";
+            echo "<td><a href=''>" . $row[Number] . "</a></td>";
             echo "<td>" . $row[Name] . "</td>";
             echo "<td>" . $row[supervisor] . "</td>";
             echo "<td><a href=''>link</a></td>";
