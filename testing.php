@@ -22,6 +22,21 @@ if (!$link) {
     <title>RGUEthics - Experiment Approval Officers (EAO)</title>
     <link rel="stylesheet" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="css/main-style.css">
+    <style type="text/css">
+        tr.header
+        {
+            font-weight:bold;
+        }
+        tr.alt
+        {
+            background-color: #777777;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.striped tr:even').addClass('alt');
+        });
+    </script>
 </head>
 <body>
 <div>
@@ -30,32 +45,28 @@ if (!$link) {
 <div class="container">
 
     <?php
-    /* connect to the db */
 
-    /*mysqli_select_db($link,"localdb");
-
-     show tables
-    $result = mysqli_query($link,"Show tables") or die('cannot show tables');
-    while($tableName = mysqli_fetch_row($result)) {
-
-        $table = $tableName[0];
-*/
-    echo '<h3>', $table, '</h3>';
-    $result2 = mysqli_query($link, "SELECT Number, Name, supervisor, ProjectTopic, StartDate, Endate FROM projethics") or die('cannot show columns from ' . $table);
-    if (mysqli_num_rows($result2)) {
-        echo '<table cellpadding="0" cellspacing="0" class="table table-striped">';
-        echo '<tr><th>Number</th><th>Name</th><th>Supervisor</th><th>Project Topic</th><th>Start Date<th>End Date</th></tr>';
-        while ($row2 = mysqli_fetch_row($result2)) {
-            echo '<tr>';
-            foreach ($row2 as $key => $value) {
-                echo '<td>', $value, '</td>';
-            }
-            echo '</tr>';
-        }
-        echo '</table><br />';
-    }
-    //}
+    //   $server = mysqli_connect("localhost","root", "");
+    //   $db =  mysqli_select_db("MyDatabase",$server);
+    $query = mysqli_query($link, "select Number, Name, supervisor from projethics");
     ?>
+    <table class="striped">
+        <tr class="header">
+            <td>Id</td>
+            <td>Name</td>
+            <td>Title</td>
+        </tr>
+        <?php
+        while ($row = mysqli_fetch_array($query)) {
+            echo "<tr>";
+            echo "<td>".$row[ID]."</td>";
+            echo "<td>".$row[Name]."</td>";
+            echo "<td>".$row[Title]."</td>";
+            echo "</tr>";
+        }
+
+        ?>
+    </table>
 </div>
 <div>
     <?php include 'include/footer.php'; ?>
