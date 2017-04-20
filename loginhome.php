@@ -80,6 +80,9 @@ function test_input($data)
 <div>
     <?php include 'include/header.php'; ?>
 </div>
+<div>
+    <hr>
+</div>
 <div class="container">
 
     <div id="login-form">
@@ -135,6 +138,9 @@ function test_input($data)
         }
         ?>
     </div>
+</div>
+<div>
+    <hr>
 </div>
 <div>
     <?php include 'include/footer.php'; ?>

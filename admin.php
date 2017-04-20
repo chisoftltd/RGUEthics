@@ -26,6 +26,9 @@ if (!$link) {
 <div>
     <?php include 'include/header.php'; ?>
 </div>
+<div>
+    <hr>
+</div>
 <div class="container">
 
     <?php
@@ -64,6 +67,9 @@ if (!$link) {
     }
     //}
     ?>
+</div>
+<div>
+    <hr>
 </div>
 <div>
     <?php include 'include/loginheader.php'; ?>

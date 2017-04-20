@@ -61,6 +61,9 @@ if (!$link) {
     ?>
 </div>
 <div>
+    <hr>
+</div>
+<div>
     <?php include 'include/footer.php'; ?>
 </div>
 <script>

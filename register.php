@@ -116,7 +116,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div>
             <?php include 'include/header.php'; ?>
         </div>
-
+        <div>
+            <hr>
+        </div>
         <div class="container">
 
             <div id="login-form">
@@ -197,6 +199,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </form>
             </div>
 
+        </div>
+        <div>
+            <hr>
         </div>
         <div>
             <?php include 'include/footer.php'; ?>

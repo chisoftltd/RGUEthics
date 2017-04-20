@@ -28,6 +28,9 @@ $userRow = mysqli_fetch_array($res);
 <div>
     <?php include 'include/loginheader.php'; ?>
 </div>
+<div>
+    <hr>
+</div>
 <nav class="navbar navbar-default navbar-fixed-top">
 
     <div class="container">
@@ -122,6 +125,9 @@ $userRow = mysqli_fetch_array($res);
         </ul>
 
     </article>
+</div>
+<div>
+    <hr>
 </div>
 <div>
     <?php include 'include/footer.php'; ?>
