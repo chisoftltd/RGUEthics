@@ -45,8 +45,7 @@ if (!$link) {
 
         echo '<h3>', $table, '</h3>';
         $result2 = mysqli_query($link, "SELECT * FROM " . $table) or die('cannot show columns from ' . $table);
-
-        $count = mysqli_num_rows($result2);
+        //$count = mysqli_num_rows($result2);
         if (mysqli_num_rows($result2)) {
             echo '<table cellpadding="0" cellspacing="0" class="table table-striped">';
             echo '<tr><th>Approval Number</th><th>Staff Name</th><th>Approval Date</th><th>Project Topic</th><th>Student<th>Supervisor</th></tr>';
@@ -60,6 +59,7 @@ if (!$link) {
             echo '</table><br />';
         }
     }
+
     ?>
 </div>
 <div>
