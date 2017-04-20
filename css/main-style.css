@@ -113,10 +113,10 @@ h2{
 .article {
     text-align: left;
 }
-.nav {background: border-box;}
+.nav {background: #eeeeee;}
 
 .nav ul {
-    list-style-type:square;
+    list-style-type: disc;
     padding: 0;
 
 }
