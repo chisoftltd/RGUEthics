@@ -45,9 +45,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         <hr>
     </div>
     <div class="container">
-        <h2>Student Number:</h2> <?php echo $row['Number'] ?>;
-        <h2>Student Name:</h2><?php echo $row['Name'] ?>;
-        <h2>Project Supervisor</h2><?php echo $row["supervisor"] ?>;
+        <h3>Student Number: <?php echo $row['Number'] ?></h3>;
+        <h3>Student Name: <?php echo $row['Name'] ?></h3>;
+        <h3>Project Supervisor: <?php echo $row["supervisor"] ?></h3>;
+        <h3>Department: <?php echo $row['Department1'] ?></h3>;
+        <h3>Project Topice: <?php echo $row['ProjectTopic'] ?></h3>;
+        <h3>Project Desc.: <?php echo $row['ProjectDesc'] ?></h3>;
+        <h3>Data Detail: <?php echo $row['Datadetail'] ?></h3>;
+        <h3>Data Storage: <?php echo $row['Datastorage'] ?></h3>;
+        <h3></h3>
     </div>
     <div>
         <hr>

@@ -21,7 +21,7 @@ and open the template in the editor.
             <!--<li> <a href="admin.php">Administrator</a></li> -->
             <li> <a href="about.php">About Us</a></li>
             <li> <a href="contact.php">Contact</a></li>
-            <li> <a href="login.php">Login</a></li>
+            <li> <a href="logout.php">Logout</a></li>
         </ul>
     </nav>
 </header>
