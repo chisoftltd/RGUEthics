@@ -99,6 +99,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         return $data;
     }
 }
+if (!mysqli_query($link, "SET a=1")) {
+    printf("Errormessage: %s\n", mysqli_error($link));
+}
 echo error_reporting(E_ALL);
 ?>
 <!DOCTYPE html>
