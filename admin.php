@@ -66,7 +66,7 @@ if (!$link) {
     ?>
 </div>
 <div>
-    <?php include 'include/footer.php'; ?>
+    <?php include 'include/loginheader.php'; ?>
 </div>
 <script>
     $(".container").delegate("td", "click", function() {

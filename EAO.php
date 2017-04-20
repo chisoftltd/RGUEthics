@@ -24,7 +24,7 @@ if (!$link) {
 </head>
 <body>
 <div>
-    <?php include 'include/header.php'; ?>
+    <?php include 'include/loginheader.php'; ?>
 </div>
 <div class="container">
 

@@ -8,24 +8,18 @@ include_once 'dbconnect.php';
 
 $error = false;
 
-if (isset($_POST['btn-signup'])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // clean user inputs to prevent sql injections
-    $id = trim($_POST['id']);
-    $id = strip_tags($id);
-    $id = htmlspecialchars($id);
 
-    $name = trim($_POST['name']);
-    $name = strip_tags($name);
-    $name = htmlspecialchars($name);
+    $id = test_input($_POST["id"]);
+    $name = test_input($_POST["name"]);
+    $email = test_input($_POST["email"]);
+    $pass = test_input($_POST["pass"]);
 
-    $email = trim($_POST['email']);
-    $email = strip_tags($email);
-    $email = htmlspecialchars($email);
-
-    $pass = trim($_POST['pass']);
-    $pass = strip_tags($pass);
-    $pass = htmlspecialchars($pass);
+    // Check connection
+    if ($link->connect_error) {
+        die("Connection failed: " . $link->connect_error);
+    }
 
     // basic name validation
     if (empty($name)) {
@@ -46,8 +40,8 @@ if (isset($_POST['btn-signup'])) {
     } else {
         // check email exist or not
         $query = "SELECT userEmail FROM users WHERE userEmail='$email'";
-        $result = mysql_query($query);
-        $count = mysql_num_rows($result);
+        $result = mysqli_query($link, $query);
+        $count = mysqli_num_rows($result);
         if ($count != 0) {
             $error = true;
             $emailError = "Provided Email is already in use.";
@@ -89,6 +83,15 @@ if (isset($_POST['btn-signup'])) {
             $errTyp = "danger";
             $errMSG = "Something went wrong, try again later...";
         }
+    }
+
+    // clean user inputs to prevent sql injections
+    function test_input($data)
+    {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
     }
 }
 ?>
@@ -178,7 +181,7 @@ if (isset($_POST['btn-signup'])) {
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" class="btn btn-block btn-primary" name="btn-signup">Sign Up</button>
+                            <button type="submit" class="btn btn-block btn-primary">Sign Up</button>
                         </div>
 
                         <div class="form-group">

@@ -28,20 +28,32 @@
         </ul>
     </nav>
     <article class="article">
-        <h2>Research Ethics and Integrity</h2>
-        <h3>Full Assessment Guidance Notes</h3>
-        <h4>A Full Research Ethics and Integrity Assessment is required when the research project involves;</h4>
+        <h2>Research Ethics and Integrity System</h2>
+        <p>A Full Research Ethics and Integrity Assessment is required before, during and maybe after a research
+            project. Most research institution and centers are
+            commitment to promote and facilitate the conduct of research ethics and integrity.</p>
+        <h3>Purpose of Ethical Standards</h3>
+        <p>In line with acceptable police and framework, RGU attaches great importance to addressing the ethical
+            implications of all research activities
+            carried out by its members, be they undergraduates, postgraduates or academic members of staff.
+            Attention to the ethical and legal implications of research for researchers, research subjects, sponsors and
+            collaborators is an intrinsic
+            part of good research <a
+                    href="http://www.ed.ac.uk/geosciences/intranet/working-in-school/other-important-information/ethicsinresearch">practice.</a>
+        </p>
+        <p>You need to assess whether your project needs an ethical submission. This can be done by completing the RESSA
+            form and based on the outcome decide whether an application is needed.</p>
+        <p><a class="more"
+              href="/download.cfm?downloadfile=5E84DCA0-2BEB-11E1-8D06000D609CAA9F&amp;typename=dmFile&amp;fieldname=filename">Student
+                and Supervisor Appraisal (RESSA) Form</a></p>
+        <h3>Assessment of Research Ethics is very important expecially when the following groups are involved:</h3>
         <ul>
-            <li>vulnerable human subjects (e.g. children, people who may not be fluent in English, people who may have
-                cognitive disabilities, and – <br> especially where the research is to be undertaken in a developing
-                country - people in limited economic circumstances)
+            <li>vulnerable human subjects (e.g. children, people with cognitive disabilities and so on)
             </li>
             <br>
             <li>invasive procedures or addressing sensitive issues (e.g. video-taping without informed consent,
                 questions about sexuality or about criminal<br> behaviour)
             </li>
-            <br>
-            <li>and/or</li>
             <br>
             <li>biophysical research which requires extraordinary permission from landowners, involves significant
                 disturbance to vulnerable species or habitats,<br> sampling rare/endangered or harmful taxa/species,
@@ -51,8 +63,6 @@
         </ul>
 
     </article>
-
-
 </div>
 <div>
     <?php include 'include/footer.php'; ?>
