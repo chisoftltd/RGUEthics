@@ -104,7 +104,7 @@ if (isset($_POST['signup'])) {
         </div>
     </nav>
     <div>
-        <?php include 'include/loginheader.php'; ?>
+        <?php include 'include/header.php'; ?>
     </div>
     <div>
         <hr>

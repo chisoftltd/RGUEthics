@@ -132,7 +132,7 @@ echo error_reporting(E_ALL);
     </head>
     <body>
     <div>
-        <?php include 'include/loginheader.php'; ?>
+        <?php include 'include/header.php'; ?>
     </div>
     <div>
         <hr>
