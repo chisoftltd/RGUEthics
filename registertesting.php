@@ -78,6 +78,7 @@ if (isset($_POST['signup'])) {
         <title>RGUEthics - Registration System</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main-style.css">
     </head>
 
     <body>
