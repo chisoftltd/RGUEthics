@@ -51,15 +51,11 @@ if (isset($_POST['signup'])) {
 
 
         if ($res) {
-            $errTyp = "success";
-            $successMSG = "Successfully Registered! <a href='login.php'>Click here to Login</a>";
-            unset($name);
-            unset($email);
-            unset($password);
+            $successmsg = "Successfully Registered! <a href='login.php'>Click here to Login</a>";
         } else {
-            $errTyp = "danger";
-            $errMSG = "Something went wrong, try again later...";
+            $errormsg = "Error in registering...Please try again later!";
         }
+
     }
     function test_input($data)
     {
