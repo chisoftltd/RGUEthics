@@ -120,7 +120,7 @@ function test_input($data)
                     <hr/>
                 </div>
                 <div class="form-group">
-                    <a href="register.php">Sign Up Here...</a>
+                    <a href="registertesting.php">Sign Up Here...</a>
                 </div>
             </div>
 

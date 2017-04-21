@@ -26,19 +26,19 @@ if (isset($_POST['signup'])) {
         $error = true;
         $id_Error = "ID must have atleast 11 digits.";
     }
-    if (!preg_match("/^[a-zA-Z ]+$/",$name)) {
+    if (!preg_match("/^[a-zA-Z ]+$/", $name)) {
         $error = true;
         $name_error = "Name must contain only alphabets and space";
     }
-    if(!filter_var($email,FILTER_VALIDATE_EMAIL)) {
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $error = true;
         $email_error = "Please Enter Valid Email ID";
     }
-    if(strlen($password) < 6) {
+    if (strlen($password) < 6) {
         $error = true;
         $password_error = "Password must be minimum of 6 characters";
     }
-    if($password != $cpassword) {
+    if ($password != $cpassword) {
         $error = true;
         $cpassword_error = "Password and Confirm Password doesn't match";
     }
@@ -46,7 +46,7 @@ if (isset($_POST['signup'])) {
     // if there's no error, continue to signup
     if (!$error) {
 
-        $query = "INSERT INTO users (userId, userName, userEmail, userPass) VALUES('".$id."', '".$name."','".$email."','".md5($password)."')";
+        $query = "INSERT INTO users (userId, userName, userEmail, userPass) VALUES('" . $id . "', '" . $name . "','" . $email . "','" . md5($password) . "')";
         $res = mysqli_query($link, $query);
 
 
@@ -76,44 +76,32 @@ if (isset($_POST['signup'])) {
     <head>
         <meta http-equiv="Content-Type" content="text/html charset=utf-8"/>
         <title>RGUEthics - Registration System</title>
-        <link rel="stylesheet" href="style.css" type="text/css"/>
-        <link rel="stylesheet" href="css/main-style.css">
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-              crossorigin="anonymous">
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-              integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-              crossorigin="anonymous">
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-                crossorigin="anonymous"></script>
-        <script>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
-<body>
-<nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
-        <!-- add header -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.php">Koding Made Simple</a>
+
+    <body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- add header -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.php">Koding Made Simple</a>
+            </div>
+            <!-- menu items -->
+            <div class="collapse navbar-collapse" id="navbar1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="login.php">Login</a></li>
+                    <li class="active"><a href="registertesting.php">Sign Up</a></li>
+                </ul>
+            </div>
         </div>
-        <!-- menu items -->
-        <div class="collapse navbar-collapse" id="navbar1">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="login.php">Login</a></li>
-                <li class="active"><a href="registertesting.php">Sign Up</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+    </nav>
     <div>
         <?php include 'include/loginheader.php'; ?>
     </div>
@@ -121,59 +109,65 @@ if (isset($_POST['signup'])) {
         <hr>
     </div>
     <div class="container">
-
         <div id="login-form">
-            <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" name="signupform" autocomplete="on">
-
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" name="signupform"
+                  autocomplete="on">
                 <div class="col-md-12">
-<fieldset>
-                    <legend>Student Sign Up</legend>
+                    <fieldset>
+                        <legend>Student Sign Up</legend>
+                        <div class="form-group">
+                            <label for="id">Number</label>
+                            <input type="number" name="id" placeholder="Enter Student Number" required
+                                   value="<?php if ($error) echo $id ?>" class="form-control"/>
+                            <span class="text-danger"><?php if (isset($id_error)) echo $id_error; ?></span>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="id">Number</label>
-                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                            <input type="number" name="id" class="form-control" placeholder="Enter Student Number"
-                                   maxlength="50"  value="<?php if($error) echo $id ?>" class="form-control" />
-    <span class="text-danger"><?php if (isset($id_error)) echo $id_error; ?></span>
-                    </div>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" placeholder="Enter Full Name" required
+                                   value="<?php if ($error) echo $name; ?>" class="form-control"/>
+                            <span class="text-danger"><?php if (isset($name_error)) echo $name_error; ?></span>
+                        </div>
 
-    <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" name="name" placeholder="Enter Full Name" required value="<?php if($error) echo $name; ?>" class="form-control" />
-    <span class="text-danger"><?php if (isset($name_error)) echo $name_error; ?></span>
-    </div>
+                        <div class="form-group">
+                            <label for="name">Email</label>
+                            <input type="text" name="email" placeholder="Email" required
+                                   value="<?php if ($error) echo $email; ?>" class="form-control"/>
+                            <span class="text-danger"><?php if (isset($email_error)) echo $email_error; ?></span>
+                        </div>
 
-    <div class="form-group">
-    <label for="name">Email</label>
-    <input type="text" name="email" placeholder="Email" required value="<?php if($error) echo $email; ?>" class="form-control" />
-    <span class="text-danger"><?php if (isset($email_error)) echo $email_error; ?></span>
-    </div>
+                        <div class="form-group">
+                            <label for="name">Password</label>
+                            <input type="password" name="password" placeholder="Password" required
+                                   class="form-control"/>
+                            <span class="text-danger"><?php if (isset($password_error)) echo $password_error; ?></span>
+                        </div>
 
-    <div class="form-group">
-    <label for="name">Password</label>
-    <input type="password" name="password" placeholder="Password" required class="form-control" />
-    <span class="text-danger"><?php if (isset($password_error)) echo $password_error; ?></span>
-    </div>
+                        <div class="form-group">
+                            <label for="name">Confirm Password</label>
+                            <input type="password" name="cpassword" placeholder="Confirm Password" required
+                                   class="form-control"/>
+                            <span class="text-danger"><?php if (isset($cpassword_error)) echo $cpassword_error; ?></span>
+                        </div>
 
-    <div class="form-group">
-    <label for="name">Confirm Password</label>
-<input type="password" name="cpassword" placeholder="Confirm Password" required class="form-control" />
-    <span class="text-danger"><?php if (isset($cpassword_error)) echo $cpassword_error; ?></span>
-    </div>
-
-    <div class="form-group">
-    <input type="submit" name="signup" value="Sign Up" class="btn btn-primary" />
-    </div>
-    </fieldset>
-    </form>
+                        <div class="form-group">
+                            <input type="submit" name="signup" value="Sign Up" class="btn btn-primary"/>
+                        </div>
+                    </fieldset>
             </form>
-    <span class="text-success"><?php if (isset($successmsg)) { echo $successmsg; } ?></span>
-    <span class="text-danger"><?php if (isset($errormsg)) { echo $errormsg; } ?></span>
-    </div>
+            <span class="text-success"><?php if (isset($successmsg)) {
+                    echo $successmsg;
+                } ?></span>
+            <span class="text-danger"><?php if (isset($errormsg)) {
+                    echo $errormsg;
+                } ?></span>
+        </div>
     </div>
     <div class="row">
-    <div class="col-md-4 col-md-offset-4 text-center">
-    Already Registered? <a href="login.php">Login Here</a>
+        <div class="col-md-4 col-md-offset-4 text-center">
+            Already Registered? <a href="loginhome.php">Login Here</a>
+        </div>
+    </div>
     <div>
         <hr>
     </div>
@@ -181,6 +175,11 @@ if (isset($_POST['signup'])) {
         <?php include 'include/footer.php'; ?>
 
     </div>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </body>
     </html>
 <?php ob_end_flush(); ?>
