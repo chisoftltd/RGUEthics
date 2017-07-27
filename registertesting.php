@@ -128,7 +128,7 @@ if (isset($_POST['signup'])) {
 
                         <div class="form-group">
                             <label for="name">Email</label>
-                            <input type="text" name="email" placeholder="Email" required
+                            <input type="email" name="email" placeholder="Email" required
                                    value="<?php if ($error) echo $email; ?>" class="form-control"/>
                             <span class="text-danger"><?php if (isset($email_error)) echo $email_error; ?></span>
                         </div>
